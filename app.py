@@ -1,13 +1,12 @@
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
 from flask import Flask, render_template, request, redirect, flash
 from models import db, ContactMessage
 from flask import session
+from models import Service
 
 app = Flask(__name__)
-
 app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///messages.db'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.secret_key = 'something-secret'
@@ -16,7 +15,9 @@ db.init_app(app)
 
 @app.route("/")
 def home():
-    return render_template("home.html")
+    services = Service.query.all()
+    return render_template("home.html", services=services)
+
 
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
@@ -65,7 +66,9 @@ def contact():
 
 @app.route("/services")
 def services():
-    return render_template("services.html")
+    services = Service.query.all()
+    return render_template("services.html", services=services)
+
 
 @app.route("/metal")
 def metal():
@@ -111,6 +114,50 @@ def admin_logout():
     session.pop("admin_logged_in", None)
     flash("با موفقیت خارج شدید.")
     return redirect("/admin/login")
+
+@app.route("/admin/services", methods=["GET", "POST"])
+def admin_services():
+    if not session.get("admin_logged_in"):
+        return redirect("/admin/login")
+
+    if request.method == "POST":
+        title = request.form["title"]
+        description = request.form["description"]
+        new_service = Service(title=title, description=description)
+        db.session.add(new_service)
+        db.session.commit()
+        flash("خدمت جدید اضافه شد.")
+        return redirect("/admin/services")
+
+    services = Service.query.all()
+    return render_template("admin_services.html", services=services)
+
+@app.route("/admin/services/delete/<int:service_id>", methods=["POST"])
+def delete_service(service_id):
+    if not session.get("admin_logged_in"):
+        return redirect("/admin/login")
+
+    service = Service.query.get_or_404(service_id)
+    db.session.delete(service)
+    db.session.commit()
+    flash("خدمت حذف شد.")
+    return redirect("/admin/services")
+
+@app.route("/admin/services/edit/<int:service_id>", methods=["GET", "POST"])
+def edit_service(service_id):
+    if not session.get("admin_logged_in"):
+        return redirect("/admin/login")
+
+    service = Service.query.get_or_404(service_id)
+
+    if request.method == "POST":
+        service.title = request.form["title"]
+        service.description = request.form["description"]
+        db.session.commit()
+        flash("خدمت ویرایش شد.")
+        return redirect("/admin/services")
+
+    return render_template("edit_service.html", service=service)
 
 with app.app_context():
     db.create_all()

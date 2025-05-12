@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}الماس کویر الکترو مبین{% endblock %}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans.woff2') format('woff2');
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Bold.woff2') format('woff2');
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Light.woff2') format('woff2');
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Medium.woff2') format('woff2');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Black.woff2') format('woff2');
+      font-weight: 800;
+    }
+
+    body {
+      font-family: 'IRANSans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <!-- هدر سایت -->
+<header class="bg-blue-900 sticky top-0 z-50 relative">
+  <div class="container mx-auto flex items-center justify-between p-4">
+    <div class="flex items-center gap-3 relative z-10 mb-[-75px]">
+      <a href="/">
+        <img src="/static/images/logo.png" alt="الماس کویر" class="h-32 w-auto drop-shadow-lg">
+      </a>
+    </div>
+    <nav class="flex items-center gap-2 z-10">
+      <a href="/" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خانه</a>
+      <a href="/services" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خدمات</a>
+      <a href="/metal" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
+      <a href="/contact" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
+      {% if session.admin_logged_in %}
+        <a href="/admin/logout" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خروج</a>
+      {% endif %}
+    </nav>
+  </div>
+</header>
+
+  <!-- محتوای صفحه -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+
+  <!-- فوتر ساده (بعداً کامل می‌کنیم) -->
+  <footer class="bg-gray-800 text-white text-center py-4 mt-10">
+    <p>© 1403 شرکت الماس کویر الکترو مبین. تمام حقوق محفوظ است.</p>
+  </footer>
+
+</body>
+</html>

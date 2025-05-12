@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block title %}ویرایش خدمت | الماس کویر{% endblock %}
+
+{% block content %}
+<section class="max-w-xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6 text-center">ویرایش خدمت</h1>
+  <form method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+    <input name="title" type="text" value="{{ service.title }}" class="w-full border px-4 py-2 rounded" required>
+    <textarea name="description" rows="4" class="w-full border px-4 py-2 rounded" required>{{ service.description }}</textarea>
+    <div class="flex justify-between items-center">
+      <a href="/admin/services" class="text-gray-600 hover:underline">بازگشت</a>
+      <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded">ذخیره تغییرات</button>
+    </div>
+  </form>
+</section>
+{% endblock %}

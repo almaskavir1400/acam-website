@@ -1,111 +1,12 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>خدمات فلزکاری با لیزر فایبر | الماس کویر</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans leading-relaxed">
+{% extends "base.html" %}
 
-  <!-- Header -->
-  <header class="bg-blue-900 text-white p-6 text-center shadow-md">
-    <h1 class="text-3xl font-bold">برش فلز با دستگاه لیزر فایبر</h1>
-    <p class="mt-2 text-lg">دقت میلی‌متری، کیفیت صنعتی، تحویل سریع</p>
-  </header>
+{% block title %}فلزکاری | الماس کویر{% endblock %}
 
-  <!-- Section: Introduction -->
-  <section class="container mx-auto px-4 mt-10">
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-semibold mb-4">لیزر فایبر چیست؟</h2>
-      <p>دستگاه لیزر فایبر یکی از پیشرفته‌ترین فناوری‌های برش فلز است که با اشعه متمرکز لیزر، فلزات مختلف را با دقت بالا، سرعت زیاد و بدون تغییر شکل حرارتی برش می‌دهد.</p>
-    </div>
-  </section>
-
-  <!-- Section: قابلیت‌ها -->
-  <section class="container mx-auto px-4 mt-8">
-    <div class="grid md:grid-cols-2 gap-6">
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">قابلیت‌های دستگاه ما</h3>
-        <ul class="list-disc pr-5 space-y-1">
-          <li>برش دقیق و تمیز انواع فلز</li>
-          <li>سرعت بالا حتی در تیراژ بالا</li>
-          <li>لبه‌های صاف بدون نیاز به پرداخت</li>
-          <li>مصرف انرژی پایین و نگهداری کم‌هزینه</li>
-        </ul>
-      </div>
-      <div class="bg-white p-6 rounded-xl shadow">
-        <h3 class="text-xl font-bold mb-2">حداکثر ضخامت برش</h3>
-        <ul class="list-disc pr-5 space-y-1">
-          <li>فولاد سیاه: تا ۲۰ میلی‌متر</li>
-          <li>استیل: تا ۱۰ میلی‌متر</li>
-          <li>آلومینیوم: تا ۶ میلی‌متر</li>
-          <li>برنج: تا ۵ میلی‌متر</li>
-          <li>مس: تا ۴ میلی‌متر</li>
-          <li>گالوانیزه: بسته به نوع ورق</li>
-        </ul>
-      </div>
-    </div>
-  </section>
-
-  <!-- Section: مقایسه -->
-  <section class="container mx-auto px-4 mt-10">
-    <div class="bg-white p-6 rounded-xl shadow">
-      <h2 class="text-xl font-semibold mb-4">مقایسه با سایر روش‌ها</h2>
-      <table class="table-auto w-full text-center border border-gray-300 text-sm">
-        <thead class="bg-gray-200">
-          <tr>
-            <th class="border px-2 py-1">ویژگی</th>
-            <th class="border px-2 py-1">لیزر فایبر</th>
-            <th class="border px-2 py-1">CO₂</th>
-            <th class="border px-2 py-1">پلاسما</th>
-            <th class="border px-2 py-1">هوا برش</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="border px-2 py-1">دقت</td>
-            <td class="border">بسیار بالا</td>
-            <td class="border">متوسط</td>
-            <td class="border">پایین‌تر</td>
-            <td class="border">پایین</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-1">لبه برش</td>
-            <td class="border">تمیز و براق</td>
-            <td class="border">نیاز به پرداخت</td>
-            <td class="border">خشن</td>
-            <td class="border">خشن</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-1">سرعت</td>
-            <td class="border">بسیار بالا</td>
-            <td class="border">کمتر</td>
-            <td class="border">متوسط</td>
-            <td class="border">کم</td>
-          </tr>
-          <tr>
-            <td class="border px-2 py-1">هزینه نگهداری</td>
-            <td class="border">پایین</td>
-            <td class="border">بالا</td>
-            <td class="border">متوسط</td>
-            <td class="border">متوسط</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </section>
-
-  <!-- Section: CTA -->
-  <section class="container mx-auto px-4 mt-12 text-center">
-    <h2 class="text-xl font-semibold mb-2">برای مشاوره، استعلام یا ثبت سفارش</h2>
-    <p class="mb-4">با ما تماس بگیرید یا فایل طراحی خود را ارسال کنید. پاسخ‌گویی سریع در واتس‌اپ و تلفن.</p>
-    <a href="/contact" class="bg-green-600 hover:bg-green-500 text-white px-6 py-3 rounded-xl">ثبت سفارش و تماس</a>
-  </section>
-
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white text-center py-4 mt-16">
-    <p>© 2025 الماس کویر الکترو مبین</p>
-  </footer>
-
-</body>
-</html>
+{% block content %}
+<section class="max-w-4xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-orange-600 mb-4">خدمات فلزکاری با برش لیزری</h1>
+  <p class="text-gray-700 leading-7">
+    شرکت الماس کویر با بهره‌گیری از دستگاه لیزر فایبر پیشرفته، خدمات برش دقیق فلزات را ارائه می‌دهد. این خدمات مناسب برای ساخت بدنه تابلو برق، قطعات صنعتی و سفارشات خاص می‌باشد.
+  </p>
+</section>
+{% endblock %}

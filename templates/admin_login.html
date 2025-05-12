@@ -1,41 +1,14 @@
-<!DOCTYPE html>
-<html lang="fa" dir="rtl">
-<head>
-  <meta charset="UTF-8">
-  <title>ورود مدیر | الماس کویر</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-100 font-sans">
+{% extends "base.html" %}
 
-  <div class="flex items-center justify-center min-h-screen">
-    <div class="bg-white p-8 rounded-xl shadow-md w-full max-w-sm">
-      <h1 class="text-2xl font-bold text-center mb-6">ورود به پنل مدیریت</h1>
-      
-      {% with messages = get_flashed_messages() %}
-        {% if messages %}
-          <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
-            {% for message in messages %}
-              <p>{{ message }}</p>
-            {% endfor %}
-          </div>
-        {% endif %}
-      {% endwith %}
+{% block title %}ورود مدیریت | الماس کویر{% endblock %}
 
-      <form method="POST">
-        <div class="mb-4">
-          <label class="block mb-1">نام کاربری</label>
-          <input name="username" type="text" class="w-full border px-4 py-2 rounded-lg">
-        </div>
-        <div class="mb-4">
-          <label class="block mb-1">رمز عبور</label>
-          <input name="password" type="password" class="w-full border px-4 py-2 rounded-lg">
-        </div>
-        <button type="submit" class="bg-blue-700 hover:bg-blue-600 text-white px-4 py-2 rounded-lg w-full">
-          ورود
-        </button>
-      </form>
-    </div>
-  </div>
-
-</body>
-</html>
+{% block content %}
+<section class="max-w-md mx-auto p-6 mt-10">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6 text-center">ورود مدیر</h1>
+  <form method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+    <input type="text" name="username" placeholder="نام کاربری" class="w-full border px-4 py-2 rounded" required>
+    <input type="password" name="password" placeholder="رمز عبور" class="w-full border px-4 py-2 rounded" required>
+    <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded w-full">ورود</button>
+  </form>
+</section>
+{% endblock %}

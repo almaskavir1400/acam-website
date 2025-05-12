@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}مدیریت خدمات | الماس کویر{% endblock %}
+
+{% block content %}
+<section class="max-w-4xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6">مدیریت خدمات</h1>
+
+  <!-- فرم افزودن -->
+  <form method="POST" class="bg-white p-6 rounded-xl shadow mb-10 space-y-4">
+    <input name="title" type="text" placeholder="عنوان خدمت" class="w-full border px-4 py-2 rounded" required>
+    <textarea name="description" placeholder="توضیحات" rows="3" class="w-full border px-4 py-2 rounded" required></textarea>
+    <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded">افزودن خدمت</button>
+  </form>
+
+  <!-- جدول نمایش -->
+  <div class="bg-white rounded-xl shadow overflow-hidden">
+    <table class="w-full text-sm text-right">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="px-4 py-2">عنوان</th>
+          <th class="px-4 py-2">توضیحات</th>
+          <th class="px-4 py-2">عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for service in services %}
+        <tr class="border-t">
+          <td class="px-4 py-2 font-bold">{{ service.title }}</td>
+          <td class="px-4 py-2">{{ service.description }}</td>
+          <td class="px-4 py-2 flex gap-3">
+            <form method="POST" action="/admin/services/delete/{{ service.id }}" onsubmit="return confirm('آیا مطمئنی؟');">
+              <button type="submit" class="text-red-600 hover:underline">حذف</button>
+            </form>
+            <a href="/admin/services/edit/{{ service.id }}" class="text-blue-600 hover:underline">ویرایش</a>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="3" class="text-center text-gray-500 py-4">هیچ خدمتی ثبت نشده است.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
