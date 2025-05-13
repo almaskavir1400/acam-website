@@ -3,35 +3,79 @@
 {% block title %}خانه | الماس کویر{% endblock %}
 
 {% block content %}
-<!-- Hero Section -->
-<section class="bg-blue-900 text-white py-20">
-  <div class="container mx-auto px-6 text-center">
-    <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
-      مهندسی دقیق و هوشمندی؛ از طراحی تا اجرای تابلو برق صنعتی
-    </h1>
-    <p class="text-lg md:text-xl text-blue-200 mb-8">
-      شرکت الماس کویر؛ متخصص در راه‌اندازی سیستم‌های برق صنعتی با کیفیت و استاندارد جهانی
-    </p>
-    <a href="/services" class="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-3 px-6 rounded-xl transition-all">
-      مشاهده خدمات
-    </a>
+
+<!-- HERO SECTION -->
+<section class="relative h-[75vh] flex flex-col justify-center text-center bg-blue-900 text-white overflow-hidden">
+<img src="/static/images/hero.png" alt="تابلو برق صنعتی"
+     class="absolute inset-0 w-full h-full object-contain object-left z-0">
+
+  <!-- نوشته‌های موقعیت‌یافته با سایه سفید -->
+  <div class="absolute top-[75px] right-[100px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+    مهندسی دقیق
+  </div>
+  <div class="absolute top-[160px] right-[220px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+    هوشمندی
+  </div>
+  <div class="absolute top-[245px] right-[300px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+    از طراحی تا اجرای تابلو برق صنعتی
+  </div>
+
+  <!-- مستطیل متن اصلی با رنگ سفید و سایه سفید -->
+  <div class="absolute top-[400px] right-[100px] bg-white/80 text-blue-900 font-black text-lg px-10 py-4"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+    شرکت الماس کویر الکترو مبین - متخصص در راه‌اندازی سیستم‌های برق صنعتی با کیفیت و استاندارد جهانی
   </div>
 </section>
 
-<!-- خدمات به صورت کارت -->
-<section class="max-w-6xl mx-auto px-6 py-16">
-  <h2 class="text-2xl font-bold text-orange-600 text-center mb-10">خدمات ما</h2>
-  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-    {% for service in services %}
-    <div class="bg-white rounded-xl shadow hover:shadow-lg transition-all p-6">
-      <h3 class="text-xl font-semibold text-blue-800 mb-2">{{ service.title }}</h3>
-      <p class="text-gray-700 text-sm">{{ service.description[:100] }}...</p>
-      <a href="/services" class="text-sm text-orange-600 hover:underline mt-2 inline-block">بیشتر بخوانید</a>
+<!-- کارت‌های خدمات اصلی -->
+<section class="bg-gray-400 py-20">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-0 px-0 max-w-full mx-auto">
+    {% for service in [
+      ["طراحی و ساخت تابلو های برق صنعتی", "طراحی دقیق تابلوهای برق فشار ضعیف و متوسط متناسب با نیاز هر پروژه"],
+      ["تابلوهای کنترل و اتوماسیون صنعتی", "پیاده‌سازی سیستم‌های کنترل صنعتی با استفاده از PLC، HMI و ابزار دقیق"],
+      ["نصب - تست - راه‌اندازی", "اجرای کامل عملیات نصب، تست و راه‌اندازی تابلوها در محل پروژه"],
+      ["زیر ساخت های برق صنعتی", "اجرای کابل‌کشی، سینی‌کشی و زیرساخت‌های برقی در پروژه‌های صنعتی"],
+      ["خدمات مهندسی برق و انرژی", "مشاوره تخصصی و طراحی مدارهای الکتریکی با هدف بهینه‌سازی مصرف انرژی"],
+      ["تأمین تجهیزات برق صنعتی", "فروش و تأمین تجهیزات از برندهای معتبر داخلی و خارجی"],
+      ["کلیه خدمات فلزکاری", "ساخت بدنه تابلو و قطعات فلزی با دستگاه‌های پیشرفته برش لیزر"],
+      ["Retrofit و نوسازی تابلوها", "به‌روزرسانی تجهیزات قدیمی و تطبیق با استانداردهای روز"],
+      ["آموزش های تخصصی برق صنعتی", "برگزاری دوره‌های فنی با تمرکز بر مهارت‌های عملی و کاربردی"]
+    ] %}
+    <div class="bg-blue-900 hover:shadow-lg transition flex flex-col text-center my-4 mx-8"
+     style="box-shadow: -20px 20px 30px rgba(0,51,153,0.5);">
+      <!-- تصویر نمونه -->
+      <div class="w-full aspect-[3/2]">
+        <img src="/static/images/services/service{{ loop.index }}.jpg" alt="{{ service[0] }}" class="w-full h-full object-cover">
+      </div>
+      <!-- عنوان با پدینگ داخلی -->
+      <div class="bg-black/30 text-white text-lg font-bold px-6 py-4 mx-2 mt-2 mb-2">
+        {{ service[0] }}
+      </div>
+
+      <!-- توضیحات با فاصله بالا پایین و پدینگ کناری -->
+      <p class="text-white text-sm leading-relaxed mx-2 mt-5 mb-10 px-6">
+        {{ service[1] }}
+      </p>
     </div>
-    {% else %}
-    <p class="text-center col-span-3 text-gray-500">هیچ خدمتی ثبت نشده است.</p>
     {% endfor %}
   </div>
+</section>
+
+<!-- CTA زیر خدمات -->
+<section class="bg-blue-900">
+  <a href="/services"
+     class="group block w-full bg-orange-600 hover:bg-blue-900 text-white font-extrabold text-2xl py-10 transition-all text-center flex justify-center items-center gap-4">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white group-hover:text-white transition">
+      <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
+    </svg>
+    <span class="text-white transition">مشاهده همه خدمات</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white group-hover:text-white transition rotate-180">
+      <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
+    </svg>
+  </a>
 </section>
 
 <!-- معرفی خدمات فلزکاری -->

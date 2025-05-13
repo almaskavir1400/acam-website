@@ -40,19 +40,19 @@
 
   <!-- هدر سایت -->
 <header class="bg-blue-900 sticky top-0 z-50 relative">
-  <div class="container mx-auto flex items-center justify-between p-4">
-    <div class="flex items-center gap-3 relative z-10 mb-[-75px]">
+  <div class="container mx-auto flex items-center justify-between px-4">
+    <div class="flex items-center gap-3 relative z-10 mb-[-90px]">
       <a href="/">
-        <img src="/static/images/logo.png" alt="الماس کویر" class="h-32 w-auto drop-shadow-lg">
+        <img src="/static/images/logo.png" alt="الماس کویر" class="h-[200px] w-auto">
       </a>
     </div>
     <nav class="flex items-center gap-2 z-10">
-      <a href="/" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خانه</a>
-      <a href="/services" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خدمات</a>
-      <a href="/metal" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
-      <a href="/contact" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
+      <a href="/" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">صفحه اصلی</a>
+      <a href="/services" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">خدمات</a>
+      <a href="/metal" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
+      <a href="/contact" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
       {% if session.admin_logged_in %}
-        <a href="/admin/logout" class="text-white font-bold bg-black/30 hover:bg-orange-600/90 px-4 py-2 rounded-lg transition-all">خروج</a>
+        <a href="/admin/logout" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">خروج</a>
       {% endif %}
     </nav>
   </div>
