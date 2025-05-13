@@ -11,21 +11,21 @@
 
   <!-- نوشته‌های موقعیت‌یافته با سایه سفید -->
   <div class="absolute top-[75px] right-[100px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7);">
     مهندسی دقیق
   </div>
   <div class="absolute top-[160px] right-[220px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7);">
     هوشمندی
   </div>
   <div class="absolute top-[245px] right-[300px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7);">
     از طراحی تا اجرای تابلو برق صنعتی
   </div>
 
   <!-- مستطیل متن اصلی با رنگ سفید و سایه سفید -->
-  <div class="absolute top-[400px] right-[100px] bg-white/80 text-blue-900 font-black text-lg px-10 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.5);">
+  <div class="absolute top-[400px] right-[100px] bg-white/90 text-blue-900 font-black text-lg px-10 py-4"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7);">
     شرکت الماس کویر الکترو مبین - متخصص در راه‌اندازی سیستم‌های برق صنعتی با کیفیت و استاندارد جهانی
   </div>
 </section>
@@ -45,7 +45,7 @@
       ["آموزش های تخصصی برق صنعتی", "برگزاری دوره‌های فنی با تمرکز بر مهارت‌های عملی و کاربردی"]
     ] %}
     <div class="bg-blue-900 hover:shadow-lg transition flex flex-col text-center my-4 mx-8"
-     style="box-shadow: -20px 20px 30px rgba(0,51,153,0.5);">
+     style="box-shadow: -20px 20px 30px rgba(0,51,153,0.8);">
       <!-- تصویر نمونه -->
       <div class="w-full aspect-[3/2]">
         <img src="/static/images/services/service{{ loop.index }}.jpg" alt="{{ service[0] }}" class="w-full h-full object-cover">
@@ -67,28 +67,73 @@
 <!-- CTA زیر خدمات -->
 <section class="bg-blue-900">
   <a href="/services"
-     class="group block w-full bg-orange-600 hover:bg-blue-900 text-white font-extrabold text-2xl py-10 transition-all text-center flex justify-center items-center gap-4">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white group-hover:text-white transition">
+   class="group block w-full bg-orange-600 hover:bg-blue-900 text-white font-extrabold text-2xl py-10 transition-all text-center flex justify-center items-center gap-4
+          border-transparent"
+   style="box-shadow: inset 0 -5px 0 0 transparent;"
+   onmouseover="this.style.boxShadow='inset 0 -5px 0 0 white'"
+   onmouseout="this.style.boxShadow='inset 0 -5px 0 0 transparent'">
+
+   <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white group-hover:text-white transition">
       <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
     </svg>
-    <span class="text-white transition">مشاهده همه خدمات</span>
+    <span class="text-white transition">مشاهده خدمات برق صنعتی</span>
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 text-white group-hover:text-white transition rotate-180">
       <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
     </svg>
   </a>
 </section>
 
-<!-- معرفی خدمات فلزکاری -->
-<section class="py-16 bg-white">
-  <div class="max-w-5xl mx-auto px-6 text-center">
-    <h2 class="text-2xl font-bold text-orange-600 mb-4">خدمات برش لیزر فلزات</h2>
-    <p class="text-gray-700 text-base mb-6">
-      با استفاده از دستگاه لیزر فایبر، شرکت الماس کویر خدمات دقیق، سریع و باکیفیت برش فلزات را ارائه می‌دهد. این خدمات برای ساخت بدنه تابلو برق، قطعات صنعتی و سفارشات خاص طراحی شده‌اند.
-    </p>
-    <a href="/metal" class="inline-block bg-blue-800 hover:bg-blue-900 text-white py-3 px-6 rounded-xl transition-all">
-      مشاهده جزئیات فلزکاری
-    </a>
+<section class="relative h-[80vh] text-white overflow-hidden">
+
+  <!-- تصویر پس‌زمینه -->
+  <img src="/static/images/metal-hero.jpg" alt="خدمات فلزکاری"
+       class="absolute inset-0 w-full h-full object-cover object-center z-0">
+
+  <!-- گرادینت آبی از راست به چپ -->
+  <div class="absolute inset-0 z-10"
+       style="background: linear-gradient(to left, #1e3a8a 0%, rgba(30, 58, 138, 0) 80%);">
   </div>
+
+  <!-- نوشته‌های روی تصویر -->
+  <div class="absolute top-[75px] right-[100px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8);">
+    برش لیزر
+  </div>
+  <div class="absolute top-[160px] right-[220px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8);">
+    خم‌کاری CNC
+  </div>
+  <div class="absolute top-[245px] right-[300px] bg-white/90 text-blue-900 font-black text-4xl px-4 py-4 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8);">
+    رنگ کوره‌ای الکترواستاتیک
+  </div>
+
+  <!-- جمله پایانی معرفی -->
+  <div class="absolute top-[400px] right-[100px] bg-white/90 text-blue-900 font-black text-lg px-10 py-4 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8);">
+    خدمات فلزکاری دقیق، سریع و حرفه‌ای ویژه بدنه تابلو، قطعات صنعتی و پروژه‌های خاص
+  </div>
+</section>
+
+
+  <!-- CTA دکمه تمام‌عرض -->
+  <a href="/metal"
+   class="group block w-full bg-orange-600 hover:bg-blue-900 text-white font-extrabold text-2xl py-10 transition-all text-center flex justify-center items-center gap-4
+          border-transparent"
+   style="box-shadow: inset 0 5px 0 0 transparent, inset 0 -5px 0 0 transparent;"
+   onmouseover="this.style.boxShadow='inset 0 5px 0 0 white, inset 0 -5px 0 0 white'"
+   onmouseout="this.style.boxShadow='inset 0 5px 0 0 transparent, inset 0 -5px 0 0 transparent'">
+
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+         class="w-6 h-6 text-white group-hover:text-white transition">
+      <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
+    </svg>
+    <span class="text-white transition">مشاهده خدمات فلزکاری</span>
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24"
+         class="w-6 h-6 text-white group-hover:text-white transition rotate-180">
+      <path d="M9.293 6.293a1 1 0 011.414 0L15 10.586V7a1 1 0 112 0v7a1 1 0 01-1 1h-7a1 1 0 110-2h3.586l-4.293-4.293a1 1 0 010-1.414z" />
+    </svg>
+  </a>
 </section>
 
 <!-- مزیت‌های شرکت -->
