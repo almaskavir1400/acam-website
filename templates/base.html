@@ -30,6 +30,20 @@
       src: url('/static/fonts/IRANSans_Black.woff2') format('woff2');
       font-weight: 800;
     }
+    @font-face {
+     font-family: 'BTitr';
+     src: url('/static/fonts/BTitr.woff2') format('woff2'),
+          url('/static/fonts/BTitr.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+    }
+    @font-face {
+     font-family: 'TitrZebr';
+     src: url('/static/fonts/TitrZebr.woff2') format('woff2'),
+          url('/static/fonts/TitrZebr.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+    }
 
     body {
       font-family: 'IRANSans', sans-serif;
@@ -63,10 +77,63 @@
     {% block content %}{% endblock %}
   </main>
 
-  <!-- فوتر ساده (بعداً کامل می‌کنیم) -->
-  <footer class="bg-gray-800 text-white text-center py-4">
-    <p>© کلیه حقوق برای شرکت الماس کویر الکترو مبین محفظ است</p>
-  </footer>
+<!-- فوتر -->
+<footer class="bg-black text-white py-10 text-sm mt-0">
+  <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+
+    <!-- ستون ۱: لوگو و درباره ما -->
+    <div class="flex flex-col gap-4 mx-10">
+      <div class="flex items-center gap-3">
+        <img src="/static/images/logo-white.png" alt="الماس کویر" class="h-12 w-auto">
+        <h4 class="text-lg font-bold">الماس کویر الکترو مبین</h4>
+      </div>
+      <p class="leading-relaxed text-white">
+        از طراحی تا اجرای پروژه‌های تابلوهای برق صنعتی و خدمات فلزکاری
+      </p>
+    </div>
+
+    <!-- ستون ۲: اطلاعات تماس با آیکن -->
+    <div class="flex flex-col gap-6 mx-10">
+      <h4 class="text-lg font-bold">اطلاعات تماس</h4>
+      <div class="flex items-start gap-3">
+        <img src="/static/icon/location.svg" alt="آدرس" class="w-6 h-6 mt-1">
+        <p>
+          یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br>
+          کدپستی: 8947185259
+        </p>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="/static/icon/telephone.svg" alt="تلفن ثابت" class="w-6 h-6">
+        <a href="tel:03591099440" class="hover:text-orange-400">035-91099440</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="/static/icon/cell-phone.svg" alt="تلفن همراه" class="w-6 h-6">
+        <a href="tel:09134154214" class="hover:text-orange-400">0913-4154214</a>
+      </div>
+      <div class="flex items-center gap-3">
+        <img src="/static/icon/email.svg" alt="ایمیل" class="w-6 h-6">
+        <a href="mailto:info@acam-co.ir" class="hover:text-orange-400">info@acam-co.ir</a>
+      </div>
+    </div>
+
+    <!-- ستون ۳: لینک‌های دسترسی سریع -->
+    <div class="flex flex-col gap-4 mx-10">
+      <h4 class="text-lg font-bold">دسترسی سریع</h4>
+      <ul class="space-y-4">
+        <li><a href="/" class="text-orange-500 hover:text-white">صفحه اصلی</a></li>
+        <li><a href="/services" class="text-orange-500 hover:text-white">برق صنعتی</a></li>
+        <li><a href="/metal" class="text-orange-500 hover:text-white">فلزکاری</a></li>
+        <li><a href="/contact" class="text-orange-500 hover:text-white">تماس با ما</a></li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- ردیف پایانی -->
+  <div class="mt-10 text-center text-white border-t border-white/30 pt-4">
+    © تمامی حقوق برای شرکت الماس کویر الکترو مبین محفوظ است
+  </div>
+</footer>
 
 </body>
 </html>
