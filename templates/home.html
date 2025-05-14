@@ -171,6 +171,7 @@
   <p class="text-white/80 text-sm mb-6 leading-relaxed">
     کارشناسان ما آماده پاسخگویی به شما هستند. فرم زیر را پر کنید تا در اولین فرصت با شما تماس بگیریم.
   </p>
+
   <form action="/send-message-from-home" method="POST" class="space-y-4 bg-black/30 p-6 rounded-xl">
     <input type="text" name="name" placeholder="نام شما"
            class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-orange-500">
@@ -184,13 +185,15 @@
             class="bg-orange-600 hover:bg-orange-700 transition px-4 py-2 rounded-xl font-bold w-full">
       ارسال پیام
     </button>
-  </form>
 
-  {% if success_from_home %}
-  <div class="text-center mt-4 text-white font-bold">
-    پیام شما با موفقیت ارسال شد.
-  </div>
-  {% endif %}
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        <div class="text-center mt-4 text-white font-bold">
+          {{ messages[0] }}
+        </div>
+      {% endif %}
+    {% endwith %}
+  </form>
 </div>
 
 <!-- ستون ۲: اطلاعات تماس -->
@@ -234,17 +237,5 @@
 
   </div>
 </section>
-
-<!-- اضافه کردن جاوا اسکریپت برای نمایش پیام پس از ارسال فرم -->
-<script>
-  document.querySelector("form").addEventListener("submit", function(event) {
-    event.preventDefault();
-    // فرض بر این است که فرم شما در سرور به درستی ارسال شده است
-    document.getElementById("form-message").classList.remove("hidden");
-    setTimeout(function() {
-      document.getElementById("form-message").classList.add("hidden");
-    }, 5000);
-  });
-</script>
 
 {% endblock %}
