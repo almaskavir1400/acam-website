@@ -172,7 +172,7 @@
     کارشناسان ما آماده پاسخگویی به شما هستند. فرم زیر را پر کنید تا در اولین فرصت با شما تماس بگیریم.
   </p>
 
-  <form action="/send-message-from-home" method="POST" class="space-y-4 bg-black/30 p-6 rounded-xl">
+  <form id="quick-contact-form" action="/send-message-from-home" method="POST" class="space-y-4 bg-black/30 p-6 rounded-xl">
     <input type="text" name="name" placeholder="نام شما"
            class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-orange-500">
     <input type="email" name="email" placeholder="ایمیل"
@@ -185,15 +185,37 @@
             class="bg-orange-600 hover:bg-orange-700 transition px-4 py-2 rounded-xl font-bold w-full">
       ارسال پیام
     </button>
-
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-        <div class="text-center mt-4 text-white font-bold">
-          {{ messages[0] }}
-        </div>
-      {% endif %}
-    {% endwith %}
   </form>
+  <div id="form-message" class="hidden text-green-500 mt-4 font-bold"></div>
+
+  <script>
+document.getElementById("quick-contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    message: form.message.value
+  };
+
+  const response = await fetch("/api/send-message", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await response.json();
+
+  const msgBox = document.getElementById("form-message");
+  msgBox.innerText = result.message;
+  msgBox.classList.remove("hidden");
+
+  setTimeout(() => msgBox.classList.add("hidden"), 5000);
+});
+</script>
+
 </div>
 
 <!-- ستون ۲: اطلاعات تماس -->

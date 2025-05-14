@@ -209,6 +209,23 @@ def edit_service(service_id):
 
     return render_template("edit_service.html", service=service)
 
+@app.route("/api/send-message", methods=["POST"])
+def api_send_message():
+    try:
+        name = request.json.get("name")
+        email = request.json.get("email")
+        phone = request.json.get("phone")
+        message = request.json.get("message")
+
+        new_msg = ContactMessage(name=name, email=email, phone=phone, message=message)
+        db.session.add(new_msg)
+        db.session.commit()
+
+        return {"success": True, "message": "پیام شما با موفقیت ثبت شد ✅"}, 200
+    except Exception as e:
+        print("❌ خطا در ارسال فرم AJAX:", e)
+        return {"success": False, "message": "خطایی رخ داد"}, 500
+    
 # ساخت دیتابیس در اجرای اولیه
 with app.app_context():
     db.create_all()
