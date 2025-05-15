@@ -5,47 +5,46 @@
 {% block content %}
 
 <!-- HERO SECTION -->
-<section class="relative h-[75vh] flex flex-col justify-center text-center bg-blue-900 text-white overflow-hidden ">
-
-<div class="hero-lightning-image"></div>
+<section class="hero-electric relative h-[75vh] flex flex-col justify-center text-center bg-blue-900 text-white overflow-hidden ">
 
 <img src="/static/images/hero.png" alt="تابلو برق صنعتی"
      class="absolute inset-0 w-full h-full object-contain object-left z-5">
 
   <!-- نوشته‌های موقعیت‌یافته با سایه سفید -->
-  <div class="absolute top-[115px] right-[100px] bg-white/90 text-blue-900 font-black text-5xl px-2 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7); font-family:'TitrZebr'; z-10">
+  <div class="absolute top-[115px] right-[100px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-10">
     مهندسی دقیق
   </div>
-  <div class="absolute top-[200px] right-[220px] bg-white/90 text-blue-900 font-black text-5xl px-4 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7); font-family:'TitrZebr'; z-10">
+  <div class="absolute top-[200px] right-[220px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-10">
     هوشمندی
   </div>
-  <div class="absolute top-[285px] right-[300px] bg-white/90 text-blue-900 font-black text-5xl px-4 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7); font-family:'TitrZebr'; z-10">
+  <div class="absolute top-[285px] right-[300px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-10">
     از طراحی تا اجرای تابلو برق صنعتی
   </div>
 
   <!-- مستطیل متن اصلی با رنگ سفید و سایه سفید -->
-  <div class="absolute top-[460px] right-[100px] bg-white/90 text-blue-900 font-black text-xl px-10 py-4"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.7); z-10">
+  <div class="absolute top-[460px] right-[100px] bg-white/60 text-stroke-blue font-black text-xl px-5 py-5"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); z-10">
     شرکت الماس کویر الکترو مبین - متخصص در راه‌اندازی سیستم‌های برق صنعتی با کیفیت و استاندارد جهانی
   </div>
 
 </section>
 
 <script>
-function startLightningVisual() {
-  const lightning = document.querySelector('.hero-lightning-image');
-  function flash() {
-    lightning.style.opacity = 1;
-    setTimeout(() => lightning.style.opacity = 0, 100);
-    const delay = Math.random() * 1000 + 1000;
-    setTimeout(flash, delay);
+document.addEventListener("DOMContentLoaded", () => {
+  const section = document.querySelector(".hero-electric");
+  for (let i = 0; i < 150; i++) {
+    const p = document.createElement("div");
+    p.classList.add("particle");
+    p.style.left = Math.random() * 100 + "%";
+    p.style.bottom = Math.random() * 100 + "px";
+    p.style.animationDuration = 1 + Math.random() * 1 + "s";
+    p.style.animationDelay = Math.random() * 1 + "s";
+    section.appendChild(p);
   }
-  flash();
-}
-window.addEventListener("DOMContentLoaded", startLightningVisual);
+});
 </script>
 
 <!-- کارت‌های خدمات اصلی -->
@@ -117,22 +116,22 @@ window.addEventListener("DOMContentLoaded", startLightningVisual);
 
 
   <!-- نوشته‌های روی تصویر -->
-  <div class="absolute top-[115px] right-[100px] bg-white/90 text-blue-900 font-black text-5xl px-2 py-4 z-20"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8); font-family: 'TitrZebr';">
+  <div class="absolute top-[115px] right-[100px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     برش لیزر
   </div>
-  <div class="absolute top-[200px] right-[220px] bg-white/90 text-blue-900 font-black text-5xl px-2 py-4 z-20"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8); font-family: 'TitrZebr';">
+  <div class="absolute top-[200px] right-[220px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     خم‌کاری CNC
   </div>
-  <div class="absolute top-[285px] right-[300px] bg-white/90 text-blue-900 font-black text-5xl px-2 py-4 z-20"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8); font-family: 'TitrZebr';">
+  <div class="absolute top-[285px] right-[300px] bg-white/60 text-stroke-blue font-black text-3xl px-1 py-5 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     رنگ کوره‌ای الکترواستاتیک
   </div>
 
   <!-- جمله پایانی معرفی -->
-  <div class="absolute top-[460px] right-[100px] bg-white/90 text-blue-900 font-black text-xl px-10 py-4 z-20"
-       style="box-shadow: -15px 15px 30px rgba(255,255,255,0.8);">
+  <div class="absolute top-[460px] right-[100px] bg-white/60 text-stroke-blue font-black text-xl px-5 py-5 z-20"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">
     خدمات فلزکاری دقیق، سریع و حرفه‌ای ویژه بدنه تابلو، قطعات صنعتی و پروژه‌های خاص
   </div>
 </section>

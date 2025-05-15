@@ -6,18 +6,39 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <style>
 
-.hero-lightning-image {
+.hero-electric {
+  position: relative;
+  background-color: #1e3a8a; /* bg-blue-900 */
+  overflow: hidden;
+}
+
+.hero-electric .particle {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url('/static/images/lightning.png') center right repeat;
-  background-size: 40%;
-  opacity: 0;
-  z-index: 0;
-  pointer-events: none;
-  transition: opacity 0.01s ease-in-out;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.4);
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.text-stroke-blue {
+  color: #002c6f; /* آبی تیره */
+    text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
 }
 
     @font-face {
