@@ -105,7 +105,9 @@ def send_email(name, email, phone, message):
             server.login(sender_email, sender_password)
             server.sendmail(sender_email, receiver_email, msg.as_string())
     except Exception as e:
-        print("خطا در ارسال ایمیل:", e)
+        import traceback
+        print("❌ خطا در ارسال ایمیل:")
+        traceback.print_exc()
 
 # صفحه خدمات
 @app.route("/services")
@@ -221,9 +223,14 @@ def api_send_message():
         db.session.add(new_msg)
         db.session.commit()
 
+        # ✅ این خط اضافه شد تا ایمیل هم ارسال شود
+        send_email(name, email, phone, message)
+
         return {"success": True, "message": "پیام شما با موفقیت ثبت شد ✅"}, 200
     except Exception as e:
-        print("❌ خطا در ارسال فرم AJAX:", e)
+        import traceback
+        print("❌ خطا در ارسال فرم AJAX:")
+        traceback.print_exc()
         return {"success": False, "message": "خطایی رخ داد"}, 500
     
 # ساخت دیتابیس در اجرای اولیه
