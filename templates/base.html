@@ -12,13 +12,24 @@
   overflow: hidden;
 }
 
-.hero-electric .particle {
+/* تنظیم عمومی ذرات */
+.particles-layer .particle {
   position: absolute;
   width: 6px;
   height: 6px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.4);
   animation: floatParticle linear infinite;
+  pointer-events: none;
+}
+
+/* ذرات سفید (پیش‌فرض – برای بک‌گراندهای تیره) */
+.white-particles .particle {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ذرات آبی تیره – برای بخش‌هایی با بک‌گراند روشن */
+.blue-dark-particles .particle {
+  background: rgba(30, 58, 138, 0.5); /* معادل Tailwind bg-blue-900 با شفافیت */
 }
 
 @keyframes floatParticle {
@@ -27,7 +38,7 @@
     opacity: 1;
   }
   100% {
-    transform: translateY(-100vh) scale(0.5);
+    transform: translateY(var(--move-distance)) scale(0.5);
     opacity: 0;
   }
 }
@@ -97,12 +108,12 @@
       </a>
     </div>
     <nav class="flex items-center gap-2 z-10">
-      <a href="/" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">صفحه اصلی</a>
-      <a href="/services" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">خدمات</a>
-      <a href="/metal" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
-      <a href="/contact" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
+      <a href="/" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">صفحه اصلی</a>
+      <a href="/services" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">برق صنعتی</a>
+      <a href="/metal" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
+      <a href="/contact" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
       {% if session.admin_logged_in %}
-        <a href="/admin/logout" class="text-white font-bold bg-orange-600/70 hover:bg-black/30 px-4 py-2 rounded-lg transition-all">خروج</a>
+        <a href="/admin/logout" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">خروج</a>
       {% endif %}
     </nav>
   </div>
@@ -114,11 +125,12 @@
   </main>
 
 <!-- فوتر -->
-<footer class="bg-black text-white py-10 text-sm mt-0">
-  <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12">
+<footer class="hero-electric bg-black text-white py-10 text-sm mt-0">
+<div class="particles-layer white-particles absolute inset-0 z-0"></div>
+  <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 z-5">
 
     <!-- ستون ۱: لوگو و درباره ما -->
-    <div class="flex flex-col gap-4 mx-10">
+    <div class="flex flex-col gap-4 mx-10 z-10">
       <div class="flex items-center gap-3">
         <img src="/static/images/logo-white.png" alt="الماس کویر" class="h-12 w-auto">
         <h4 class="text-lg font-bold">الماس کویر الکترو مبین</h4>
@@ -129,7 +141,7 @@
     </div>
 
     <!-- ستون ۲: اطلاعات تماس با آیکن -->
-    <div class="flex flex-col gap-6 mx-10">
+    <div class="flex flex-col gap-6 mx-10 z-10">
       <h4 class="text-lg font-bold">اطلاعات تماس</h4>
       <div class="flex items-start gap-3">
         <img src="/static/icon/location.svg" alt="آدرس" class="w-6 h-6 mt-1">
@@ -153,7 +165,7 @@
     </div>
 
     <!-- ستون ۳: لینک‌های دسترسی سریع -->
-    <div class="flex flex-col gap-4 mx-10">
+    <div class="flex flex-col gap-4 mx-10 z-10">
       <h4 class="text-lg font-bold">دسترسی سریع</h4>
       <ul class="space-y-4">
         <li><a href="/" class="text-orange-500 hover:text-white">صفحه اصلی</a></li>
@@ -166,7 +178,7 @@
   </div>
 
   <!-- ردیف پایانی -->
-  <div class="mt-10 text-center text-white border-t border-white/30 pt-4">
+  <div class="mt-10 text-center text-white border-t border-white/30 pt-4 z-5">
     © تمامی حقوق برای شرکت الماس کویر الکترو مبین محفوظ است
   </div>
 </footer>
