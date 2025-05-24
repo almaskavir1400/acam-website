@@ -110,10 +110,10 @@ def send_email(name, email, phone, message):
         traceback.print_exc()
 
 # صفحه خدمات
-@app.route("/services")
-def services():
+@app.route("/electrical")
+def bargh_sanati():
     services = Service.query.all()
-    return render_template("services.html", services=services)
+    return render_template("electrical.html", services=services)
 
 # صفحه فلزکاری
 @app.route("/metal")

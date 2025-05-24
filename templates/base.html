@@ -52,6 +52,33 @@
      1px  1px 0 white;
 }
 
+.custom-button {
+  color: #ffffff; /* معادل text-blue-900 */
+  font-weight: 900;
+  font-size: 1.5rem; /* معادل text-2xl */
+  padding: 1.25rem 5rem; /* معادل py-5 px-20 */
+  border-radius: 9999px 0 9999px 0;
+  background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.1), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,0.9), transparent);
+  background-blend-mode: screen;
+  backdrop-filter: blur(4px);
+  box-shadow: 5px 20px 10px rgba(255,255,255,0.2);
+  transition: all 0.4s ease-in-out;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-button:hover {
+  color: #1e3a8a; /* معادل text-blue-900 */
+  text-shadow: -1px 1px 0 white;
+  background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.9), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);
+  box-shadow: 5px 20px 10px rgba(255,165,0,0.2);
+}
+
     @font-face {
       font-family: 'IRANSans';
       src: url('/static/fonts/IRANSans.woff2') format('woff2');
@@ -109,7 +136,7 @@
     </div>
     <nav class="flex items-center gap-2 z-10">
       <a href="/" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">صفحه اصلی</a>
-      <a href="/services" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">برق صنعتی</a>
+      <a href="/electrical" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">برق صنعتی</a>
       <a href="/metal" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">فلزکاری</a>
       <a href="/contact" class="text-white font-bold bg-black hover:bg-black/20 px-4 py-2 rounded-lg transition-all">تماس با ما</a>
       {% if session.admin_logged_in %}
@@ -169,7 +196,7 @@
       <h4 class="text-lg font-bold">دسترسی سریع</h4>
       <ul class="space-y-4">
         <li><a href="/" class="text-orange-500 hover:text-white">صفحه اصلی</a></li>
-        <li><a href="/services" class="text-orange-500 hover:text-white">برق صنعتی</a></li>
+        <li><a href="/electrical" class="text-orange-500 hover:text-white">برق صنعتی</a></li>
         <li><a href="/metal" class="text-orange-500 hover:text-white">فلزکاری</a></li>
         <li><a href="/contact" class="text-orange-500 hover:text-white">تماس با ما</a></li>
       </ul>
