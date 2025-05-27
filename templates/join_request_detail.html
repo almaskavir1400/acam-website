@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}جزییات درخواست همکاری | الماس کویر{% endblock %}
+
+{% block content %}
+<section class="max-w-3xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6">جزییات درخواست همکاری</h1>
+
+  <div class="bg-white rounded-xl shadow p-6 space-y-4 text-right">
+    <p><strong>نام و نام خانوادگی:</strong> {{ req.fullname }}</p>
+    <p><strong>نام پدر:</strong> {{ req.father }}</p>
+    <p><strong>جنسیت:</strong> {{ req.gender }}</p>
+    <p><strong>تاریخ تولد:</strong> {{ req.birthdate }}</p>
+    <p><strong>کد ملی:</strong> {{ req.national_id }}</p>
+    <p><strong>محل صدور شناسنامه:</strong> {{ req.id_location }}</p>
+    <p><strong>وضعیت تاهل:</strong> {{ req.marital_status }}</p>
+    <p><strong>تعداد فرزند:</strong> {{ req.children }}</p>
+    <p><strong>وضعیت نظام وظیفه:</strong> {{ req.military }}</p>
+    <p><strong>نشانی محل سکونت:</strong> {{ req.address }}</p>
+    <p><strong>شماره تماس:</strong> {{ req.phone }}</p>
+    <p><strong>ایمیل:</strong> {{ req.email }}</p>
+    <p><strong>مدرک تحصیلی:</strong> {{ req.education }}</p>
+    <p><strong>سابقه کار:</strong> {{ req.experience }}</p>
+    <p><strong>توضیحات تکمیلی:</strong> <br>{{ req.message }}</p>
+  </div>
+</section>
+{% endblock %}

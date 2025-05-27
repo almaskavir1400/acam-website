@@ -1,0 +1,254 @@
+{% extends "base.html" %}
+
+{% block title %}تماس با ما | الماس کویر{% endblock %}
+
+{% block content %}
+
+<!-- 🔹 سکشن تیتر مستقل - تمام‌عرض چسبیده به هدر -->
+<section class="bg-blue-900 py-20 px-6 text-center text-white">
+  <h1 class="text-3xl md:text-4xl font-bold leading-relaxed font-display"
+      style="font-family:'TitrZebr';">
+    مهندسی دقیق - از طراحی تا اجرا
+  </h1>
+</section>
+
+<!-- 🔹 سکشن متنی دو بخشی با فلش بین آن‌ها -->
+<section class="w-full grid grid-cols-11 text-xl">
+  <!-- بخش راست: متن اول با بک‌گراند آبی تیره -->
+  
+  <div class="col-span-5 bg-blue-900 text-white flex items-center justify-center px-6 py-4 m-0 text-center">
+  <div class="flex items-center gap-4">
+    <p class="leading-relaxed m-0 text-xl text-start">
+      شرکت <a href="/" class="font-bold text-orange-500 hover:text-white transition">الماس کویر الکترو مبین</a> با بیش از یک دهه تجربه، در طراحی، ساخت و اجرای تابلوهای برق صنعتی و خدمات فلزکاری، به عنوان یک برند معتبر صنعتی شناخته می‌شود
+    </p>
+  </div>
+  </div>
+   
+  <!-- فلش بین دو بخش (مثلث آبی) تمام‌عرض با جهت درست -->
+  <div class="col-span-1 bg-white flex items-center justify-center m-0 p-0 relative">
+    <svg class="block w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <polygon points="0,0 100,0 100,100" fill="#1e3a8a" />
+    </svg>
+  </div>
+
+  <!-- بخش چپ: متن دوم با پس‌زمینه سفید و متن آبی -->
+  <div class="col-span-5 bg-white text-blue-900 flex items-center justify-center px-6 py-4 m-0 text-center">
+    <p class="leading-relaxed m-0 text-xl">
+      ما با بهره‌گیری از دانش مهندسی، تجهیزات مدرن، تیم متعهد و سال ها تجربه، پروژه‌های شما را با کیفیتی فراتر از انتظار اجرا می‌کنیم
+    </p>
+  </div>
+</section>
+
+<!-- ویژگی‌ها به صورت آیکن‌دار در دو ردیف سه ستونه با پس‌زمینه سفید و مرکزچین -->
+<section class="bg-white py-16">
+  <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-blue-900">
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/panel.png" alt="مونتاژ تابلو برق" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">مونتاژ تابلو برق</span> طبق استانداردهای جهانی</p>
+    </div>
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/design.png" alt="طراحی پروژه" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">طراحی مهندسی</span> دقیق برای پروژه‌های صنعتی</p>
+    </div>
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/commitment.png" alt="تعهد" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">تیم متعهد</span> و پاسخ‌گو در تمامی مراحل اجرا</p>
+    </div>
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/cnc.png" alt="خم‌کاری CNC" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">خم‌کاری CNC</span> دقیق برای قطعات صنعتی خاص</p>
+    </div>
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/laser.png" alt="برش لیزر" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">برش لیزر</span> سریع و تمیز با بالاترین دقت</p>
+    </div>
+    <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
+      <img src="/static/icon/paint.png" alt="رنگ کوره‌ای" class="w-25 h-25 mb-4">
+      <p><span class="font-bold">رنگ کوره‌ای الکترواستاتیک</span> مقاوم و ماندگار</p>
+    </div>
+  </div>
+</section>
+
+<!-- نتیجه‌گیری نهایی -->
+
+<!-- 🔹 سکشن پایانی با تیتر شعار شرکت -->
+<section class="bg-white py-20 px-6 text-center text-blue-900">
+  <h1 class="bg-black/20 px-4 py-8 inline-block text-3xl md:text-4xl font-bold leading-relaxed font-display animate-breathe"
+      style="font-family:'TitrZebr'; text-shadow: -2px 2px 1px rgba(255,255,255,1);">
+    ما فقط تولید نمی‌کنیم - آینده‌ی پروژه‌های صنعتی شما را تضمین می‌کنیم
+  </h1>
+</section>
+
+<!-- افکت fade-in با Tailwind یا انیمیشن دستی -->
+<style>
+@keyframes fade-in {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+.animate-fade-in {
+  animation: fade-in 1s ease-out both;
+}
+</style>
+
+<!-- 🔹 تماس سریع -->
+<section class="hero-electric grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-20 bg-blue-900 text-white relative overflow-hidden">
+<div class="particles-layer white-particles absolute inset-0 z-0"></div>
+  
+  <!-- فرم تماس -->  
+  <form id="contact-form" class="z-10">
+  <div>
+  <h3 class="text-xl font-bold mb-4">تماس با پشتیبانی</h3>
+  <p class="text-white/80 text-sm mb-6 leading-relaxed">
+    کارشناسان ما آماده پاسخگویی به شما هستند. فرم زیر را پر کنید تا در اولین فرصت با شما تماس بگیریم.
+  </p>
+  </div>
+
+    <div class="space-y-8 bg-black/40 p-6 rounded-xl">
+
+    <input type="text" name="name" placeholder="نام شما"
+      class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
+    <input type="email" name="email" placeholder="ایمیل"
+      class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
+    <input type="text" name="phone" placeholder="شماره تماس"
+      class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white">
+    <textarea name="message" rows="4" placeholder="متن پیام"
+      class="w-full px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white"></textarea>
+    <button type="submit"
+      class="bg-blue-900 hover:bg-black transition px-4 py-2 rounded-xl font-bold w-full">
+      ارسال پیام
+    </button>
+
+    <div id="form-message" class="hidden text-orange-600 mt-4 font-bold"></div>
+
+    </div>
+
+  </form>
+
+<!-- اطلاعات تماس -->
+<div class="flex flex-col justify-start gap-6 px-4 text-white/90 text-lg z-10">
+  <h4 class="text-2xl font-bold mb-4 text-white">ارتباط با ما</h4>
+
+  <div class="flex gap-4 mt-6">
+    <a href="https://instagram.com/acamyazd" target="_blank" title="اینستاگرام">
+      <img src="/static/icon/instagram.svg" alt="اینستاگرام" class="w-10 h-10 hover:scale-110 transition">
+    </a>
+    <a href="https://wa.me/989134154214" target="_blank" title="واتساپ">
+      <img src="/static/icon/whatsapp.svg" alt="واتساپ" class="w-10 h-10 hover:scale-110 transition">
+    </a>
+    <a href="https://t.me/acamyazd" target="_blank" title="تلگرام">
+      <img src="/static/icon/telegram.svg" alt="تلگرام" class="w-10 h-10 hover:scale-110 transition">
+    </a>
+    <a href="https://eitaa.com/acamyazd913" target="_blank" title="ایتا">
+      <img src="/static/icon/eitaa.svg" alt="ایتا" class="w-10 h-10 hover:scale-110 transition">
+    </a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <img src="/static/icon/telephone.svg" alt="تلفن" class="w-8 h-8">
+    <a href="tel:03591099440" class="hover:text-orange-400 transition">035-91099440</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <img src="/static/icon/cell-phone.svg" alt="موبایل" class="w-8 h-8">
+    <a href="tel:09134154214" class="hover:text-orange-400 transition">0913-4154214</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <img src="/static/icon/email.svg" alt="ایمیل" class="w-8 h-8">
+    <a href="mailto:info@acam-co.ir" class="hover:text-orange-400 transition">info@acam-co.ir</a>
+  </div>
+
+  <div class="flex items-center gap-3">
+    <img src="/static/icon/location.svg" alt="آدرس" class="w-8 h-8">
+    <span>یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br>
+          کدپستی: 8947185259</span>
+  </div>
+
+  <div class="mt-8 rounded-xl overflow-hidden bg-black/30 p-6 shadow-lg">
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3387.215855266905!2d54.22886302383397!3d31.900732028250424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU0JzAyLjYiTiA1NMKwMTMnMzQuNiJF!5e0!3m2!1sfa!2s!4v1747481491388!5m2!1sfa!2s"
+    width="100%" height="250"
+    style="border:0;"
+    class="rounded-xl"
+    allowfullscreen="" loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+
+  <div class="text-sm text-white/80 mt-3 space-y-4">
+  <p class="font-semibold">نمایش موقعیت در:</p>
+  <a href="https://maps.google.com/?q=31.900732,54.228863"
+     target="_blank"
+     class="block text-orange-500 hover:text-white transition">
+    Google Maps
+  </a>
+  <a href="https://neshan.org/maps?lat=31.900732&lng=54.228863"
+     target="_blank"
+     class="block text-orange-500 hover:text-white transition">
+    نقشه نشان
+  </a>
+  <a href="https://balad.ir/p/31.900732,54.228863"
+     target="_blank"
+     class="block text-orange-500 hover:text-white transition">
+    نقشه بلد
+  </a>
+  </div>
+
+  </div>
+</div>
+
+</section>
+
+<script>
+document.getElementById("contact-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+
+  const form = e.target;
+  const data = {
+    name: form.name.value,
+    email: form.email.value,
+    phone: form.phone.value,
+    message: form.message.value
+  };
+
+  const response = await fetch("/api/send-message", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await response.json();
+
+  const msgBox = document.getElementById("form-message");
+  msgBox.innerText = result.message;
+  msgBox.classList.remove("hidden");
+
+  setTimeout(() => msgBox.classList.add("hidden"), 5000);
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const layers = document.querySelectorAll(".particles-layer");
+
+  layers.forEach(layer => {
+    const sectionHeight = layer.offsetHeight;
+
+    for (let i = 0; i < 150; i++) {
+      const p = document.createElement("div");
+      p.classList.add("particle");
+      p.style.left = Math.random() * 100 + "%";
+      p.style.bottom = Math.random() * 200 - 100 + "px";
+      p.style.animationDuration = 1 + Math.random() * 1 + "s";
+      p.style.animationDelay = Math.random() * 1 + "s";
+
+      // تنظیم ارتفاع داینامیک حرکت
+      const distance = -(sectionHeight + 100); // حرکت تا بالای سکشن + اضافه
+      p.style.setProperty("--move-distance", `${distance}px`);
+
+      layer.appendChild(p);
+    }
+  });
+});
+</script>
+
+{% endblock %}

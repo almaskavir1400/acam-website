@@ -1,0 +1,183 @@
+
+{% extends "base.html" %}
+
+{% block title %}همکاری با ما | الماس کویر{% endblock %}
+
+{% block content %}
+
+<!-- 🔷 سکشن هدر صفحه -->
+<section class="bg-blue-900 py-20 px-6 text-center text-white">
+  <h1 class="bg-white/60 mx-4 px-2 py-5 inline-block text-blue-900 text-stroke-blue text-3xl font-bold text-right ml-auto mb-4 animate-breathe"
+      style="font-family: 'TitrZebr'; box-shadow: -15px 15px 30px rgba(255,255,255,1);">
+    به تیم متخصصان الماس کویر بپیوندید
+  </h1>
+  <p class="text-2xl font-bold leading-relaxed my-5" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+    اگر به رشد، مسئولیت‌پذیری و کار تیمی علاقه‌مند هستید، منتظر شما هستیم!
+  </p>
+</section>
+
+<!-- 🔷 نوار جداکننده بالا -->
+<div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
+
+<!-- 🔷 بخش معرفی شرکت و مزایا -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-16 bg-blue-900 text-white">
+
+  <!-- 🟦 ستون سمت راست: تصویر معرفی -->
+  <div class="flex items-center justify-center">
+    <img src="/static/icon/commitment.png" alt="تعهد شغلی" class="w-full max-w-sm">
+  </div>
+
+  <!-- 🟦 ستون سمت چپ: مزایا -->
+  <div class="flex flex-col justify-center space-y-6 text-right" style="direction: rtl;">
+    <div class="mb-10">
+      <p class="text-2xl md:text-3xl font-black bg-black/20 px-6 py-3 inline-block"
+         style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+        محیطی پویا و حرفه‌ای برای رشد
+      </p>
+    </div>
+    <div class="text-lg font-bold leading-loose pr-20 space-y-4" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+      <p>✔ محیط کاری حرفه‌ای و دوستانه</p>
+      <p>✔ فرصت‌های رشد شغلی و یادگیری مداوم</p>
+      <p>✔ پروژه‌های صنعتی واقعی و چالشی</p>
+      <p>✔ پاداش‌ها و مزایای انگیزشی</p>
+    </div>
+  </div>
+  
+</section>
+
+<!-- 🔷 نوار جداکننده پایین -->
+<div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
+
+<!-- 🔷 فرم درخواست همکاری -->
+<section class="grid grid-cols-1 px-6 py-20 bg-blue-900 text-white relative overflow-hidden">
+  <form id="job-form" class="z-10 max-w-4xl mx-auto text-center">
+    <!-- 📝 عنوان فرم -->
+    <h3 class="text-2xl md:text-3xl font-black bg-black/20 px-6 py-3 inline-block my-10"
+        style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+      فرصت همکاری با ما
+    </h3>
+
+    <!-- 📝 توضیحات اولیه -->
+    <p class="bg-black/20 text-lg font-bold leading-loose text-right p-5 m-5 max-w-3xl mx-auto"
+       style="text-shadow: -1px 1px 1px rgba(0,0,0,0.7);">
+      ما به دنبال افراد باانگیزه و متخصص هستیم که با مهارت و تجربه خود بتوانند در مسیر رشد و توسعه مجموعه ما سهیم باشند.<br>
+      لطفاً فرم زیر را با دقت تکمیل نمایید. اطلاعات شما به‌صورت محرمانه بررسی خواهد شد.<br>
+      همراه شویم و آینده‌ای موفق را در کنار یکدیگر رقم بزنیم.
+    </p>
+
+    <!-- 📝 فیلدهای فرم -->
+    <div class="space-y-6 bg-black/40 p-8 rounded-xl text-right">
+      <input type="text" name="fullname" placeholder="نام و نام خانوادگی" class="input-field">
+      <input type="text" name="father" placeholder="نام پدر" class="input-field">
+      <select name="gender" class="input-select">
+        <option hidden>جنسیت</option>
+        <option>مرد</option>
+        <option>زن</option>
+      </select>
+      <input type="text" name="birthdate" placeholder="تاریخ تولد (مثال: 1367/05/31)" class="input-field">
+      <input type="text" name="national_id" placeholder="کد ملی" class="input-field">
+      <input type="text" name="id_location" placeholder="محل صدور شناسنامه" class="input-field">
+      <select name="marital_status" class="input-select">
+        <option hidden>وضعیت تاهل</option>
+        <option>مجرد</option>
+        <option>متاهل</option>
+      </select>
+      <input type="text" name="children" placeholder="تعداد فرزند" class="input-field">
+      <select name="military" class="input-select">
+        <option hidden>وضعیت نظام وظیفه</option>
+        <option>پایان خدمت</option>
+        <option>معاف</option>
+        <option>مشمول</option>
+      </select>
+      <textarea name="address" rows="2" placeholder="نشانی محل سکونت" class="input-field"></textarea>
+      <input type="tel" name="phone" placeholder="شماره تماس" class="input-field" style="text-align: right;" dir="rtl">
+      <input type="email" name="email" placeholder="ایمیل" class="input-field">
+      <input type="text" name="education" placeholder="آخرین مدرک تحصیلی" class="input-field">
+      <input type="text" name="experience" placeholder="سابقه کار (تعداد سال)" class="input-field">
+      <textarea name="message" rows="4" placeholder="توضیحات تکمیلی / سوابق / علاقه‌مندی‌ها" class="input-field"></textarea>
+
+      <!-- 🟩 دکمه ارسال -->
+      <button type="submit" class="bg-blue-900 hover:bg-black transition px-4 py-2 rounded-xl font-bold w-full">
+        ارسال درخواست
+      </button>
+
+      <div id="job-form-message" class="hidden text-orange-300 mt-4 font-bold text-center"></div>
+    </div>
+  </form>
+</section>
+
+<!-- 🔷 اسکریپت ارسال فرم به سرور (API) -->
+<script>
+document.getElementById("job-form").addEventListener("submit", async function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = Object.fromEntries(new FormData(form).entries());
+
+  const response = await fetch("/api/join-request", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify(data)
+  });
+
+  const result = await response.json();
+  const msgBox = document.getElementById("job-form-message");
+  msgBox.innerText = result.message;
+  msgBox.classList.remove("hidden");
+  setTimeout(() => msgBox.classList.add("hidden"), 5000);
+});
+</script>
+
+<!-- 🔷 کلاس‌های فرم برای استایل‌دهی -->
+<style>
+.input-field {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  outline: none;
+}
+.input-field:focus {
+  box-shadow: 0 0 0 2px white;
+}
+.input-select {
+  width: 100%;
+  padding: 0.5rem 1rem;
+  border-radius: 0.75rem;
+  background: #1e3a8a;
+  color: white;
+  border: 2px solid white;
+  outline: none;
+}
+.input-select:focus {
+  box-shadow: 0 0 0 2px white;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const layers = document.querySelectorAll(".particles-layer");
+
+  layers.forEach(layer => {
+    const sectionHeight = layer.offsetHeight;
+
+    for (let i = 0; i < 150; i++) {
+      const p = document.createElement("div");
+      p.classList.add("particle");
+      p.style.left = Math.random() * 100 + "%";
+      p.style.bottom = Math.random() * 200 - 100 + "px";
+      p.style.animationDuration = 1 + Math.random() * 1 + "s";
+      p.style.animationDelay = Math.random() * 1 + "s";
+
+      // تنظیم ارتفاع داینامیک حرکت
+      const distance = -(sectionHeight + 100); // حرکت تا بالای سکشن + اضافه
+      p.style.setProperty("--move-distance", `${distance}px`);
+
+      layer.appendChild(p);
+    }
+  });
+});
+</script>
+
+{% endblock %}

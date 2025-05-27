@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}ورود مدیریت | الماس کویر{% endblock %}
+
+{% block content %}
+<section class="max-w-md mx-auto p-6 mt-10">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6 text-center">ورود مدیر</h1>
+  <form method="POST" class="bg-white p-6 rounded-xl shadow space-y-4">
+    <input type="text" name="username" placeholder="نام کاربری" class="w-full border px-4 py-2 rounded" required>
+    <input type="password" name="password" placeholder="رمز عبور" class="w-full border px-4 py-2 rounded" required>
+    <button type="submit" class="bg-blue-700 hover:bg-blue-800 text-white px-4 py-2 rounded w-full">ورود</button>
+  </form>
+</section>
+{% endblock %}

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+
+<html dir="rtl" lang="fa">
+<head><!--🔹 فایل پایه سایت شامل لود استایل‌ها، اسکریپت‌ها و تنظیمات جهانی-->
+<meta charset="utf-8"/>
+<title>{% block title %}الماس کویر الکترو مبین{% endblock %}</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Persian Datepicker -->
+<link href="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/css/persian-datepicker.min.css" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.6.4/dist/jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/persian-date@1.0.6/dist/persian-date.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/persian-datepicker@1.2.0/dist/js/persian-datepicker.min.js"></script>
+<style>
+
+.hero-electric {
+  position: relative;
+  background-color: #1e3a8a; /* bg-blue-900 */
+  overflow: hidden;
+}
+
+/* تنظیم عمومی ذرات */
+.particles-layer .particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  animation: floatParticle linear infinite;
+  pointer-events: none;
+}
+
+/* ذرات سفید (پیش‌فرض – برای بک‌گراندهای تیره) */
+.white-particles .particle {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+/* ذرات آبی تیره – برای بخش‌هایی با بک‌گراند روشن */
+.blue-dark-particles .particle {
+  background: rgba(30, 58, 138, 0.5); /* معادل Tailwind bg-blue-900 با شفافیت */
+}
+
+@keyframes floatParticle {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(var(--move-distance)) scale(0.5);
+    opacity: 0;
+  }
+}
+
+.text-stroke-blue {
+  color: #002c6f; /* آبی تیره */
+    text-shadow:
+    -1px -1px 0 white,
+     1px -1px 0 white,
+    -1px  1px 0 white,
+     1px  1px 0 white;
+}
+
+.custom-button {
+  color: #ffffff; /* معادل text-blue-900 */
+  text-shadow: -1px 1px 0 black;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 8px 12px;
+    background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.1), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,1), transparent);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  border-radius: 5px; /* گوشه‌های گرد برای ظاهر مدرن‌تر */  
+}
+
+.custom-button2 {
+  font-weight: 900;
+  font-size: 1.5rem; /* معادل text-2xl */
+  padding: 1.25rem 5rem; /* معادل py-5 px-20 */
+    background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.1), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,1), transparent);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+  border-radius: 5px; /* گوشه‌های گرد برای ظاهر مدرن‌تر */
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px; /* فاصله بین آیکون‌ها و متن */
+}
+
+.custom-button:hover {
+  color: #1e3a8a; /* معادل text-blue-900 */
+  text-shadow: -1px 1px 0 white;
+  background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.9), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.custom-button2:hover {
+  color: #1e3a8a; /* معادل text-blue-900 */
+  text-shadow: -1px 1px 0 white;
+  background-image:
+    linear-gradient(to top right, rgba(255,255,255,0.9), transparent),
+    linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+@keyframes breathe {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.015); }
+}
+
+.animate-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans.woff2') format('woff2');
+      font-weight: normal;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Bold.woff2') format('woff2');
+      font-weight: bold;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Light.woff2') format('woff2');
+      font-weight: 300;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Medium.woff2') format('woff2');
+      font-weight: 500;
+    }
+    @font-face {
+      font-family: 'IRANSans';
+      src: url('/static/fonts/IRANSans_Black.woff2') format('woff2');
+      font-weight: 800;
+    }
+    @font-face {
+     font-family: 'BTitr';
+     src: url('/static/fonts/BTitr.woff2') format('woff2'),
+          url('/static/fonts/BTitr.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+    }
+    @font-face {
+     font-family: 'TitrZebr';
+     src: url('/static/fonts/TitrZebr.woff2') format('woff2'),
+          url('/static/fonts/TitrZebr.woff') format('woff');
+     font-weight: bold;
+     font-style: normal;
+    }
+
+    body {
+      font-family: 'IRANSans', sans-serif;
+    }
+  </style>
+</head>
+<body class="bg-gray-100"><!--🔹 بدنه اصلی صفحه شامل هدر، محتوای دینامیک و فوتر-->
+<!-- هدر سایت -->
+<header class="bg-blue-900 sticky top-0 z-50 relative">
+<div class="container mx-auto flex items-center justify-between px-4">
+<div class="flex items-center gap-3 relative z-10 mb-[-90px]">
+<a href="/">
+<img alt="الماس کویر" class="h-[200px] w-auto" src="/static/images/logo.png"/>
+</a>
+</div>
+<nav class="flex items-center gap-2 z-10">
+<a class="custom-button custom-button:hover transition-all" href="/">صفحه اصلی</a>
+<a class="custom-button custom-button:hover transition-all" href="/electrical">برق صنعتی</a>
+<a class="custom-button custom-button:hover transition-all" href="/metal">فلزکاری</a>
+<a class="custom-button custom-button:hover transition-all" href="/contact">تماس با ما</a>
+<a class="custom-button custom-button:hover transition-all" href="/cooperation">همکاری با ما</a>
+      {% if session.admin_logged_in %}
+        <a class="custom-button custom-button:hover transition-all" href="/admin/join-requests">درخواست‌های همکاری</a>
+<a class="custom-button custom-button:hover transition-all" href="/admin/messages">فرم های تماس با ما</a>
+<a class="custom-button custom-button:hover transition-all" href="/admin/logout">خروج</a>
+      {% endif %}
+    </nav>
+</div>
+</header>
+<!-- محتوای صفحه -->
+<main><!--🔹 محتوای داینامیک صفحات داخلی در این بخش قرار می‌گیرد-->
+    {% block content %}{% endblock %}
+  </main>
+<!-- فوتر -->
+<footer class="hero-electric bg-black text-white py-10 text-sm mt-0">
+<div class="particles-layer white-particles absolute inset-0 z-0"></div>
+<div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 z-5">
+<!-- ستون ۱: لوگو و درباره ما -->
+<div class="flex flex-col gap-4 mx-10 z-10">
+<div class="flex items-center gap-3">
+<img alt="الماس کویر" class="h-12 w-auto" src="/static/images/logo-white.png"/>
+<h4 class="text-lg font-bold">الماس کویر الکترو مبین</h4>
+</div>
+<p class="leading-relaxed text-white">
+        از طراحی تا اجرای پروژه‌های تابلوهای برق صنعتی و خدمات فلزکاری
+      </p>
+</div>
+<!-- ستون ۲: اطلاعات تماس با آیکن -->
+<div class="flex flex-col gap-6 mx-10 z-10">
+<h4 class="text-lg font-bold">اطلاعات تماس</h4>
+<div class="flex items-start gap-3">
+<img alt="آدرس" class="w-6 h-6 mt-1" src="/static/icon/location.svg"/>
+<p>
+          یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br/>
+          کدپستی: 8947185259
+        </p>
+</div>
+<div class="flex items-center gap-3">
+<img alt="تلفن ثابت" class="w-6 h-6" src="/static/icon/telephone.svg"/>
+<a class="hover:text-orange-400" href="tel:03591099440">035-91099440</a>
+</div>
+<div class="flex items-center gap-3">
+<img alt="تلفن همراه" class="w-6 h-6" src="/static/icon/cell-phone.svg"/>
+<a class="hover:text-orange-400" href="tel:09134154214">0913-4154214</a>
+</div>
+<div class="flex items-center gap-3">
+<img alt="ایمیل" class="w-6 h-6" src="/static/icon/email.svg"/>
+<a class="hover:text-orange-400" href="mailto:info@acam-co.ir">info@acam-co.ir</a>
+</div>
+</div>
+<!-- ستون ۳: لینک‌های دسترسی سریع -->
+<div class="flex flex-col gap-4 mx-10 z-10">
+<h4 class="text-lg font-bold">دسترسی سریع</h4>
+<ul class="space-y-4">
+<li><a class="text-orange-500 hover:text-white" href="/">صفحه اصلی</a></li>
+<li><a class="text-orange-500 hover:text-white" href="/electrical">برق صنعتی</a></li>
+<li><a class="text-orange-500 hover:text-white" href="/metal">فلزکاری</a></li>
+<li><a class="text-orange-500 hover:text-white" href="/contact">تماس با ما</a></li>
+</ul>
+</div>
+</div>
+<!-- ردیف پایانی -->
+<div class="mt-10 text-center text-white border-t border-white/30 pt-4 z-5">
+    © تمامی حقوق برای شرکت الماس کویر الکترو مبین محفوظ است
+  </div>
+</footer>
+</body>
+</html>

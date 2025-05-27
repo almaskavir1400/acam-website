@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <meta charset="UTF-8">
+  <title>درخواست همکاری {{ req.fullname }}</title>
+  <style>
+    body { font-family: sans-serif; direction: rtl; padding: 20px; }
+    h1 { color: #d97706; }
+    p { margin-bottom: 10px; }
+    strong { color: #111827; }
+  </style>
+</head>
+<body>
+  <h1>فرم درخواست همکاری</h1>
+  <p><strong>نام و نام خانوادگی:</strong> {{ req.fullname }}</p>
+  <p><strong>نام پدر:</strong> {{ req.father }}</p>
+  <p><strong>جنسیت:</strong> {{ req.gender }}</p>
+  <p><strong>تاریخ تولد:</strong> {{ req.birthdate }}</p>
+  <p><strong>کد ملی:</strong> {{ req.national_id }}</p>
+  <p><strong>محل صدور:</strong> {{ req.id_location }}</p>
+  <p><strong>وضعیت تاهل:</strong> {{ req.marital_status }}</p>
+  <p><strong>تعداد فرزند:</strong> {{ req.children }}</p>
+  <p><strong>وضعیت نظام وظیفه:</strong> {{ req.military }}</p>
+  <p><strong>نشانی:</strong> {{ req.address }}</p>
+  <p><strong>شماره تماس:</strong> {{ req.phone }}</p>
+  <p><strong>ایمیل:</strong> {{ req.email }}</p>
+  <p><strong>مدرک تحصیلی:</strong> {{ req.education }}</p>
+  <p><strong>سابقه کار:</strong> {{ req.experience }}</p>
+  <p><strong>توضیحات:</strong><br>{{ req.message }}</p>
+</body>
+</html>

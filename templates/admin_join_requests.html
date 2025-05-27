@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block title %}درخواست‌های همکاری | الماس کویر{% endblock %}
+
+{% block content %}
+<section class="max-w-6xl mx-auto p-6">
+  <h1 class="text-2xl font-bold text-orange-600 mb-6">درخواست‌های همکاری</h1>
+  <div class="bg-white rounded-xl shadow overflow-x-auto">
+    <table class="w-full text-sm text-right">
+      <thead class="bg-gray-200">
+        <tr>
+          <th class="px-4 py-2 whitespace-nowrap">نام</th>
+          <th class="px-4 py-2 whitespace-nowrap">تلفن</th>
+          <th class="px-4 py-2 whitespace-nowrap">ایمیل</th>
+          <th class="px-4 py-2 whitespace-nowrap">مدرک</th>
+          <th class="px-4 py-2 whitespace-nowrap">تجربه</th>
+          <th class="px-4 py-2 whitespace-nowrap">عملیات</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for req in requests %}
+        <tr class="border-t hover:bg-gray-50">
+          <td class="px-4 py-2 font-semibold whitespace-nowrap">{{ req.fullname }}</td>
+          <td class="px-4 py-2 whitespace-nowrap">{{ req.phone }}</td>
+          <td class="px-4 py-2 whitespace-nowrap">{{ req.email }}</td>
+          <td class="px-4 py-2 whitespace-nowrap">{{ req.education }}</td>
+          <td class="px-4 py-2 whitespace-nowrap">{{ req.experience }}</td>
+          <td class="px-4 py-2 space-y-1">
+            <form method="POST" action="/admin/join-requests/delete/{{ req.id }}" onsubmit="return confirm('آیا مطمئن هستید؟');">
+              <button type="submit" class="text-red-600 hover:underline">حذف</button>
+            </form>
+            <div class="py-5"><a href="/admin/join-requests/view/{{ req.id }}" class="text-blue-600 hover:underline">جزییات کامل</a></div>
+            <a href="/admin/join-requests/pdf/{{ req.id }}" class="text-green-600 hover:underline">دانلود PDF</a>
+          </td>
+        </tr>
+        {% else %}
+        <tr>
+          <td colspan="6" class="text-center text-gray-500 py-4">هیچ درخواستی ثبت نشده است.</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+{% endblock %}
