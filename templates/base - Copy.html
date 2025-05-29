@@ -8,9 +8,6 @@
   <!-- لود Tailwind CSS از CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   
-  <!-- لود آیکون‌های Font Awesome -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  
   <!-- تنظیم viewport برای رسپانسیو بودن -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
@@ -77,14 +74,13 @@
         linear-gradient(to bottom left, rgba(255,165,0,1), transparent);
       box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
       border-radius: 5px;
-      transition: all 0.3s ease;
     }
 
     /* استایل دکمه‌های سفارشی (نسخه بزرگ) */
     .custom-button2 {
       font-weight: 900;
-      font-size: 1.25rem;
-      padding: 1rem 3rem;
+      font-size: 1.5rem;
+      padding: 1.25rem 5rem;
       background-image:
         linear-gradient(to top right, rgba(255,255,255,0.1), transparent),
         linear-gradient(to bottom left, rgba(255,165,0,1), transparent);
@@ -94,7 +90,6 @@
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: all 0.3s ease;
     }
 
     /* استایل hover برای دکمه‌ها */
@@ -105,7 +100,7 @@
       background-image:
         linear-gradient(to top right, rgba(255,255,255,0.9), transparent),
         linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);
-      transform: translateY(-2px);
+      box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
     }
 
     /* انیمیشن تنفس برای عناصر */
@@ -115,60 +110,6 @@
     }
     .animate-breathe {
       animation: breathe 4s ease-in-out infinite;
-    }
-
-    /* استایل‌های هدر رسپانسیو */
-    /* منوی موبایل (پاپ آپ) */
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 80%;
-      height: 100vh;
-      background-color: #1e3a8a;
-      z-index: 1000;
-      padding: 1.5rem;
-      transition: all 0.3s ease;
-      overflow-y: auto;
-      box-shadow: -5px 0 15px rgba(0,0,0,0.2);
-    }
-
-    .mobile-menu.active {
-      right: 0;
-    }
-
-    .mobile-menu-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
-      border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    /* استایل‌های رسپانسیو */
-    @media (max-width: 1023px) {
-      /* مخفی کردن منوی اصلی در موبایل */
-      .desktop-nav {
-        display: none !important;
-      }
-      
-      /* تنظیم سایز لوگو برای موبایل */
-      .logo-container img {
-        height: 60px;
-      }
-    }
-
-    @media (min-width: 1024px) {
-      /* مخفی کردن منوی موبایل در دسکتاپ */
-      .mobile-menu {
-        display: none;
-      }
-      
-      /* تنظیم سایز لوگو برای دسکتاپ */
-      .logo-container img {
-        height: 120px;
-      }
     }
 
     /* فونت‌های سفارشی */
@@ -215,71 +156,41 @@
     /* فونت پیش‌فرض بدنه */
     body {
       font-family: 'IRANSans', sans-serif;
-      overflow-x: hidden; /* جلوگیری از اسکرول افقی */
     }
   </style>
 </head>
 
 <body class="bg-gray-100">
   <!-- هدر سایت -->
-  <header class="bg-blue-900 sticky top-0 z-50 shadow-md">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <!-- لوگو - نمایش در همه دستگاه‌ها -->
-      <div class="logo-container z-50">
+  <header class="bg-blue-900 sticky top-0 z-50 relative">
+    <div class="container mx-auto flex items-center justify-between px-4">
+      <!-- لوگو -->
+      <div class="flex items-center gap-3 relative z-10 mb-[-90px]">
         <a href="/">
-          <img alt="الماس کویر" class="transition-all" src="/static/images/logo.png"/>
+          <img alt="الماس کویر" class="h-[200px] w-auto" src="/static/images/logo.png"/>
         </a>
       </div>
       
-      <!-- دکمه منوی همبرگری (نمایش فقط در موبایل) -->
-      <button class="hamburger-btn text-white text-2xl md:hidden z-50" id="hamburgerBtn">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <!-- منوی اصلی (نمایش فقط در دسکتاپ) -->
-      <nav class="desktop-nav hidden md:flex items-center gap-2">
-        <a class="custom-button" href="/">صفحه اصلی</a>
-        <a class="custom-button" href="/electrical">برق صنعتی</a>
-        <a class="custom-button" href="/metal">فلزکاری</a>
-        <a class="custom-button" href="/contact">تماس با ما</a>
-        <a class="custom-button" href="/cooperation">همکاری با ما</a>
+      <!-- منوی ناوبری -->
+      <nav class="flex items-center gap-2 z-10">
+        <a class="custom-button custom-button:hover transition-all" href="/">صفحه اصلی</a>
+        <a class="custom-button custom-button:hover transition-all" href="/electrical">برق صنعتی</a>
+        <a class="custom-button custom-button:hover transition-all" href="/metal">فلزکاری</a>
+        <a class="custom-button custom-button:hover transition-all" href="/contact">تماس با ما</a>
+        <a class="custom-button custom-button:hover transition-all" href="/cooperation">همکاری با ما</a>
         
         <!-- لینک‌های مدیریتی (فقط برای ادمین) -->
         {% if session.admin_logged_in %}
-          <a class="custom-button" href="/admin/join-requests">درخواست‌های همکاری</a>
-          <a class="custom-button" href="/admin/messages">فرم های تماس با ما</a>
-          <a class="custom-button" href="/admin/logout">خروج</a>
+          <a class="custom-button custom-button:hover transition-all" href="/admin/join-requests">درخواست‌های همکاری</a>
+          <a class="custom-button custom-button:hover transition-all" href="/admin/messages">فرم های تماس با ما</a>
+          <a class="custom-button custom-button:hover transition-all" href="/admin/logout">خروج</a>
         {% endif %}
       </nav>
-    </div>
-    
-    <!-- منوی موبایل (پاپ آپ) -->
-    <div class="mobile-menu" id="mobileMenu">
-      <div class="mobile-menu-header">
-        <img alt="الماس کویر" class="h-10" src="/static/images/logo-white.png"/>
-        <button class="close-menu-btn text-white text-2xl" id="closeMenuBtn">
-          <i class="fas fa-times"></i>
-        </button>
-      </div>
-      
-      <div class="flex flex-col gap-3 mt-4">
-        <a class="custom-button text-center" href="/">صفحه اصلی</a>
-        <a class="custom-button text-center" href="/electrical">برق صنعتی</a>
-        <a class="custom-button text-center" href="/metal">فلزکاری</a>
-        <a class="custom-button text-center" href="/contact">تماس با ما</a>
-        <a class="custom-button text-center" href="/cooperation">همکاری با ما</a>
-        
-        {% if session.admin_logged_in %}
-          <a class="custom-button text-center" href="/admin/join-requests">درخواست‌های همکاری</a>
-          <a class="custom-button text-center" href="/admin/messages">فرم های تماس با ما</a>
-          <a class="custom-button text-center" href="/admin/logout">خروج</a>
-        {% endif %}
-      </div>
     </div>
   </header>
 
   <!-- محتوای اصلی صفحه -->
-  <main class="relative z-10">
+  <main>
     {% block content %}{% endblock %}
   </main>
 
@@ -287,9 +198,9 @@
   <footer class="hero-electric bg-black text-white py-10 text-sm mt-0">
     <div class="particles-layer white-particles absolute inset-0 z-0"></div>
     
-    <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 z-5">
+    <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-12 z-5">
       <!-- ستون ۱: لوگو و درباره ما -->
-      <div class="flex flex-col gap-4 mx-4 md:mx-10 z-10">
+      <div class="flex flex-col gap-4 mx-10 z-10">
         <div class="flex items-center gap-3">
           <img alt="الماس کویر" class="h-12 w-auto" src="/static/images/logo-white.png"/>
           <h4 class="text-lg font-bold">الماس کویر الکترو مبین</h4>
@@ -300,84 +211,45 @@
       </div>
       
       <!-- ستون ۲: اطلاعات تماس -->
-      <div class="flex flex-col gap-4 md:gap-6 mx-4 md:mx-10 z-10">
+      <div class="flex flex-col gap-6 mx-10 z-10">
         <h4 class="text-lg font-bold">اطلاعات تماس</h4>
         <div class="flex items-start gap-3">
           <img alt="آدرس" class="w-6 h-6 mt-1" src="/static/icon/location.svg"/>
-          <p class="text-sm md:text-base">
+          <p>
             یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br/>
             کدپستی: 8947185259
           </p>
         </div>
         <div class="flex items-center gap-3">
           <img alt="تلفن ثابت" class="w-6 h-6" src="/static/icon/telephone.svg"/>
-          <a class="hover:text-orange-400 text-sm md:text-base" href="tel:03591099440">035-91099440</a>
+          <a class="hover:text-orange-400" href="tel:03591099440">035-91099440</a>
         </div>
         <div class="flex items-center gap-3">
           <img alt="تلفن همراه" class="w-6 h-6" src="/static/icon/cell-phone.svg"/>
-          <a class="hover:text-orange-400 text-sm md:text-base" href="tel:09134154214">0913-4154214</a>
+          <a class="hover:text-orange-400" href="tel:09134154214">0913-4154214</a>
         </div>
         <div class="flex items-center gap-3">
           <img alt="ایمیل" class="w-6 h-6" src="/static/icon/email.svg"/>
-          <a class="hover:text-orange-400 text-sm md:text-base" href="mailto:info@acam-co.ir">info@acam-co.ir</a>
+          <a class="hover:text-orange-400" href="mailto:info@acam-co.ir">info@acam-co.ir</a>
         </div>
       </div>
       
       <!-- ستون ۳: لینک‌های سریع -->
-      <div class="flex flex-col gap-4 mx-4 md:mx-10 z-10">
+      <div class="flex flex-col gap-4 mx-10 z-10">
         <h4 class="text-lg font-bold">دسترسی سریع</h4>
-        <ul class="space-y-2 md:space-y-4">
-          <li><a class="text-orange-500 hover:text-white block py-1" href="/">صفحه اصلی</a></li>
-          <li><a class="text-orange-500 hover:text-white block py-1" href="/electrical">برق صنعتی</a></li>
-          <li><a class="text-orange-500 hover:text-white block py-1" href="/metal">فلزکاری</a></li>
-          <li><a class="text-orange-500 hover:text-white block py-1" href="/contact">تماس با ما</a></li>
+        <ul class="space-y-4">
+          <li><a class="text-orange-500 hover:text-white" href="/">صفحه اصلی</a></li>
+          <li><a class="text-orange-500 hover:text-white" href="/electrical">برق صنعتی</a></li>
+          <li><a class="text-orange-500 hover:text-white" href="/metal">فلزکاری</a></li>
+          <li><a class="text-orange-500 hover:text-white" href="/contact">تماس با ما</a></li>
         </ul>
       </div>
     </div>
     
     <!-- کپی رایت -->
-    <div class="mt-8 md:mt-10 text-center text-white border-t border-white/30 pt-4 z-5">
+    <div class="mt-10 text-center text-white border-t border-white/30 pt-4 z-5">
       © تمامی حقوق برای شرکت الماس کویر الکترو مبین محفوظ است
     </div>
   </footer>
-
-  <!-- اسکریپت مدیریت منوی موبایل -->
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const hamburgerBtn = document.getElementById('hamburgerBtn');
-      const closeMenuBtn = document.getElementById('closeMenuBtn');
-      const mobileMenu = document.getElementById('mobileMenu');
-      
-      // تابع برای باز کردن منو
-      function openMenu() {
-        mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
-      }
-      
-      // تابع برای بستن منو
-      function closeMenu() {
-        mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
-      }
-      
-      // باز کردن منو با کلیک روی دکمه همبرگری
-      hamburgerBtn.addEventListener('click', openMenu);
-      
-      // بستن منو با کلیک روی دکمه بستن
-      closeMenuBtn.addEventListener('click', closeMenu);
-      
-      // بستن منو هنگام کلیک روی لینک‌ها
-      document.querySelectorAll('.mobile-menu a').forEach(link => {
-        link.addEventListener('click', closeMenu);
-      });
-      
-      // بستن منو هنگام کلیک خارج از آن
-      mobileMenu.addEventListener('click', function(e) {
-        if (e.target === mobileMenu) {
-          closeMenu();
-        }
-      });
-    });
-  </script>
 </body>
 </html>
