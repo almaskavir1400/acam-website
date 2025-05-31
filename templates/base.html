@@ -108,6 +108,26 @@
         linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);      
     }
 
+    @media (max-width: 767px) {
+    .custom-button2 {
+      padding: 0.75rem 1.5rem !important;
+      font-size: 0.9rem !important;
+      flex-direction: row-reverse; /* ترتیب عناصر */
+      gap: 8px;
+      width: 90%;
+      max-width: 300px;
+      margin: 0 auto;
+    }    
+    .custom-button2 svg {
+      width: 1rem !important;
+      height: 1rem !important;
+    }
+    section.py-10 {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+  }
+  }
+
     /* انیمیشن تنفس برای عناصر */
     @keyframes breathe {
       0%, 100% { transform: scale(1); }
@@ -208,8 +228,6 @@
       min-height: 40px !important;
     }
 
-
-
     /* استایل لوگو در هدر - موقعیت ثابت در سمت راست */
     .header-logo {
       order: 1;
@@ -233,33 +251,36 @@
     /* نمایش hero در تبلت */
     @media (min-width: 768px) and (max-width: 1023px) {
       .hero-electric {
-        height: 50vh !important;
+        height: 60vh !important;
       }
       
       /* تنظیم موقعیت متن‌ها برای تبلت */
       .hero-electric > div:nth-child(3) { /* مهندسی دقیق */
-        top: 10% !important;
+        top: 15% !important;
         right: 5% !important;
         font-size: 1.5rem !important;
       }
       
       .hero-electric > div:nth-child(4) { /* هوشمندی */
-        top: 25% !important;
+        top: 30% !important;
         right: 15% !important;
         font-size: 1.5rem !important;
       }
       
       .hero-electric > div:nth-child(5) { /* از طراحی تا اجرا */
-        top: 40% !important;
+        top: 45% !important;
         right: 25% !important;
-        font-size: 1.2rem !important;
+        font-size: 1.5rem !important;
       }
       
       .hero-electric > div:nth-child(6) { /* متن اصلی */
-        top: 60% !important;
+        top: 65% !important;
         right: 5% !important;
-        font-size: 0.9rem !important;
-        padding: 0.5rem !important;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;      
+        width: 90% !important;
+        margin: 0 !important;     
+        line-height: 2.5 !important; /* اضافه کردن این خط */
       }
     }
 
@@ -277,8 +298,8 @@
       right: 5% !important;
       font-size: 1rem !important;
       padding: 0.5rem !important;
-      background-color: rgb(30,58,138,0.5);
-      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      background-color: rgb(0,0,0,0.4);
+      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
       width: 50%;
     }
     
@@ -287,8 +308,8 @@
       right: 15% !important;
       font-size: 1rem !important;
       padding: 0.5rem !important;
-      background-color: rgb(30,58,138,0.5);
-      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      background-color: rgb(0,0,0,0.4);
+      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
       width: 50%;
     }
    
@@ -298,8 +319,8 @@
       font-size: 1rem !important;
       padding: 0.5rem !important;
       margin: 0px !important;
-      background-color: rgb(30,58,138,0.5);
-      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      background-color: rgb(0,0,0,0.4);
+      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
       width: 90% !important;
     }
     
@@ -315,11 +336,168 @@
       line-height: 2.5 !important; /* اضافه کردن این خط */
     }
     
-    /* تنظیم تصویر پس‌زمینه */
-    .hero-electric img {
-      object-position: 30% center !important;
+      .metal-mobile-section {
+      height: 70vh !important;
     }
+    
+    /* متن‌ها با استایل HERO */
+    .metal-mobile-section > div:nth-child(3),
+    .metal-mobile-section > div:nth-child(4),
+    .metal-mobile-section > div:nth-child(5) {
+      background: rgba(0,0,0,0.4) !important;
+      color: #002c6f !important;
+      text-shadow: 
+        -1px -1px 0 white,
+        1px -1px 0 white,
+        -1px 1px 0 white,
+        1px 1px 0 white !important;
+      font-family: 'TitrZebr' !important;
+      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+      padding: 0.5rem !important;
+      border-radius: 0 !important;
+      z-index: 10 !important;
+      text-align: center !important; /* وسط چین */
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      }
+
+  /* موقعیت‌های اختصاصی */
+  .metal-mobile-section > div:nth-child(3) { /* برش لیزر */
+    top: 10% !important;
+    right: 5% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
   }
+  
+  .metal-mobile-section > div:nth-child(4) { /* خم‌کاری */
+    top: 15% !important;
+    right: 10% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+  
+  .metal-mobile-section > div:nth-child(5) { /* رنگ کوره‌ای */
+    top: 20% !important;
+    right: 15% !important;
+    font-size: 1rem !important;
+    width: 70% !important;
+  }
+  
+  /* متن اصلی */
+  .metal-mobile-section > div:nth-child(6) {
+    top: 30% !important;
+    right: 5% !important;
+    width: 90% !important;
+    font-size: 1rem !important;
+    line-height: 2.5 !important;
+    background: rgba(0,0,0,0.4) !important;
+    box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+    color: #002c6f !important;
+    text-shadow: 
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white !important;
+    text-align: center !important; /* وسط چین */
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+
+    .brand-mobile-section {
+    height: 80vh !important;
+    padding: 0 !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .brand-mobile-section h1 {
+    flex-direction: column;
+    gap: 0;
+    margin: 0;
+    height: 100%;
+    position: relative;
+  }
+
+  .brand-mobile-section h1 > span {
+    position: absolute !important;
+    background: rgba(255,255,255,0.4) !important;
+    color: #002c6f !important;
+    text-shadow: 
+      -1px -1px 0 white,
+      1px -1px 0 white,
+      -1px 1px 0 white,
+      1px 1px 0 white !important;
+    font-family: 'TitrZebr' !important;
+    box-shadow: -15px 15px 30px rgba(255,255,255,1) !important;
+    padding: 0.5rem !important;
+    border-radius: 0 !important;
+    z-index: 10 !important;
+    text-align: center !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+    margin: 0 auto !important;
+    transform: none !important;
+  }
+
+  /* موقعیت‌های اختصاصی برای عبارات */
+  .brand-mobile-section h1 > span:nth-child(1) { /* ما فقط تولید نمی کنیم */
+    top: 5% !important;
+    right: 5% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+  
+  .brand-mobile-section h1 > span:nth-child(2) { /* ما با دانش مهندسی */
+    top: 20% !important;
+    right: 15% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+  
+  .brand-mobile-section h1 > span:nth-child(3) { /* تجهیزات مدرن */
+    top: 35% !important;
+    right: 25% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+  
+  .brand-mobile-section h1 > span:nth-child(4) { /* تیم متعهد */
+    top: 50% !important;
+    right: 15% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+  
+  .brand-mobile-section h1 > span:nth-child(5) { /* و سال ها تجربه */
+    top: 65% !important;
+    right: 5% !important;
+    font-size: 1rem !important;
+    width: 50% !important;
+  }
+
+  /* متن اصلی */
+  .brand-mobile-section .main-text {
+    top: 80% !important;
+    right: 5% !important;
+    left: 5% !important;
+    width: 90% !important;    
+    font-size: 1rem !important;
+    line-height: 2.5 !important;
+    padding: 0.5rem !important;
+    margin: 0 auto !important;
+    z-index: 20 !important; /* افزایش z-index */
+    background: rgba(255,255,255,0.2) !important;
+    box-shadow: -15px 15px 30px rgba(255,255,255,0.2) !important;    
+  }  
+
+  }  
 
     /* فونت‌های سفارشی */
     @font-face {
