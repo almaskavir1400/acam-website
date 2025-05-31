@@ -26,11 +26,12 @@
     /* استایل ذرات شناور (particles) */
     .particles-layer .particle {
       position: absolute;
-      width: 6px;
-      height: 6px;
+      width: 3px;
+      height: 3px;
       border-radius: 50%;
       animation: floatParticle linear infinite;
       pointer-events: none;
+      opacity: 1; /* مقدار بین 0 (کاملاً شفاف) تا 1 (کاملاً مات) */
     }
 
     /* ذرات سفید برای پس‌زمینه‌های تیره */
@@ -70,8 +71,8 @@
       color: #ffffff;
       text-shadow: -1px 1px 0 black;
       font-weight: 700;
-      font-size: 1rem;
-      padding: 8px 12px;
+      font-size: 0.9rem;
+      padding: 6px 10px;
       background-image:
         linear-gradient(to top right, rgba(255,255,255,0.1), transparent),
         linear-gradient(to bottom left, rgba(255,165,0,1), transparent);
@@ -104,8 +105,7 @@
       text-shadow: -1px 1px 0 white;
       background-image:
         linear-gradient(to top right, rgba(255,255,255,0.9), transparent),
-        linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);
-      transform: translateY(-2px);
+        linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);      
     }
 
     /* انیمیشن تنفس برای عناصر */
@@ -125,7 +125,7 @@
       right: -100%;
       width: 80%;
       height: 100vh;
-      background-color: #1e3a8a;
+      background-color: rgba(30, 58, 138, 0.85);
       z-index: 1000;
       padding: 1.5rem;
       transition: all 0.3s ease;
@@ -141,35 +141,185 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding-bottom: 1rem;
-      margin-bottom: 1rem;
+      padding-bottom: 1.5rem;
+      margin-bottom: 1.5rem;
       border-bottom: 1px solid rgba(255,255,255,0.2);
     }
 
     /* استایل‌های رسپانسیو */
+    /* برای دستگاه‌های کوچکتر از 1024px (موبایل و تبلت) */
     @media (max-width: 1023px) {
-      /* مخفی کردن منوی اصلی در موبایل */
+      /* مخفی کردن منوی اصلی */      
       .desktop-nav {
-        display: none !important;
+        display: none !important;        
       }
       
-      /* تنظیم سایز لوگو برای موبایل */
-      .logo-container img {
-        height: 60px;
+      /* نمایش دکمه همبرگری */
+      .hamburger-btn {
+        display: block !important;        
+        }
+      
+      /* تنظیمات لوگو برای دستگاه‌های کوچک */
+      .header-logo img {
+        height: 100px;
+        bottom: -30px;
+        padding-right: 5px;
+      }
+      .header-container {
+        max-height: 60px !important; /* کاهش ارتفاع کلی */        
       }
     }
 
+    /* برای دستگاه‌های بزرگتر از 1024px (دسکتاپ) */
     @media (min-width: 1024px) {
-      /* مخفی کردن منوی موبایل در دسکتاپ */
+      /* مخفی کردن منوی موبایل */
       .mobile-menu {
         display: none;
       }
       
-      /* تنظیم سایز لوگو برای دسکتاپ */
-      .logo-container img {
-        height: 120px;
+      /* مخفی کردن دکمه همبرگری */
+      .hamburger-btn {
+        display: none !important;
+      }
+      
+      /* نمایش منوی دسکتاپ */
+      .desktop-nav {
+        display: flex !important;
+      }
+      
+      /* تنظیمات لوگو برای دسکتاپ */
+      .header-logo img {
+        height: 140px;
+        bottom: -50px;
+      }
+      .header-container {
+        max-height: 100px !important; /* کاهش ارتفاع کلی */
       }
     }
+
+    /* استایل جدید برای هدر با موقعیت ثابت لوگو و منوها */
+    .header-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      padding: 0;
+      position: relative;      
+      min-height: 40px !important;
+    }
+
+
+
+    /* استایل لوگو در هدر - موقعیت ثابت در سمت راست */
+    .header-logo {
+      order: 1;
+      margin-left: auto;
+    }
+
+    /* استایل منوی دسکتاپ - موقعیت ثابت در سمت چپ */
+    .desktop-nav {
+      order: 2;
+      margin-right: auto;
+      gap: 10px; /* کاهش فاصله بین دکمه‌های منو */
+    }
+
+    /* استایل دکمه همبرگری - موقعیت ثابت در سمت چپ */
+    .hamburger-btn {
+      order: 2;
+      margin-right: auto;
+      z-index: 50;
+    }
+
+    /* نمایش hero در تبلت */
+    @media (min-width: 768px) and (max-width: 1023px) {
+      .hero-electric {
+        height: 50vh !important;
+      }
+      
+      /* تنظیم موقعیت متن‌ها برای تبلت */
+      .hero-electric > div:nth-child(3) { /* مهندسی دقیق */
+        top: 10% !important;
+        right: 5% !important;
+        font-size: 1.5rem !important;
+      }
+      
+      .hero-electric > div:nth-child(4) { /* هوشمندی */
+        top: 25% !important;
+        right: 15% !important;
+        font-size: 1.5rem !important;
+      }
+      
+      .hero-electric > div:nth-child(5) { /* از طراحی تا اجرا */
+        top: 40% !important;
+        right: 25% !important;
+        font-size: 1.2rem !important;
+      }
+      
+      .hero-electric > div:nth-child(6) { /* متن اصلی */
+        top: 60% !important;
+        right: 5% !important;
+        font-size: 0.9rem !important;
+        padding: 0.5rem !important;
+      }
+    }
+
+    /* نمایش hero در موبایل */
+    @media (max-width: 767px) {
+    
+    .hero-electric {
+      height: 60vh !important;
+      padding: 0px !important;
+    }
+    
+    /* تنظیم موقعیت متن‌ها برای موبایل */
+    .hero-electric > div:nth-child(3) { /* مهندسی دقیق */
+      top: 0% !important;
+      right: 5% !important;
+      font-size: 1rem !important;
+      padding: 0.5rem !important;
+      background-color: rgb(30,58,138,0.5);
+      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      width: 50%;
+    }
+    
+    .hero-electric > div:nth-child(4) { /* هوشمندی */
+      top: 5% !important;
+      right: 15% !important;
+      font-size: 1rem !important;
+      padding: 0.5rem !important;
+      background-color: rgb(30,58,138,0.5);
+      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      width: 50%;
+    }
+   
+    .hero-electric > div:nth-child(5) { /* از طراحی تا اجرا */
+      top: 10% !important;
+      right: 5% !important;
+      font-size: 1rem !important;
+      padding: 0.5rem !important;
+      margin: 0px !important;
+      background-color: rgb(30,58,138,0.5);
+      box-shadow: -15px 15px 30px rgba(30,58,138,1) !important;
+      width: 90% !important;
+    }
+    
+    .hero-electric > div:nth-child(6) { /* متن اصلی */
+      top: 20% !important;
+      right: 5% !important;
+      font-size: 1rem !important;
+      padding: 0.5rem !important;
+      width: 90% !important;
+      margin: 0 !important;
+      background-color: rgb(0,0,0,0.4);
+      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+      line-height: 2.5 !important; /* اضافه کردن این خط */
+    }
+    
+    /* تنظیم تصویر پس‌زمینه */
+    .hero-electric img {
+      object-position: 30% center !important;
+    }
+  }
 
     /* فونت‌های سفارشی */
     @font-face {
@@ -222,47 +372,52 @@
 
 <body class="bg-gray-100">
   <!-- هدر سایت -->
-  <header class="bg-blue-900 sticky top-0 z-50 shadow-md">
-    <div class="container mx-auto flex items-center justify-between px-4 py-3">
-      <!-- لوگو - نمایش در همه دستگاه‌ها -->
-      <div class="logo-container z-50">
-        <a href="/">
-          <img alt="الماس کویر" class="transition-all" src="/static/images/logo.png"/>
-        </a>
-      </div>
-      
-      <!-- دکمه منوی همبرگری (نمایش فقط در موبایل) -->
-      <button class="hamburger-btn text-white text-2xl md:hidden z-50" id="hamburgerBtn">
-        <i class="fas fa-bars"></i>
-      </button>
-      
-      <!-- منوی اصلی (نمایش فقط در دسکتاپ) -->
-      <nav class="desktop-nav hidden md:flex items-center gap-2">
-        <a class="custom-button" href="/">صفحه اصلی</a>
-        <a class="custom-button" href="/electrical">برق صنعتی</a>
-        <a class="custom-button" href="/metal">فلزکاری</a>
-        <a class="custom-button" href="/contact">تماس با ما</a>
-        <a class="custom-button" href="/cooperation">همکاری با ما</a>
+  <header class="bg-blue-900 sticky top-0 z-50 py-1">
+    <div class="container mx-auto px-2 relative">
+      <div class="header-container">
+        <!-- دکمه منوی همبرگری (نمایش در موبایل و تبلت) -->
+        <button class="hamburger-btn text-white text-2xl lg:hidden" id="hamburgerBtn">
+          <i class="fas fa-bars"></i>
+        </button>
         
-        <!-- لینک‌های مدیریتی (فقط برای ادمین) -->
-        {% if session.admin_logged_in %}
-          <a class="custom-button" href="/admin/join-requests">درخواست‌های همکاری</a>
-          <a class="custom-button" href="/admin/messages">فرم های تماس با ما</a>
-          <a class="custom-button" href="/admin/logout">خروج</a>
-        {% endif %}
-      </nav>
+        <!-- لوگو - نمایش در همه دستگاه‌ها -->
+        <div class="header-logo">
+          <a href="/">
+            <img alt="الماس کویر" 
+                class="transition-all relative" 
+                src="/static/images/logo.png"
+                style="max-width: none">
+          </a>
+        </div>
+        
+        <!-- منوی اصلی (نمایش فقط در دسکتاپ) -->
+        <nav class="desktop-nav hidden lg:flex items-center">
+          <a class="custom-button" href="/">صفحه اصلی</a>
+          <a class="custom-button" href="/electrical">برق صنعتی</a>
+          <a class="custom-button" href="/metal">فلزکاری</a>
+          <a class="custom-button" href="/contact">تماس با ما</a>
+          <a class="custom-button" href="/cooperation">همکاری با ما</a>
+          
+          <!-- لینک‌های مدیریتی (فقط برای ادمین) -->
+          {% if session.admin_logged_in %}
+            <a class="custom-button" href="/admin/join-requests">درخواست‌های همکاری</a>
+            <a class="custom-button" href="/admin/messages">فرم های تماس با ما</a>
+            <a class="custom-button" href="/admin/logout">خروج</a>
+          {% endif %}
+        </nav>
+      </div>
     </div>
     
-    <!-- منوی موبایل (پاپ آپ) -->
-    <div class="mobile-menu" id="mobileMenu">
+    <!-- منوی موبایل (پاپ آپ - نمایش در موبایل و تبلت) -->
+    <div class="mobile-menu lg:hidden" id="mobileMenu">
       <div class="mobile-menu-header">
-        <img alt="الماس کویر" class="h-10" src="/static/images/logo-white.png"/>
+        <img alt="الماس کویر" class="h-12" src="/static/images/logo-white.png"/>
         <button class="close-menu-btn text-white text-2xl" id="closeMenuBtn">
           <i class="fas fa-times"></i>
         </button>
       </div>
       
-      <div class="flex flex-col gap-3 mt-4">
+      <div class="flex flex-col gap-5 mt-5">
         <a class="custom-button text-center" href="/">صفحه اصلی</a>
         <a class="custom-button text-center" href="/electrical">برق صنعتی</a>
         <a class="custom-button text-center" href="/metal">فلزکاری</a>
