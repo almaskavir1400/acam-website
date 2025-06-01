@@ -16,14 +16,23 @@
   
   <!-- استایل‌های سفارشی -->
   <style>
-    /* استایل بخش Hero با پس‌زمینه آبی */
+    /* ==================== استایل‌های عمومی ==================== */
+    
+    /**
+     * استایل بخش Hero با پس‌زمینه آبی
+     * استفاده شده در بخش‌های اصلی سایت و فوتر
+     */
     .hero-electric {
       position: relative;
       background-color: #1e3a8a; /* bg-blue-900 */
-      overflow: hidden;
+      overflow: hidden;            
     }
 
-    /* استایل ذرات شناور (particles) */
+    /* ==================== استایل‌های انیمیشن ذرات ==================== */
+    
+    /**
+     * استایل پایه برای ذرات شناور
+     */
     .particles-layer .particle {
       position: absolute;
       width: 3px;
@@ -31,7 +40,7 @@
       border-radius: 50%;
       animation: floatParticle linear infinite;
       pointer-events: none;
-      opacity: 1; /* مقدار بین 0 (کاملاً شفاف) تا 1 (کاملاً مات) */
+      opacity: 1;
     }
 
     /* ذرات سفید برای پس‌زمینه‌های تیره */
@@ -56,7 +65,12 @@
       }
     }
 
-    /* استایل متن با حاشیه آبی */
+    /* ==================== استایل‌های متن و تایپوگرافی ==================== */
+    
+    /**
+     * استایل متن با حاشیه آبی
+     * استفاده شده در عناوین اصلی
+     */
     .text-stroke-blue {
       color: #002c6f; /* آبی تیره */
       text-shadow:
@@ -66,7 +80,12 @@
         1px 1px 0 white;
     }
 
-    /* استایل دکمه‌های سفارشی (نسخه کوچک) */
+    /* ==================== استایل‌های دکمه‌ها ==================== */
+    
+    /**
+     * استایل دکمه‌های سفارشی (نسخه کوچک)
+     * استفاده شده در منوی ناوبری
+     */
     .custom-button {
       color: #ffffff;
       text-shadow: -1px 1px 0 black;
@@ -81,7 +100,10 @@
       transition: all 0.3s ease;
     }
 
-    /* استایل دکمه‌های سفارشی (نسخه بزرگ) */
+    /**
+     * استایل دکمه‌های سفارشی (نسخه بزرگ)
+     * استفاده شده در دکمه‌های اصلی صفحه
+     */
     .custom-button2 {
       font-weight: 900;
       font-size: 1.25rem;
@@ -108,27 +130,12 @@
         linear-gradient(to bottom left, rgba(255,165,0,0.1), transparent);      
     }
 
-    @media (max-width: 767px) {
-    .custom-button2 {
-      padding: 0.75rem 1.5rem !important;
-      font-size: 0.9rem !important;
-      flex-direction: row-reverse; /* ترتیب عناصر */
-      gap: 8px;
-      width: 90%;
-      max-width: 300px;
-      margin: 0 auto;
-    }    
-    .custom-button2 svg {
-      width: 1rem !important;
-      height: 1rem !important;
-    }
-    section.py-10 {
-    padding-top: 2rem !important;
-    padding-bottom: 2rem !important;
-  }
-  }
-
-    /* انیمیشن تنفس برای عناصر */
+    /* ==================== استایل‌های انیمیشن ==================== */
+    
+    /**
+     * انیمیشن تنفس برای عناصر
+     * استفاده شده برای ایجاد افکت جذاب روی عناصر مهم
+     */
     @keyframes breathe {
       0%, 100% { transform: scale(1); }
       50% { transform: scale(1.015); }
@@ -137,8 +144,12 @@
       animation: breathe 4s ease-in-out infinite;
     }
 
-    /* استایل‌های هدر رسپانسیو */
-    /* منوی موبایل (پاپ آپ) */
+    /* ==================== استایل‌های هدر و منو ==================== */
+    
+    /**
+     * منوی موبایل (پاپ آپ)
+     * نمایش داده می‌شود در دستگاه‌های موبایل و تبلت
+     */
     .mobile-menu {
       position: fixed;
       top: 0;
@@ -153,10 +164,12 @@
       box-shadow: -5px 0 15px rgba(0,0,0,0.2);
     }
 
+    /* حالت فعال منوی موبایل */
     .mobile-menu.active {
       right: 0;
     }
 
+    /* هدر منوی موبایل */
     .mobile-menu-header {
       display: flex;
       justify-content: space-between;
@@ -164,57 +177,6 @@
       padding-bottom: 1.5rem;
       margin-bottom: 1.5rem;
       border-bottom: 1px solid rgba(255,255,255,0.2);
-    }
-
-    /* استایل‌های رسپانسیو */
-    /* برای دستگاه‌های کوچکتر از 1024px (موبایل و تبلت) */
-    @media (max-width: 1023px) {
-      /* مخفی کردن منوی اصلی */      
-      .desktop-nav {
-        display: none !important;        
-      }
-      
-      /* نمایش دکمه همبرگری */
-      .hamburger-btn {
-        display: block !important;        
-        }
-      
-      /* تنظیمات لوگو برای دستگاه‌های کوچک */
-      .header-logo img {
-        height: 100px;
-        bottom: -30px;
-        padding-right: 5px;
-      }
-      .header-container {
-        max-height: 60px !important; /* کاهش ارتفاع کلی */        
-      }
-    }
-
-    /* برای دستگاه‌های بزرگتر از 1024px (دسکتاپ) */
-    @media (min-width: 1024px) {
-      /* مخفی کردن منوی موبایل */
-      .mobile-menu {
-        display: none;
-      }
-      
-      /* مخفی کردن دکمه همبرگری */
-      .hamburger-btn {
-        display: none !important;
-      }
-      
-      /* نمایش منوی دسکتاپ */
-      .desktop-nav {
-        display: flex !important;
-      }
-      
-      /* تنظیمات لوگو برای دسکتاپ */
-      .header-logo img {
-        height: 140px;
-        bottom: -50px;
-      }
-      .header-container {
-        max-height: 100px !important; /* کاهش ارتفاع کلی */
-      }
     }
 
     /* استایل جدید برای هدر با موقعیت ثابت لوگو و منوها */
@@ -245,261 +207,467 @@
     .hamburger-btn {
       order: 2;
       margin-right: auto;
+      margin-left: 10px;
       z-index: 50;
     }
 
+    /* ==================== استایل‌های رسپانسیو ==================== */
+    
+    /* برای دستگاه‌های کوچکتر از 1024px (موبایل و تبلت) */
+    @media (max-width: 1023px) {
+      /* مخفی کردن منوی اصلی */      
+      .desktop-nav {
+        display: none !important;        
+      }
+      
+      /* نمایش دکمه همبرگری */
+      .hamburger-btn {
+        display: block !important;        
+      }
+      
+      /* تنظیمات لوگو برای دستگاه‌های کوچک */
+      .header-logo img {
+        height: 100px;
+        bottom: -30px;
+        padding-right: 5px;        
+      }
+      .header-container {
+        max-height: 60px !important; /* کاهش ارتفاع کلی */        
+      }
+    }
+
+    /* برای دستگاه‌های بزرگتر از 1024px (دسکتاپ) */
+    @media (min-width: 1024px) {
+      /* مخفی کردن منوی موبایل */
+      .mobile-menu {
+        display: none;
+      }
+      
+      /* مخفی کردن دکمه همبرگری */
+      .hamburger-btn {
+        display: none !important;
+      }
+      
+      /* نمایش منوی دسکتاپ */
+      .desktop-nav {
+        display: flex !important;
+      }
+      
+      /* تنظیمات لوگو برای دسکتاپ */
+      .header-logo img {
+        height: 140px;
+        bottom: -50px;
+      }
+      .header-container {
+        max-height: 100px !important;
+      }
+    }
+
+    /* تنظیمات دکمه‌های بزرگ در موبایل */
+    @media (max-width: 767px) {
+      .custom-button2 {
+        padding: 0.75rem 1.5rem !important;
+        font-size: 0.9rem !important;
+        flex-direction: row-reverse; /* ترتیب عناصر */
+        gap: 8px;
+        width: 90%;
+        max-width: 300px;
+        margin: 0 auto;
+      }    
+      .custom-button2 svg {
+        width: 1rem !important;
+        height: 1rem !important;
+      }
+      section.py-10 {
+        padding-top: 2rem !important;
+        padding-bottom: 2rem !important;
+      }
+    }
+
+    /* ==================== استایل‌های بخش Hero در دستگاه‌های مختلف ==================== */
+    
     /* نمایش hero در تبلت */
     @media (min-width: 768px) and (max-width: 1023px) {
-      .hero-electric {
+      .hero-main-section {
         height: 60vh !important;
       }
       
       /* تنظیم موقعیت متن‌ها برای تبلت */
-      .hero-electric > div:nth-child(3) { /* مهندسی دقیق */
+      .hero-main-section > div:nth-child(3) { /* مهندسی دقیق */
         top: 15% !important;
         right: 5% !important;
         font-size: 1.5rem !important;
       }
       
-      .hero-electric > div:nth-child(4) { /* هوشمندی */
+      .hero-main-section > div:nth-child(4) { /* هوشمندی */
         top: 30% !important;
         right: 15% !important;
         font-size: 1.5rem !important;
       }
       
-      .hero-electric > div:nth-child(5) { /* از طراحی تا اجرا */
+      .hero-main-section > div:nth-child(5) { /* از طراحی تا اجرا */
         top: 45% !important;
         right: 25% !important;
         font-size: 1.5rem !important;
       }
       
-      .hero-electric > div:nth-child(6) { /* متن اصلی */
+      .hero-main-section > div:nth-child(6) { /* متن اصلی */
         top: 65% !important;
         right: 5% !important;
         font-size: 1rem !important;
         padding: 0.5rem !important;      
         width: 90% !important;
         margin: 0 !important;     
-        line-height: 2.5 !important; /* اضافه کردن این خط */
+        line-height: 2.5 !important;
       }
     }
 
     /* نمایش hero در موبایل */
     @media (max-width: 767px) {
-    
-    .hero-electric {
-      height: 60vh !important;
-      padding: 0px !important;
+      .hero-main-section {
+        height: 60vh !important;
+        padding: 0px !important;
+      }
+      
+      /* تنظیم موقعیت متن‌ها برای موبایل */
+      .hero-main-section > div:nth-child(3) { /* مهندسی دقیق */
+        top: 0% !important;
+        right: 5% !important;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        background-color: rgb(0,0,0,0.4);
+        box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+        width: 50%;
+      }
+      
+      .hero-main-section > div:nth-child(4) { /* هوشمندی */
+        top: 5% !important;
+        right: 15% !important;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        background-color: rgb(0,0,0,0.4);
+        box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+        width: 50%;
+      }
+     
+      .hero-main-section > div:nth-child(5) { /* از طراحی تا اجرا */
+        top: 10% !important;
+        right: 5% !important;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        margin: 0px !important;
+        background-color: rgb(0,0,0,0.4);
+        box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+        width: 90% !important;
+      }
+      
+      .hero-main-section > div:nth-child(6) { /* متن اصلی */
+        top: 20% !important;
+        right: 5% !important;
+        font-size: 1rem !important;
+        padding: 0.5rem !important;
+        width: 90% !important;
+        margin: 0 !important;
+        background-color: rgb(0,0,0,0.4);
+        box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
+        line-height: 2.5 !important;
+      }
     }
     
-    /* تنظیم موقعیت متن‌ها برای موبایل */
-    .hero-electric > div:nth-child(3) { /* مهندسی دقیق */
-      top: 0% !important;
-      right: 5% !important;
-      font-size: 1rem !important;
-      padding: 0.5rem !important;
-      background-color: rgb(0,0,0,0.4);
-      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-      width: 50%;
-    }
-    
-    .hero-electric > div:nth-child(4) { /* هوشمندی */
-      top: 5% !important;
-      right: 15% !important;
-      font-size: 1rem !important;
-      padding: 0.5rem !important;
-      background-color: rgb(0,0,0,0.4);
-      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-      width: 50%;
-    }
-   
-    .hero-electric > div:nth-child(5) { /* از طراحی تا اجرا */
-      top: 10% !important;
-      right: 5% !important;
-      font-size: 1rem !important;
-      padding: 0.5rem !important;
-      margin: 0px !important;
-      background-color: rgb(0,0,0,0.4);
-      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-      width: 90% !important;
-    }
-    
-    .hero-electric > div:nth-child(6) { /* متن اصلی */
-      top: 20% !important;
-      right: 5% !important;
-      font-size: 1rem !important;
-      padding: 0.5rem !important;
-      width: 90% !important;
-      margin: 0 !important;
-      background-color: rgb(0,0,0,0.4);
-      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-      line-height: 2.5 !important; /* اضافه کردن این خط */
-    }
-    
-      .metal-mobile-section {
-      height: 70vh !important;
-    }
-    
-    /* متن‌ها با استایل HERO */
-    .metal-mobile-section > div:nth-child(3),
-    .metal-mobile-section > div:nth-child(4),
-    .metal-mobile-section > div:nth-child(5) {
-      background: rgba(0,0,0,0.4) !important;
-      color: #002c6f !important;
-      text-shadow: 
-        -1px -1px 0 white,
-        1px -1px 0 white,
-        -1px 1px 0 white,
-        1px 1px 0 white !important;
-      font-family: 'TitrZebr' !important;
-      box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-      padding: 0.5rem !important;
-      border-radius: 0 !important;
-      z-index: 10 !important;
-      text-align: center !important; /* وسط چین */
-      display: flex !important;
-      justify-content: center !important;
-      align-items: center !important;
+      /* استایل‌های عمومی برای بخش فلزکاری */
+      .metal-section {
+        position: relative;
+      }
+      
+      /* استایل‌های متن‌ها برای موبایل */
+      .metal-text-1,
+      .metal-text-2,
+      .metal-text-3,
+      .metal-main-text {
+        position: absolute;
+        background: rgba(255,255,255,0.4) !important;
+        box-shadow: -15px 15px 30px rgba(255,255,255,1) !important;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 0 !important;
+        z-index: 10 !important;
+      }
+      
+      .metal-text-1 {
+        top: 10% !important;
+        right: 5% !important;
+        font-size: 1rem !important;
+        width: 40% !important;
+        padding: 1rem !important;
+      }
+      
+      .metal-text-2 {
+        top: 15% !important;
+        right: 10% !important;
+        font-size: 1rem !important;
+        width: 40% !important;
+        padding: 1rem !important;
+      }
+      
+      .metal-text-3 {
+        top: 20% !important;
+        right: 15% !important;
+        font-size: 1rem !important;
+        width: 60% !important;
+        padding: 1rem !important;
+      }
+      
+      .metal-main-text {
+        top: 30% !important;
+        right: 5% !important;
+        left: 5% !important;
+        width: 90% !important;
+        font-size: 1rem !important;
+        line-height: 2.5 !important;
+        padding: 1rem !important;
+      }
+      
+      /* استایل‌های برای تبلت (768px تا 1023px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .metal-text-1 {
+          top: 10% !important;
+          right: 10% !important;
+          font-size: 1.5rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-text-2 {
+          top: 20% !important;
+          right: 15% !important;
+          font-size: 1.5rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-text-3 {
+          top: 30% !important;
+          right: 20% !important;
+          font-size: 1.5rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-main-text {
+          top: 50% !important;
+          right: 10% !important;
+          left: 10% !important;
+          font-size: 1.5rem !important;
+          width: 80% !important;
+          line-height: 2.5 !important;
+          padding: 1rem !important;
+        }
+      }
+      
+      /* استایل‌های برای دسکتاپ (1024px به بالا) */
+      @media (min-width: 1024px) {
+        .metal-text-1 {
+          top: 10% !important;
+          right: 10% !important;
+          font-size: 2rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-text-2 {
+          top: 25% !important;
+          right: 15% !important;
+          font-size: 2rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-text-3 {
+          top: 40% !important;
+          right: 20% !important;
+          font-size: 2rem !important;
+          width: auto !important;
+          padding: 1rem !important;
+        }
+        
+        .metal-main-text {
+          top: 60% !important;
+          right: 10% !important;
+          left: 10% !important;
+          font-size: 1.5rem !important;
+          width: 80% !important;
+          line-height: 2 !important;
+        }
       }
 
-  /* موقعیت‌های اختصاصی */
-  .metal-mobile-section > div:nth-child(3) { /* برش لیزر */
-    top: 10% !important;
-    right: 5% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .metal-mobile-section > div:nth-child(4) { /* خم‌کاری */
-    top: 15% !important;
-    right: 10% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .metal-mobile-section > div:nth-child(5) { /* رنگ کوره‌ای */
-    top: 20% !important;
-    right: 15% !important;
-    font-size: 1rem !important;
-    width: 70% !important;
-  }
-  
-  /* متن اصلی */
-  .metal-mobile-section > div:nth-child(6) {
-    top: 30% !important;
-    right: 5% !important;
-    width: 90% !important;
-    font-size: 1rem !important;
-    line-height: 2.5 !important;
-    background: rgba(0,0,0,0.4) !important;
-    box-shadow: -15px 15px 30px rgba(0,0,0,1) !important;
-    color: #002c6f !important;
-    text-shadow: 
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px 1px 0 white,
-      1px 1px 0 white !important;
-    text-align: center !important; /* وسط چین */
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-  }
+      /* استایل‌های پایه برای بخش برند */
+      .brand-section {
+        position: relative;
+        min-height: 300px;
+        max-height: 60vh;
+        overflow: hidden;
+      }
+      
+      /* استایل عبارات برند */
+      .brand-phrases {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        margin: 1.5rem 0;
+      }
+      
+      .brand-phrase {
+        background: rgba(255,255,255,0.6);
+        color: #002c6f;
+        text-shadow: 
+          -1px -1px 0 white,
+          1px -1px 0 white,
+          -1px 1px 0 white,
+          1px 1px 0 white;
+        font-family: 'TitrZebr';
+        box-shadow: -15px 15px 30px rgba(255,255,255,1);
+        padding: 0.5rem;
+        border-radius: 0;
+        z-index: 10;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: auto;
+        margin: 0 auto;
+      }
+      
+      /* استایل شعار اصلی */
+      .brand-slogan {
+        background: rgba(255,255,255,0.1);
+        padding: 1.5rem;
+        margin: 1rem auto;
+        text-shadow: -2px 2px 1px rgba(0,0,0,1);
+        font-family: 'TitrZebr';
+        width: auto;
+      }
+      
+      /* استایل‌های موبایل (پایین‌تر از 768px) */
+      @media (max-width: 767px) {
+        .brand-section {
+          min-height: 60vh;
+          max-height: 80vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          padding-top: 2rem;
+        }
+        
+        .brand-phrases {
+          position: relative;
+          height: 60vh;          
+        }
 
-    .brand-mobile-section {
-    height: 80vh !important;
-    padding: 0 !important;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
+        .brand-phrase {
+        position: absolute;
+        font-size: 1rem;
+        padding: 1rem;
+        width: 60%;
+        margin: 0;
+        }
+        
+      .phrase-1 { top: 5%; right: 5%; }
+      .phrase-2 { top: 20%; right: 15%; }
+      .phrase-3 { top: 35%; right: 25%; }
+      .phrase-4 { top: 50%; right: 15%; }
+      .phrase-5 { top: 65%; right: 5%; }
 
-  .brand-mobile-section h1 {
-    flex-direction: column;
-    gap: 0;
-    margin: 0;
-    height: 100%;
-    position: relative;
-  }
+      .brand-slogan {
+      position: absolute;
+      bottom: 2rem;
+      left: 5%;
+      right: 5%;
+      font-size: 1.5rem;
+      line-height: 3rem;
+      margin: 0 auto;
+      padding: 1rem;
+      width: 90%;
+      display: inline-block;
+      top: auto;
+      }
+    }
+      
+      /* استایل‌های تبلت (768px تا 1023px) */
+      @media (min-width: 768px) and (max-width: 1023px) {
+        .brand-section {
+          min-height: 350px;
+          max-height: 50vh;
+        }
+        
+        .brand-phrases {
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1rem;
+          margin: 2rem;
+        }
+        
+        .brand-phrase {
+          position: static;
+          width: auto;
+          font-size: 1rem;
+          padding: 1rem;
+          margin-top: 1rem;
+        }
+        
+        .phrase-1 { transform: translateY(-0.5rem); }
+        .phrase-3 { transform: translateY(-0.5rem); }
+        .phrase-5 { transform: translateY(-0.5rem); }
+        
+        .brand-slogan {
+          font-size: 2rem;
+          margin-top: 4rem;
+          margin-bottom: 4rem;
+          padding: 1rem;
+          width: auto !important;
+          display: inline-block;
+        }
+      }
+      
+      /* استایل‌های دسکتاپ (1024px به بالا) */
+      @media (min-width: 1024px) {
+        .brand-section {
+          min-height: 400px;
+          max-height: 60vh;
+        }
+        
+        .brand-phrases {
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: center;
+          gap: 1.5rem;
+          margin: 3rem 0;
+        }
+        
+        .brand-phrase {
+          position: static;
+          width: auto;
+          font-size: 1.5rem;
+          padding: 1rem;
+          margin: 0;
+        }
+        
+        .phrase-1 { transform: translateY(-1.5rem); }
+        .phrase-3 { transform: translateY(-1.5rem); }
+        .phrase-5 { transform: translateY(-1.5rem); }
+        
+        .brand-slogan {
+          font-size: 2.5rem;
+          margin-top: 5rem;
+          padding: 1rem;
+          width: auto !important;
+          display: inline-block;
+        }
+      }
 
-  .brand-mobile-section h1 > span {
-    position: absolute !important;
-    background: rgba(255,255,255,0.4) !important;
-    color: #002c6f !important;
-    text-shadow: 
-      -1px -1px 0 white,
-      1px -1px 0 white,
-      -1px 1px 0 white,
-      1px 1px 0 white !important;
-    font-family: 'TitrZebr' !important;
-    box-shadow: -15px 15px 30px rgba(255,255,255,1) !important;
-    padding: 0.5rem !important;
-    border-radius: 0 !important;
-    z-index: 10 !important;
-    text-align: center !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    width: 100% !important;
-    margin: 0 auto !important;
-    transform: none !important;
-  }
-
-  /* موقعیت‌های اختصاصی برای عبارات */
-  .brand-mobile-section h1 > span:nth-child(1) { /* ما فقط تولید نمی کنیم */
-    top: 5% !important;
-    right: 5% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .brand-mobile-section h1 > span:nth-child(2) { /* ما با دانش مهندسی */
-    top: 20% !important;
-    right: 15% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .brand-mobile-section h1 > span:nth-child(3) { /* تجهیزات مدرن */
-    top: 35% !important;
-    right: 25% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .brand-mobile-section h1 > span:nth-child(4) { /* تیم متعهد */
-    top: 50% !important;
-    right: 15% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-  
-  .brand-mobile-section h1 > span:nth-child(5) { /* و سال ها تجربه */
-    top: 65% !important;
-    right: 5% !important;
-    font-size: 1rem !important;
-    width: 50% !important;
-  }
-
-  /* متن اصلی */
-  .brand-mobile-section .main-text {
-    top: 80% !important;
-    right: 5% !important;
-    left: 5% !important;
-    width: 90% !important;    
-    font-size: 1rem !important;
-    line-height: 2.5 !important;
-    padding: 0.5rem !important;
-    margin: 0 auto !important;
-    z-index: 20 !important; /* افزایش z-index */
-    background: rgba(255,255,255,0.2) !important;
-    box-shadow: -15px 15px 30px rgba(255,255,255,0.2) !important;    
-  }  
-
-  }  
-
-    /* فونت‌های سفارشی */
+    /* ==================== فونت‌های سفارشی ==================== */
     @font-face {
       font-family: 'IRANSans';
       src: url('/static/fonts/IRANSans.woff2') format('woff2');
@@ -545,11 +713,49 @@
       font-family: 'IRANSans', sans-serif;
       overflow-x: hidden; /* جلوگیری از اسکرول افقی */
     }
+
+    /* استایل‌های جدید برای بخش تماس سریع و فوتر */
+    @media (max-width: 1023px) {
+      /* بخش تماس سریع */
+      .hero-electric {
+        height: auto !important; /* ارتفاع بر اساس محتوا */
+        padding-bottom: 2rem !important;
+      }
+
+      .responsive-grid {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 2rem !important;
+      }
+
+      .responsive-grid > div {
+        width: 90% !important;
+        max-width: 500px !important;
+        margin: 0 auto !important;
+      }
+
+      /* فوتر */
+      footer .grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+      }
+
+      footer .flex-col {
+        padding: 1.5rem 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      footer .flex-col:last-child {
+        border-bottom: none;
+      }
+    }
+ 
   </style>
 </head>
 
 <body class="bg-gray-100">
-  <!-- هدر سایت -->
+  <!-- ==================== هدر سایت ==================== -->
   <header class="bg-blue-900 sticky top-0 z-50 py-1">
     <div class="container mx-auto px-2 relative">
       <div class="header-container">
@@ -611,15 +817,14 @@
     </div>
   </header>
 
-  <!-- محتوای اصلی صفحه -->
+  <!-- ==================== محتوای اصلی صفحه ==================== -->
   <main class="relative z-10">
     {% block content %}{% endblock %}
   </main>
 
-  <!-- فوتر سایت -->
-  <footer class="hero-electric bg-black text-white py-10 text-sm mt-0">
-    <div class="particles-layer white-particles absolute inset-0 z-0"></div>
-    
+  <!-- ==================== فوتر سایت ==================== -->  
+  <footer class="hero-electric bg-black text-white py-8 md:py-10 text-sm mt-0 min-h-[auto]">
+    <div class="particles-layer white-particles absolute inset-0 z-0"></div>    
     <div class="max-w-full mx-auto px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 z-5">
       <!-- ستون ۱: لوگو و درباره ما -->
       <div class="flex flex-col gap-4 mx-4 md:mx-10 z-10">
@@ -674,23 +879,32 @@
     </div>
   </footer>
 
-  <!-- اسکریپت مدیریت منوی موبایل -->
+  <!-- ==================== اسکریپت مدیریت منوی موبایل ==================== -->
   <script>
+    /**
+     * مدیریت منوی موبایل
+     * این اسکریپت باز و بسته شدن منوی موبایل را کنترل می‌کند
+     */
     document.addEventListener('DOMContentLoaded', function() {
+      // عناصر DOM مورد نیاز
       const hamburgerBtn = document.getElementById('hamburgerBtn');
       const closeMenuBtn = document.getElementById('closeMenuBtn');
       const mobileMenu = document.getElementById('mobileMenu');
       
-      // تابع برای باز کردن منو
+      /**
+       * تابع برای باز کردن منوی موبایل
+       */
       function openMenu() {
         mobileMenu.classList.add('active');
-        document.body.style.overflow = 'hidden';
+        document.body.style.overflow = 'hidden'; // جلوگیری از اسکرول صفحه هنگام باز بودن منو
       }
       
-      // تابع برای بستن منو
+      /**
+       * تابع برای بستن منوی موبایل
+       */
       function closeMenu() {
         mobileMenu.classList.remove('active');
-        document.body.style.overflow = 'auto';
+        document.body.style.overflow = 'auto'; // فعال کردن مجدد اسکرول صفحه
       }
       
       // باز کردن منو با کلیک روی دکمه همبرگری
@@ -699,7 +913,7 @@
       // بستن منو با کلیک روی دکمه بستن
       closeMenuBtn.addEventListener('click', closeMenu);
       
-      // بستن منو هنگام کلیک روی لینک‌ها
+      // بستن منو هنگام کلیک روی لینک‌های منو
       document.querySelectorAll('.mobile-menu a').forEach(link => {
         link.addEventListener('click', closeMenu);
       });

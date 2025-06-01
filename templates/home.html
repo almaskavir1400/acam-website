@@ -4,37 +4,42 @@
 
 {% block content %}
 
-<!-- HERO SECTION -->
-<section class="hero-electric relative h-[60vh] md:h-[75vh] flex flex-col justify-center text-center bg-blue-900 text-white overflow-hidden">
+<!-- ==================== بخش HERO (سرصفحه) ==================== -->
+<section class="hero-main-section relative h-[60vh] md:h-[75vh] flex flex-col justify-center text-center bg-blue-900 text-white overflow-hidden">
+  <!-- لایه ذرات شناور -->
   <div class="particles-layer white-particles absolute inset-0 z-0"></div>
 
+  <!-- تصویر اصلی HERO -->
   <img src="/static/images/hero.png" alt="تابلو برق صنعتی"
        class="absolute inset-0 w-full h-full object-contain object-left md:object-left-bottom lg:object-left-bottom z-5">
 
-  <!-- نوشته‌های موقعیت‌یافته -->
+  <!-- متن‌های شناور روی تصویر -->
+  <!-- متن 1: مهندسی دقیق -->
   <div class="hero-text-1 relative md:absolute top-16 md:top-[115px] right-2 md:right-[100px] lg:right-[100px] bg-white/60 text-stroke-blue font-black text-base md:text-2xl lg:text-3xl px-1 py-3 md:py-5 lg:py-5"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-index: 10;">
     مهندسی دقیق
   </div>
   
-<div class="hero-text-2 relative md:absolute top-28 md:top-[200px] right-4 md:right-[220px] lg:right-[220px] bg-white/60 text-stroke-blue font-black text-base md:text-2xl lg:text-3xl px-1 py-3 md:py-5 lg:py-5"
-     style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-index: 10;">
+  <!-- متن 2: هوشمندی -->
+  <div class="hero-text-2 relative md:absolute top-28 md:top-[200px] right-4 md:right-[220px] lg:right-[220px] bg-white/60 text-stroke-blue font-black text-base md:text-2xl lg:text-3xl px-1 py-3 md:py-5 lg:py-5"
+       style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-index: 10;">
     هوشمندی
-</div>
+  </div>
   
+  <!-- متن 3: از طراحی تا اجرا -->
   <div class="hero-text-3 relative md:absolute top-40 md:top-[285px] md:right-[300px] lg:right-[300px] bg-white/60 text-stroke-blue font-black text-sm md:text-xl lg:text-2xl px-1 py-3 md:py-5 lg:py-5"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family:'TitrZebr'; z-index: 10;">
     از طراحی تا اجرای تابلو برق صنعتی
   </div>
 
-  <!-- مستطیل متن اصلی -->
+  <!-- متن اصلی HERO -->
   <div class="hero-main-text relative md:absolute top-56 md:top-[460px] right-2 md:right-[100px] lg:right-[100px] bg-white/60 text-stroke-blue font-black text-xs md:text-base lg:text-xl px-3 py-3 md:px-5 md:py-5 lg:px-5 lg:py-5 mx-2 md:mx-0"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); z-index: 10;">
     شرکت الماس کویر الکترو مبین - متخصص در راه‌اندازی سیستم‌های برق صنعتی با کیفیت و استاندارد جهانی
   </div>
 </section>
 
-<!-- کارت‌های خدمات اصلی -->
+<!-- ==================== بخش خدمات اصلی ==================== -->
 <section class="relative py-10 md:py-20" style="background-color:#1e3a8a;">
   <div class="relative z-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4 md:px-8 max-w-full mx-auto">
     {% for service in [
@@ -48,15 +53,19 @@
       ["Retrofit و نوسازی تابلوها", "به‌روزرسانی تجهیزات قدیمی و تطبیق با استانداردهای روز"],
       ["آموزش های تخصصی برق صنعتی", "برگزاری دوره‌های فنی با تمرکز بر مهارت‌های عملی و کاربردی"]
     ] %}
+    <!-- کارت خدمات -->
     <div class="bg-blue-900 hover:shadow-lg transition flex flex-col text-center mx-0 md:mx-4"
          style="box-shadow: -10px 10px 40px rgba(255,255,255,1);">
+      <!-- تصویر خدمت -->
       <div class="w-full aspect-[3/2]">
         <img src="/static/images/services/service{{ loop.index }}.jpg" alt="{{ service[0] }}" 
              class="w-full h-full object-cover">
       </div>
+      <!-- عنوان خدمت -->
       <div class="bg-black/30 text-white text-base md:text-lg font-bold px-4 py-3 mx-2 mt-2 mb-2">
         {{ service[0] }}
       </div>
+      <!-- توضیحات خدمت -->
       <p class="text-white text-xs md:text-sm leading-relaxed mx-2 mt-3 mb-6 md:mb-10 px-4">
         {{ service[1] }}
       </p>
@@ -65,7 +74,7 @@
   </div>
 </section>
 
-<!-- CTA زیر خدمات -->
+<!-- ==================== CTA (دعوت به اقدام) زیر خدمات ==================== -->
 <section class="py-10 md:py-16 px-4 text-center" style="background-color:#1e3a8a;">
   <a href="/electrical" class="text-stroke-blue custom-button2 custom-button2:hover">
     <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-6 h-6 transition">
@@ -78,37 +87,44 @@
   </a>
 </section>
 
-<!-- سکشن تصویر فلزکاری -->
-<section class="metal-mobile-section relative h-[50vh] md:h-[80vh] text-white overflow-hidden">
+<!-- ==================== بخش فلزکاری ==================== -->
+<section class="metal-section relative h-[70vh] md:h-[80vh] text-white overflow-hidden">
+  <!-- تصویر پس‌زمینه فلزکاری -->
   <img src="/static/images/metal-hero.jpg" alt="خدمات فلزکاری"
        class="absolute inset-0 w-full h-full object-cover object-center z-0">
 
+  <!-- گرادینت روی تصویر -->
   <div class="absolute inset-0 z-5"
        style="background: linear-gradient(to left, #1e3a8a 0%, rgba(30, 58, 138, 0) 70%);">
   </div>
 
-  <!-- نوشته‌های روی تصویر - نسخه رسپانسیو -->
-  <div class="relative md:absolute top-16 md:top-[115px] right-2 md:right-[100px] bg-white/60 text-stroke-blue font-black text-base md:text-2xl lg:text-3xl px-1 py-3 md:py-5 z-10"
+  <!-- متن‌های روی تصویر فلزکاری -->
+  <!-- متن 1: برش لیزر -->
+  <div class="metal-text-1 relative md:absolute bg-white/60 text-stroke-blue font-black px-1 py-3 md:py-5 z-10"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     برش لیزر
   </div>
-  <div class="relative md:absolute top-28 md:top-[200px] right-4 md:right-[220px] bg-white/60 text-stroke-blue font-black text-base md:text-2xl lg:text-3xl px-1 py-3 md:py-5 z-10"
+  
+  <!-- متن 2: خم‌کاری CNC -->
+  <div class="metal-text-2 relative md:absolute bg-white/60 text-stroke-blue font-black px-1 py-3 md:py-5 z-10"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     خم‌کاری CNC
   </div>
-  <div class="relative md:absolute top-40 md:top-[285px] right-6 md:right-[300px] bg-white/60 text-stroke-blue font-black text-sm md:text-xl lg:text-2xl px-1 py-3 md:py-5 z-10"
+  
+  <!-- متن 3: رنگ کوره‌ای الکترواستاتیک -->
+  <div class="metal-text-3 relative md:absolute bg-white/60 text-stroke-blue font-black px-1 py-3 md:py-5 z-10"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1); font-family: 'TitrZebr';">
     رنگ کوره‌ای الکترواستاتیک
   </div>
 
-  <!-- جمله پایانی معرفی -->
-  <div class="relative md:absolute top-56 md:top-[460px] right-2 md:right-[100px] bg-white/60 text-stroke-blue font-black text-xs md:text-base lg:text-xl px-3 py-3 md:px-5 md:py-5 mx-2 md:mx-0 z-10"
+  <!-- توضیحات فلزکاری -->
+  <div class="metal-main-text relative md:absolute bg-white/60 text-stroke-blue font-black"
        style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">
     خدمات فلزکاری دقیق، سریع و حرفه‌ای ویژه بدنه تابلو، قطعات صنعتی و پروژه‌های خاص
   </div>
 
-  <!-- دکمه در پایین تصویر -->
-  <div class="absolute bottom-0 w-full z-10">
+  <!-- دکمه CTA فلزکاری -->
+  <div class="metal-cta absolute bottom-0 w-full z-10">
     <div class="bg-blue-900/20 py-6 md:py-10 px-4 md:px-10 text-center backdrop-blur-sm">
       <a href="/metal" class="text-stroke-blue custom-button2 inline-flex items-center gap-2 text-sm md:text-base lg:text-lg px-4 md:px-20">
         <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" class="w-5 h-5 md:w-6 md:h-6 transition">
@@ -123,50 +139,67 @@
   </div>
 </section>
 
-<!-- سکشن معرفی فلسفه برند -->
-<section class="hero-electric brand-mobile-section w-full bg-blue-900 text-white py-10 md:py-16 border-y-4 border-white text-center px-4               
-               min-h-[300px] md:min-h-[350px] lg:min-h-[400px]
-               max-h-[60vh] md:max-h-[40vh] lg:max-h-[60vh]">
+<!-- ==================== بخش فلسفه برند ==================== -->
+<section class="brand-section w-full bg-blue-900 text-white py-10 md:py-16 border-y-4 border-white text-center px-4">
+  <!-- لایه ذرات شناور -->
   <div class="particles-layer white-particles absolute inset-0 z-0"></div>
-  <h1 class="text-sm md:text-lg lg:text-2xl font-black leading-relaxed font-display text-center flex flex-col md:flex-row flex-wrap justify-center gap-2 my-6 md:my-10 z-5">
-    <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue md:transform md:-translate-y-5" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">ما فقط تولید نمی کنیم</span>
-    <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">ما با دانش مهندسی</span>
-    <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue md:transform md:-translate-y-5" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">تجهیزات مدرن</span>
-    <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">تیم متعهد</span>
-    <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue md:transform md:-translate-y-5" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">و سال ها تجربه</span>
+  
+  <!-- عبارات معرفی برند -->
+  <h1 class="brand-phrases text-center z-5">
+    <span class="brand-phrase phrase-1">ما فقط تولید نمی کنیم</span>
+    <span class="brand-phrase phrase-2">ما با دانش مهندسی</span>
+    <span class="brand-phrase phrase-3">تجهیزات مدرن</span>
+    <span class="brand-phrase phrase-4">تیم متعهد</span>
+    <span class="brand-phrase phrase-5">و سال ها تجربه</span>
   </h1>
-  <div class="main-text bg-white/10 mx-1 px-4 py-6 md:py-8 inline-block mt-10 md:mt-20 text-xl md:text-3xl lg:text-4xl font-black text-white animate-breathe z-5"
-       style="text-shadow: -2px 2px 1px rgba(0,0,0,1); font-family:'TitrZebr';">
+  
+  <!-- شعار اصلی برند -->
+  <div class="brand-slogan text-white animate-breathe z-5">
     آینده پروژه‌های صنعتی را تضمین می‌کنیم
   </div>
 </section>
 
-<!-- تماس سریع (سه‌ستونه) -->
-<section class="hero-electric bg-blue-900 text-white py-10 md:py-20">
+<!-- ==================== بخش تماس سریع ==================== -->
+<section class="hero-electric bg-blue-900 text-white py-10 md:py-20 min-h-[auto]">
+  <!-- لایه ذرات شناور -->
   <div class="particles-layer white-particles absolute inset-0 z-0"></div>
-  <div class="max-w-full mx-auto px-4 md:px-6 grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 z-5">
-
-    <!-- ستون ۱: فرم تماس -->
+      
+  <!-- شبکه سه ستونی -->  
+  <div class="max-w-full mx-auto px-4 grid grid-cols-1 md:grid-cols-3 gap-8 responsive-grid">
+    
+    <!-- ستون ۱: فرم تماس سریع -->
     <div class="mx-2 md:mx-10 z-10">
       <h3 class="text-base md:text-xl font-bold mb-4">تماس با پشتیبانی</h3>
       <p class="text-white/80 text-xs md:text-sm mb-4 md:mb-6 leading-relaxed">
         کارشناسان ما آماده پاسخگویی به شما هستند. فرم زیر را پر کنید تا در اولین فرصت با شما تماس بگیریم.
       </p>
 
+      <!-- فرم تماس -->
       <form id="quick-contact-form" action="/send-message-from-home" method="POST" class="space-y-3 md:space-y-4 bg-black/40 p-4 md:p-6 rounded-xl">
+        <!-- فیلد نام -->
         <input type="text" name="name" placeholder="نام شما"
                class="w-full px-3 md:px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
+        
+        <!-- فیلد ایمیل -->
         <input type="email" name="email" placeholder="ایمیل"
                class="w-full px-3 md:px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
+        
+        <!-- فیلد تلفن -->
         <input type="text" name="phone" placeholder="شماره تماس"
                class="w-full px-3 md:px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base">
+        
+        <!-- فیلد پیام -->
         <textarea name="message" rows="3" placeholder="متن پیام"
                   class="w-full px-3 md:px-4 py-2 rounded-xl bg-transparent text-white border-2 border-white focus:outline-none focus:ring-2 focus:ring-white text-sm md:text-base"></textarea>
+        
+        <!-- دکمه ارسال -->
         <button type="submit"
                 class="bg-blue-900 hover:bg-black transition px-4 py-2 rounded-xl font-bold w-full text-sm md:text-base">
           ارسال پیام
         </button>
       </form>
+      
+      <!-- پیام وضعیت فرم -->
       <div id="form-message" class="hidden text-orange-600 mt-2 md:mt-4 font-bold text-sm md:text-base"></div>
     </div>
 
@@ -174,16 +207,19 @@
     <div class="flex flex-col justify-start items-start gap-4 md:gap-6 text-white/90 text-sm md:text-lg px-4 md:px-10 z-10">
       <h4 class="text-base md:text-lg font-bold text-white mb-2">اطلاعات تماس</h4>
 
+      <!-- تلفن ثابت -->
       <div class="flex items-center gap-2 md:gap-3">
         <img src="/static/icon/telephone.svg" alt="تلفن ثابت" class="w-8 h-8 md:w-12 md:h-12" />
         <a href="tel:03591099440" class="hover:text-orange-400 text-sm md:text-base">035-91099440</a>
       </div>
 
+      <!-- تلفن همراه -->
       <div class="flex items-center gap-2 md:gap-3">
         <img src="/static/icon/cell-phone.svg" alt="تلفن همراه" class="w-8 h-8 md:w-12 md:h-12" />
         <a href="tel:09134154214" class="hover:text-orange-400 text-sm md:text-base">0913-4154214</a>
       </div>
 
+      <!-- ایمیل -->
       <div class="flex items-center gap-2 md:gap-3">
         <img src="/static/icon/email.svg" alt="ایمیل" class="w-8 h-8 md:w-12 md:h-12" />
         <a href="mailto:info@acam-co.ir" class="hover:text-orange-400 text-sm md:text-base">info@acam-co.ir</a>
@@ -194,15 +230,22 @@
     <div class="flex flex-col justify-start gap-3 md:gap-4 px-4 md:px-10 z-10">
       <h4 class="text-base md:text-lg font-bold text-white mb-2">شبکه‌های اجتماعی</h4>
       <div class="flex flex-wrap gap-2 md:gap-3">
+        <!-- اینستاگرام -->
         <a href="https://instagram.com/acamyazd" target="_blank" title="اینستاگرام">
           <img src="/static/icon/instagram.svg" alt="اینستاگرام" class="w-8 h-8 md:w-12 md:h-12 hover:scale-110 transition" />
         </a>
+        
+        <!-- واتساپ -->
         <a href="https://wa.me/989134154214" target="_blank" title="واتساپ">
           <img src="/static/icon/whatsapp.svg" alt="واتساپ" class="w-8 h-8 md:w-12 md:h-12 hover:scale-110 transition" />
         </a>
+        
+        <!-- تلگرام -->
         <a href="https://t.me/acamyazd" target="_blank" title="تلگرام">
           <img src="/static/icon/telegram.svg" alt="تلگرام" class="w-8 h-8 md:w-12 md:h-12 hover:scale-110 transition" />
         </a>
+        
+        <!-- ایتا -->
         <a href="https://eitaa.com/acamyazd913" target="_blank" title="ایتا">
           <img src="/static/icon/eitaa.svg" alt="ایتا" class="w-8 h-8 md:w-12 md:h-12 hover:scale-110 transition" />
         </a>
@@ -211,25 +254,40 @@
   </div>
 </section>
 
+<!-- ==================== اسکریپت‌های سفارشی ==================== -->
 <script>
+/**
+ * اسکریپت تولید ذرات شناور
+ * این اسکریپت عناصر ذره‌ای را ایجاد و انیمیشن می‌کند
+ */
 document.addEventListener("DOMContentLoaded", () => {
+  // انتخاب تمام لایه‌های ذرات
   const layers = document.querySelectorAll(".particles-layer");
 
+  // برای هر لایه ذرات
   layers.forEach(layer => {
+    // محاسبه ارتفاع بخش
     const sectionHeight = layer.offsetHeight;
 
+    // ایجاد 150 ذره
     for (let i = 0; i < 150; i++) {
+      // ایجاد عنصر ذره
       const p = document.createElement("div");
       p.classList.add("particle");
+      
+      // تنظیم موقعیت تصادفی
       p.style.left = Math.random() * 100 + "%";
       p.style.bottom = Math.random() * 200 - 100 + "px";
+      
+      // تنظیم مدت و تأخیر انیمیشن
       p.style.animationDuration = 1 + Math.random() * 1 + "s";
       p.style.animationDelay = Math.random() * 1 + "s";
 
-      // تنظیم ارتفاع داینامیک حرکت
+      // تنظیم ارتفاع حرکت داینامیک
       const distance = -(sectionHeight + 100); // حرکت تا بالای سکشن + اضافه
       p.style.setProperty("--move-distance", `${distance}px`);
 
+      // اضافه کردن ذره به لایه
       layer.appendChild(p);
     }
   });
