@@ -667,6 +667,80 @@
         }
       }
 
+        /* استایل‌های خاص برای حالت افقی موبایل */
+        @media (max-width: 1023px) and (orientation: landscape) {
+          /* تنظیمات هدر در حالت افقی */
+          .header-container {
+            max-height: 50px !important;
+          }
+          
+          .header-logo img {
+            height: 80px !important;
+            bottom: -25px !important;
+          }
+
+          /* تنظیمات بخش Hero */
+          .hero-main-section {
+            height: 100vh !important;
+          }
+          
+          .hero-main-section > div:nth-child(3),
+          .hero-main-section > div:nth-child(4),
+          .hero-main-section > div:nth-child(5) {
+            font-size: 1.2rem !important;
+            width: auto !important;
+            background-color: transparent !important;
+            box-shadow: none !important;
+          }
+          
+          .hero-main-section > div:nth-child(6) {
+            top: 50% !important;
+            font-size: 0.9rem !important;
+            width: 70% !important;
+            background-color: rgba(0,0,0,0.6) !important;
+          }
+
+          /* تنظیمات بخش فلزکاری */
+          .metal-section {
+            height: 100vh !important;
+          }
+          
+          .metal-text-1,
+          .metal-text-2,
+          .metal-text-3 {
+            font-size: 1.2rem !important;
+            width: auto !important;
+            background-color: rgba(255,255,255,0.8) !important;
+          }
+          
+          .metal-main-text {
+            top: 50% !important;
+            font-size: 1rem !important;
+            line-height: 2 !important;
+          }
+
+          /* تنظیمات بخش برند */
+          .brand-section {
+            min-height: 100vh !important;
+          }
+          
+          .brand-phrase {
+            font-size: 1rem !important;
+            padding: 0.5rem !important;
+          }
+          
+          .brand-slogan {
+            font-size: 1.5rem !important;
+            line-height: 2.5rem !important;
+          }
+
+          /* کاهش padding بخش‌ها */
+          section.py-10, section.py-16 {
+            padding-top: 1.5rem !important;
+            padding-bottom: 1.5rem !important;
+          }
+        }
+
     /* ==================== فونت‌های سفارشی ==================== */
     @font-face {
       font-family: 'IRANSans';
