@@ -6,26 +6,28 @@
 
 <!-- هدر صفحه -->
 <section class="bg-blue-900 pt-20 text-white">
-  
-  <h1 class="text-3xl md:text-4xl font-black leading-relaxed font-display text-center flex flex-wrap justify-center gap-2 my-10" style="font-family:'TitrZebr';">
-  <span class="bg-white/60 mx-4 px-2 py-5 inline-block text-blue-900 relative -top-12 text-stroke-blue mx-1 animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">خدمات</span>
-  <span class="bg-white/60 mx-4 px-2 py-5 inline-block text-blue-900 relative -top-6 text-stroke-blue mx-1 animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">برق</span>
-  <span class="bg-white/60 mx-4 px-2 py-5 inline-block text-blue-900 text-stroke-blue mx-1 animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">صنعتی</span>
+  <!-- عنوان اصلی با افکت تنفس -->
+  <h1 class="text-2xl md:text-4xl font-black leading-relaxed font-display text-center flex flex-wrap justify-center gap-2 my-10" style="font-family:'TitrZebr';">
+    <span class="bg-white/60 mx-2 px-2 py-5 inline-block text-blue-900 relative -top-12 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">خدمات</span>
+    <span class="bg-white/60 mx-2 px-2 py-5 inline-block text-blue-900 relative -top-6 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">برق</span>
+    <span class="bg-white/60 mx-2 px-2 py-5 inline-block text-blue-900 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">صنعتی</span>
   </h1>
  
-<div class="bg-gradient-to-t from-black/50 to-transparent">
-<p class="text-2xl font-bold text-white bg-black/20 px-2 py-4 text-right inline-block ml-auto mt-20 mx-10"
-   style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
-  راهکارهای تخصصی، مهندسی‌شده و مطمئن برای صنایع مدرن
-</p>
+  <!-- عنوان متن توضیحی -->
+  <div class="bg-gradient-to-t from-black/50 to-transparent">
+    <p class="my-text text-xl md:text-2xl font-bold text-white bg-black/20 px-2 py-4 text-center md:text-right inline-block mt-20 mx-10"
+       style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
+      راهکارهای تخصصی، مهندسی‌شده و مطمئن برای صنایع مدرن
+    </p>
 
-<!-- متن تایپی راست‌چین با افکت تایپ -->
-<div class="ml-auto text-right text-lg leading-loose font-bold  pb-10 mx-10" style="direction: rtl; text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-  <p id="typed-text" class="whitespace-pre-wrap min-h-[9rem]">    
-  </p>
-</div>
-</div>
+    <!-- متن تایپی راست‌چین -->    
+    <div class="text-right text-mg md:text-lg leading-loose font-bold pb-10 mx-4 md:mx-10 typed-text-container-electrical" style="direction: rtl; text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+      <p id="typed-text" class="whitespace-pre-wrap min-h-[9rem]">    
+      </p>
+    </div>
+  </div>
 
+  <!-- اسکریپت تایپ خودکار متن -->
   <script>
     const text =`شرکت الماس کویر الکترو مبین با تکیه بر دانش فنی مهندسان مجرب و بهره‌گیری از تجهیزات پیشرفته صنعتی، مجموعه‌ای جامع از خدمات برق صنعتی، مهندسی انرژی، ساخت تجهیزات، فلزکاری و تأمین قطعات را ارائه می‌دهد.
  این شرکت با هدف ارائه راهکارهای تخصصی، مقرون‌به‌صرفه و مطمئن به صنایع مختلف کشور فعالیت می‌نماید.`;
@@ -45,236 +47,268 @@
   </script>  
 </section>
 
-<!-- بخش معرفی خدمات تخصصی - طراحی دو سطری با تصویر و متن جداگانه -->
-<section class="pt-0 pb-0 px-0">
+<!-- بخش معرفی خدمات تخصصی -->
+<section class="p0">
   <div class="grid gap-0">
 
-    <!-- سطر ۱: عکس راست، متن چپ -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <!-- عکس با گرادینت چپ به راست -->
-      <div class="relative order-1 md:order-2">
+    <!-- سطر ۱: طراحی و ساخت تابلو برق صنعتی -->
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">    
+      <!-- تصویر سمت راست -->
+      <div class="relative order-1 md:order-2 h-[300px] md:h-full">
         <img src="/static/images/services/service1.jpg" alt="تابلو برق صنعتی"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
       <!-- متن سمت چپ -->
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-2 md:order-1">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-2 md:order-1">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          طراحی و ساخت تابلو برق صنعتی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-          •	طراحی و ساخت انواع تابلو برق فشار ضعیف و فشار متوسط شامل MCC، بانک خازنی، تابلو چنج‌اور و تابلوهای توزیع صنعتی
+          • طراحی و ساخت انواع تابلو برق فشار ضعیف و فشار متوسط شامل MCC، بانک خازنی، تابلو چنج‌اور و تابلوهای توزیع صنعتی
         </p>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-          •	تولید تابلوها به‌صورت کشویی (Withdrawable) یا فیکس (Fixed) مطابق با نیاز پروژه و استانداردهای بین‌المللی
+          • تولید تابلوها به‌صورت کشویی (Withdrawable) یا فیکس (Fixed) مطابق با نیاز پروژه و استانداردهای بین‌المللی
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
-    <!-- سطر ۲: عکس چپ، متن راست -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <!-- عکس با گرادینت راست به چپ -->
-      <div class="relative order-1">
+    <!-- سطر ۲: طراحی و ساخت تابلوهای کنترل و اتوماسیون صنعتی -->
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت چپ -->
+      <div class="relative order-1 h-[300px] md:h-full">
         <img src="/static/images/services/service2.jpg" alt="اتوماسیون صنعتی"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
       </div>
       <!-- متن سمت راست -->
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-2">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-2">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          طراحی و ساخت تابلوهای کنترل و اتوماسیون صنعتی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-          •	طراحی و ساخت تابلوهای کنترل و حفاظت شامل تابلوهای سوئینگ (Swing Panels)، اینترپوزینگ (Interposing Panels) و مارشالینگ (Marshalling Panels)
+          • طراحی و ساخت تابلوهای کنترل و حفاظت شامل تابلوهای سوئینگ (Swing Panels)، اینترپوزینگ (Interposing Panels) و مارشالینگ (Marshalling Panels)
         </p>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">         
-          •	اجرای سیستم‌های اتوماسیون صنعتی مبتنی بر PLC، HMI، رله‌های هوشمند و سیستم‌های مانیتورینگ
+          • اجرای سیستم‌های اتوماسیون صنعتی مبتنی بر PLC، HMI، رله‌های هوشمند و سیستم‌های مانیتورینگ
         </p>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">           
-          •	برنامه‌نویسی، تست و راه‌اندازی سامانه‌های کنترلی مطابق نیاز مشتری
+          • برنامه‌نویسی، تست و راه‌اندازی سامانه‌های کنترلی مطابق نیاز مشتری
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
     <!-- سطر ۳: خدمات نصب و راه‌اندازی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-2 md:order-2">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت راست -->
+      <div class="relative order-1 md:order-2 h-[300px] md:h-full">
         <img src="/static/images/services/service3.jpg" alt="نصب و راه‌اندازی"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-1 md:order-1">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت چپ -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-1 md:order-1">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          خدمات نصب، تست و راه‌اندازی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • نصب و راه اندازی انواع تابلوهای برق و تجهیزات کنترل
         </p>
-        <p class="text-base font-bold leading-relaxed my-5"
+        <p class="service-description font-bold leading-relaxed"
          style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-          • تست و کانفیگ انواع رله‌های حفاظتی (Protection Relays)  با نرم‌افزارهای تخصصی برندهای مختلف
+          • تست و کانفیگ انواع رله‌های حفاظتی (Protection Relays) با نرم‌افزارهای تخصصی برندهای مختلف
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
     <!-- سطر ۴: زیرساخت‌های برق صنعتی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-1">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت چپ -->
+      <div class="relative order-1 h-[300px] md:h-full">
         <img src="/static/images/services/service4.jpg" alt="زیرساخت برق"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-2">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت راست -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-2">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          اجرای زیرساخت‌های برق صنعتی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • اجرای سینی کابل، نردبان کابل (لدر)، و کابل‌کشی برای شبکه‌های فشار ضعیف تا فشار متوسط
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • انجام عملیات سر کابل‌زنی و مفصل‌بندی انواع کابل‌ها با ابزار و تجهیزات استاندارد
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • طراحی و پیاده‌سازی مسیرهای انتقال انرژی مطابق با نقشه‌های مهندسی و نیاز پروژه
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
     <!-- سطر ۵: مهندسی برق و انرژی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-2 md:order-2">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت راست -->
+      <div class="relative order-1 md:order-2 h-[300px] md:h-full">
         <img src="/static/images/services/service5.jpg" alt="مهندسی برق و انرژی"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-1 md:order-1">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت چپ -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-1 md:order-1">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          خدمات مهندسی برق و انرژی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • طراحی و محاسبات شبکه‌های برق صنعتی و تهیه مدارک مهندسی
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • طراحی و اجرای نیروگاه‌های دیزلی، گازی و خورشیدی
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • مشاوره و ارائه راهکارهای بهینه‌سازی مصرف انرژی و کاهش تلفات در پروژه‌های صنعتی
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
     <!-- سطر ۶: تأمین تجهیزات برق صنعتی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-1">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت چپ -->
+      <div class="relative order-1 h-[300px] md:h-full">
         <img src="/static/images/services/service6.jpg" alt="تأمین تجهیزات برق"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-2">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت راست -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-2">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          تأمین تجهیزات و قطعات برق صنعتی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • تأمین انواع تجهیزات برق صنعتی شامل کلیدها، رله‌ها، PLC، درایو، کابل و... از برندهای معتبر داخلی و خارجی
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • خدمات مشاوره و بازرگانی برای انتخاب و خرید قطعات متناسب با نیاز پروژه
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
     <!-- سطر ۷: خدمات فلزکاری صنعتی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-2 md:order-2">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت راست -->
+      <div class="relative order-1 md:order-2 h-[300px] md:h-full">
         <img src="/static/images/services/service7.jpg" alt="خدمات فلزکاری"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-1 md:order-1">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت چپ -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-1 md:order-1">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          خدمات فلزکاری و ساخت قطعات فلزی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • برش دقیق فلزات تا ضخامت ۲۰ میلی‌متر با دستگاه لیزر فایبر صنعتی
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • ساخت انواع سینی کابل، نردبان کابل (لدر)
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • ساخت انواع بدنه تابلو برق مطابق نقشه یا نمونه
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • ساخت قطعات فلزی سفارشی برای صنایع مختلف (مانند قطعات اتاق آسانسور، درب‌های فلزی و…)
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • خدمات تکمیلی فلزکاری شامل خم‌کاری، رنگ‌کاری و سایر مراحل ساخت
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
     <!-- سطر ۸: خدمات Retrofit و نوسازی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-1">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت چپ -->
+      <div class="relative order-1 h-[300px] md:h-full">
         <img src="/static/images/services/service8.jpg" alt="Retrofit"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-2">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت راست -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-2">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          خدمات Retrofit و نوسازی تجهیزات
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • نوسازی و ارتقاء تابلوهای برق قدیمی بدون نیاز به تعویض کامل سیستم
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • به‌روزرسانی تجهیزات کنترلی و حفاظتی برای افزایش قابلیت اطمینان و عملکرد سیستم
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
     <!-- سطر ۹: خدمات آموزشی تخصصی -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-[400px]">
-      <div class="relative order-2 md:order-2">
+    <div class="service-row bg-blue-900 grid grid-cols-1 md:grid-cols-2 w-full">
+      <!-- تصویر سمت راست -->
+      <div class="relative order-1 md:order-2 h-[300px] md:h-full">
         <img src="/static/images/services/service9.jpg" alt="خدمات آموزشی"
              class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-1 md:order-1">
-        <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-4"
+      <!-- متن سمت چپ -->
+      <div class="service-content text-white flex flex-col justify-start px-4 md:px-8 py-6 order-1 md:order-1">
+        <h3 class="service-title font-bold bg-black/20 text-right block"
          style="box-shadow: -15px 15px 30px rgba(0,0,0,1);">
          خدمات آموزشی تخصصی
         </h3>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <div class="service-description-div">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • آموزش عملی و نظری مباحث تخصصی مرتبط با برق صنعتی، تابلو برق، راه‌اندازی سیستم‌ها و شبکه‌های قدرت
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • امکان آموزش نیروهای شرکت‌های طرف قرارداد یا مشتریان به‌صورت پروژه‌محور و کاربردی
         </p>
-        <p class="text-base font-bold leading-relaxed my-3" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+        <p class="service-description font-bold leading-relaxed" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
           • آموزش راه‌اندازی، تست و نگهداری شبکه برق صنعتی و تابلوهای برق
         </p>
+        </div>
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
@@ -282,28 +316,27 @@
   </div>
 </section>
 
-<!-- سکشن CTA پایانی با افکت و ترتیب صحیح لایه‌ها -->
+<!-- بخش CTA پایانی -->
 <section class="hero-electric bg-blue-900 py-16 px-6 text-center text-white relative overflow-hidden">
-
   <!-- لایه ذرات پس‌زمینه -->
   <div class="particles-layer white-particles absolute inset-0 z-0"></div>
 
   <!-- محتوای بالای افکت -->
   <div class="relative z-10">
-    <div class="bg-white/10 mx-1 px-4 py-8 inline-block mt-20 text-4xl font-black text-white animate-breathe"
-         style="text-shadow: -2px 2px 1px rgba(0,0,0,1); font-family:'TitrZebr';">
+    <div class="bg-white/10 mx-1 px-4 py-2 md:py-8 inline-block mt-10 text-xl md:text-2xl lg:text-4xl font-black text-white animate-breathe"
+         style="text-shadow: -2px 2px 1px rgba(0,0,0,1); font-family:'TitrZebr'; line-height: 3rem;">
       آماده‌ایم تا همراه شما در پروژه‌های صنعتی باشیم
     </div>
 
-    <p class="my-10 text-xl">برای مشاوره، بازدید یا شروع همکاری کافیست با ما تماس بگیرید</p>
+    <p class="my-6 md:my-10 font-bold text-lg md:text-2xl" style="line-height: 3rem;">برای مشاوره، بازدید یا شروع همکاری کافیست با ما تماس بگیرید</p>
 
-    <a href="/contact" class="text-stroke-blue custom-button2">
+    <a href="/contact" class="text-stroke-blue custom-button2 inline-flex items-center gap-2 text-sm md:text-base lg:text-lg px-4 md:px-20">
       تماس با ما
     </a>
   </div>
 </section>
 
-
+<!-- اسکریپت ذرات شناور -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
   const layers = document.querySelectorAll(".particles-layer");
