@@ -6,12 +6,12 @@
 {% block content %}
 
 <!-- 🔷 سکشن هدر صفحه -->
-<section class="bg-blue-900 py-20 px-6 text-center text-white">
-  <h1 class="bg-white/60 mx-4 px-2 py-5 inline-block text-blue-900 text-stroke-blue text-3xl font-bold text-right ml-auto mb-4 animate-breathe"
+<section class="cooperation-header bg-blue-900 py-20 px-6 text-center text-white">
+  <h1 class="bg-white/60 mx-4 px-1 py-4 inline-block text-blue-900 text-stroke-blue text-2xl lg:text-4xl font-bold text-center ml-auto mb-4 animate-breathe"
       style="font-family: 'TitrZebr'; box-shadow: -15px 15px 30px rgba(255,255,255,1);">
     به تیم متخصصان الماس کویر بپیوندید
   </h1>
-  <p class="text-2xl font-bold leading-relaxed my-5" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
+  <p class="text-xl md:text-2xl font-bold leading-relaxed my-5" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); line-height: 3rem;">
     اگر به رشد، مسئولیت‌پذیری و کار تیمی علاقه‌مند هستید، منتظر شما هستیم!
   </p>
 </section>
@@ -20,7 +20,7 @@
 <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
 <!-- 🔷 بخش معرفی شرکت و مزایا -->
-<section class="grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-16 bg-blue-900 text-white">
+<section class="cooperation-intro grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-16 bg-blue-900 text-white">
 
   <!-- 🟦 ستون سمت راست: تصویر معرفی -->
   <div class="flex items-center justify-center">
@@ -28,14 +28,14 @@
   </div>
 
   <!-- 🟦 ستون سمت چپ: مزایا -->
-  <div class="flex flex-col justify-center space-y-6 text-right" style="direction: rtl;">
-    <div class="mb-10">
-      <p class="text-2xl md:text-3xl font-black bg-black/20 px-6 py-3 inline-block"
-         style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+  <div class="flex flex-col justify-center space-y-6" style="direction: rtl;">
+    <div class="mb-10 text-center lg:text-right">
+      <p class="text-xl lg:text-3xl font-black bg-black/20 px-2 py-5 inline-block"
+         style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1); line-height: 3rem;">
         محیطی پویا و حرفه‌ای برای رشد
       </p>
     </div>
-    <div class="text-lg font-bold leading-loose pr-20 space-y-4" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+    <div class="text-lg font-bold leading-loose pr-5 space-y-4 text-right" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
       <p>✔ محیط کاری حرفه‌ای و دوستانه</p>
       <p>✔ فرصت‌های رشد شغلی و یادگیری مداوم</p>
       <p>✔ پروژه‌های صنعتی واقعی و چالشی</p>
@@ -49,24 +49,24 @@
 <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
 <!-- 🔷 فرم درخواست همکاری -->
-<section class="grid grid-cols-1 px-6 py-20 bg-blue-900 text-white relative overflow-hidden">
+<section class="cooperation-form grid grid-cols-1 px-6 py-10 bg-blue-900 text-white relative overflow-hidden">
   <form id="job-form" class="z-10 max-w-4xl mx-auto text-center">
     <!-- 📝 عنوان فرم -->
-    <h3 class="text-2xl md:text-3xl font-black bg-black/20 px-6 py-3 inline-block my-10"
+    <h3 class="text-2xl md:text-3xl font-black bg-black/20 px-2 py-6 inline-block my-10"
         style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
       فرصت همکاری با ما
     </h3>
 
     <!-- 📝 توضیحات اولیه -->
     <p class="bg-black/20 text-lg font-bold leading-loose text-right p-5 m-5 max-w-3xl mx-auto"
-       style="text-shadow: -1px 1px 1px rgba(0,0,0,0.7);">
+       style="text-shadow: -1px 1px 1px rgba(0,0,0,0.7); line-height: 3rem;">
       ما به دنبال افراد باانگیزه و متخصص هستیم که با مهارت و تجربه خود بتوانند در مسیر رشد و توسعه مجموعه ما سهیم باشند.<br>
       لطفاً فرم زیر را با دقت تکمیل نمایید. اطلاعات شما به‌صورت محرمانه بررسی خواهد شد.<br>
       همراه شویم و آینده‌ای موفق را در کنار یکدیگر رقم بزنیم.
     </p>
 
     <!-- 📝 فیلدهای فرم -->
-    <div class="space-y-6 bg-black/40 p-8 rounded-xl text-right">
+    <div class="space-y-5 bg-black/40 p-6 rounded-xl text-right">
       <input type="text" name="fullname" placeholder="نام و نام خانوادگی" class="input-field">
       <input type="text" name="father" placeholder="نام پدر" class="input-field">
       <select name="gender" class="input-select">
