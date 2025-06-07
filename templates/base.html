@@ -853,6 +853,160 @@
     }
   }
 
+/* ==================== صفحه فلزکاری ==================== */
+.metal-section {
+  position: relative;
+}
+
+/* استایل‌های کارت‌های خدمات */
+.metal-card {
+  min-height: 400px;
+  height: auto !important;
+}
+
+.metal-img-container {
+  min-height: 400px;
+  height: auto !important;
+}
+
+.metal-content {
+  padding: 1.5rem !important;
+}
+
+.metal-title {
+  font-size: 1.5rem !important;
+  padding: 1rem 0.5rem !important;
+  margin: 1.5rem 0 !important;
+  line-height: 2.5 !important;
+}
+
+.metal-description {
+  font-size: 1rem !important;
+  padding: 0.5rem !important;
+  line-height: 3 !important;
+}
+
+/* استایل‌های موبایل (پایین‌تر از 768px) */
+@media (max-width: 767px) {
+  .metal-card {
+    min-height: 600px;
+    height: auto !important;
+  }
+
+  .metal-img-container {
+    min-height: 300px;
+    height: auto !important;
+    order: 1 !important;
+  }
+
+  .metal-content {
+    order: 2 !important;
+    padding: 1rem !important;
+  }
+
+  .metal-title {
+    font-size: 1rem !important;
+    line-height: 2.5 !important;      
+    padding: 1rem 0.5rem !important;
+    margin: 1.5rem 0 !important;    
+  }
+
+  .metal-description {
+    font-size: 0.9rem !important;
+    line-height: 2.5 !important;
+  }
+
+  .metal-table {
+    font-size: 0.9rem !important;
+  }
+
+  .metal-table th, 
+  .metal-table td {
+    padding: 0.5rem !important;
+  }
+}
+
+/* استایل‌های تبلت (768px تا 1023px) */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .metal-card {
+    min-height: 500px;
+    height: auto !important;
+  }
+
+  .metal-img-container {
+    min-height: 400px;
+    height: auto !important;
+  }
+
+  .metal-title {
+    font-size: 1.2rem !important;
+    line-height: 2.5 !important;      
+    padding: 1rem 0.5rem !important;
+    margin: 1.5rem 0 !important;   
+  }
+
+  .metal-description {
+    font-size: 0.9rem !important;
+    line-height: 2.5 !important;
+  }
+
+  .metal-table {
+    font-size: 0.9rem !important;
+  }
+
+  .metal-table th, 
+  .metal-table td {
+    padding: 0.5rem !important;
+  }
+}
+
+/* استایل‌های خاص برای حالت افقی موبایل */
+@media (max-width: 1023px) and (orientation: landscape) {
+  .metal-card {
+    min-height: 400px;
+    height: auto !important;
+  }
+
+  .metal-title {
+    font-size: 1.1rem !important;
+    line-height: 2.5 !important;      
+    padding: 1rem 0.5rem !important;
+    margin: 1.5rem 0 !important; 
+  }
+
+  .metal-description {
+    font-size: 0.9rem !important;
+    line-height: 2.5 !important;
+  }
+
+  /* کاهش padding بخش‌ها */
+  section.py-10, section.py-16 {
+    padding-top: 1rem !important;
+    padding-bottom: 1rem !important;
+  }
+}
+
+  .typed-text-container-metal {
+      min-height: 20rem !important;
+      line-height: 2.5 !important;
+    }
+  @media (min-width: 768px) {
+            .my-text {
+                line-height: 1.1 !important;
+            }
+            .typed-text-container-metal {
+                min-height: 18rem !important;
+                line-height: 2.5 !important;
+              }
+        }
+  
+  @media (min-width: 1024px) {
+            .typed-text-container-metal {
+                min-height: 10rem !important;
+                line-height: 2.5 !important;
+              }
+        }
+
     /* ==================== فونت‌های سفارشی ==================== */
     @font-face {
       font-family: 'IRANSans';
@@ -1055,6 +1209,7 @@
           <li><a class="text-orange-500 hover:text-white block py-1" href="/electrical">برق صنعتی</a></li>
           <li><a class="text-orange-500 hover:text-white block py-1" href="/metal">فلزکاری</a></li>
           <li><a class="text-orange-500 hover:text-white block py-1" href="/contact">تماس با ما</a></li>
+          <li><a class="text-orange-500 hover:text-white block py-1" href="/cooperation">همکاری با ما</a></li>
         </ul>
       </div>
     </div>

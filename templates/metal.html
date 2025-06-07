@@ -5,25 +5,33 @@
 {% block content %}
 
 <!-- هدر صفحه -->
+<!-- بخش هدر صفحه -->
 <section class="bg-blue-900 pt-20 text-white">
-  <h1 class="text-3xl md:text-4xl font-black leading-relaxed font-display text-center flex flex-wrap justify-center gap-2 my-10" style="font-family:'TitrZebr';">
-    <span class="bg-white/60 mx-1 px-2 py-5 inline-block text-blue-900 relative -top-8 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">خدمات</span>
-    <span class="bg-white/60 mx-1 px-2 py-5 inline-block text-blue-900 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">فلزکاری</span>
-  </h1>
+  <!-- تغییر ارتفاع هدر برای موبایل -->
+  <div class="mx-0">
+    <h1 class="text-2xl md:text-4xl font-black leading-relaxed text-center flex flex-wrap justify-center gap-2 my-6 md:my-10" style="font-family:'TitrZebr';">
+      <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 relative -top-8 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">
+        خدمات
+      </span>
+      <span class="bg-white/60 mx-1 px-2 py-3 md:py-5 inline-block text-blue-900 text-stroke-blue animate-breathe" style="box-shadow: -15px 15px 30px rgba(255,255,255,1);">
+        فلزکاری
+      </span>
+    </h1>
 
-  <!-- سکشن توضیح با آیکن و افکت تایپ -->
-  <div class="bg-gradient-to-t from-black/50 to-transparent text-white py-16 px-10 text-right" style="direction: rtl;">
-    <div class="w-full flex items-start gap-6">
-      <!-- آیکن لیزر سمت راست (بزرگ‌تر) -->
-      <img src="/static/icon/laser.png" alt="آیکن لیزر"
-          class="w-40 h-40 object-contain mt-2" />
-
-      <!-- متن تایپ‌شونده هم‌تراز وسط آیکن -->
-      <div class="flex-1 text-lg font-bold leading-loose pt-10" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); min-height: 9rem;">
-        <p id="typed-text" class="whitespace-pre-wrap"></p>
+    <!-- سکشن توضیح با آیکن و افکت تایپ -->
+    <div class="bg-gradient-to-t from-black/50 to-transparent text-white py-8 md:py-16 px-4 md:px-10 text-right" style="direction: rtl;">
+      <div class="w-full flex flex-col md:flex-row items-start gap-4 md:gap-6">
+        <!-- آیکن لیزر - تنظیم برای موبایل -->
+        <img src="/static/icon/laser.png" alt="آیکن لیزر"
+             class="w-28 h-28 md:w-40 md:h-40 object-contain mx-auto md:mx-0 mt-0 md:mt-2" />
+             
+        <!-- متن تایپ‌شونده -->
+        <div class="flex-1 text-base md:text-lg font-bold leading-loose pt-0 md:pt-10 typed-text-container-metal" 
+             style="text-shadow: -3px 3px 1px rgba(0,0,0,1); min-height: auto;">
+          <p id="typed-text" class="whitespace-pre-wrap"></p>
+        </div>
       </div>
     </div>
-
   </div>
 
   <script>
@@ -49,222 +57,227 @@
 <section class="pt-0 pb-0 px-0">
   <div class="grid gap-0">
 
-    <!-- کارت ۱ با محتوای آیکن و ویژگی‌ها -->
-    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto">
-      <!-- ستون چپ: تصویر -->
-      <div class="relative order-2 md:order-2">
+    <!-- کارت ۱: دستگاه لیزر فایبر -->
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto metal-card">
+      <!-- ستون تصویر -->
+      <div class="relative order-2 md:order-2 metal-img-container h-[250px] md:h-full">
         <img src="/static/images/metal-hero.jpg" alt="برش لیزری فلزات"
-            class="absolute inset-0 w-full h-full object-cover">
+             class="absolute inset-0 w-full h-full object-cover">
         <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
       </div>
 
-      <!-- ستون راست: تیتر با آیکن و ویژگی‌ها -->
-      <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-10 order-1 md:order-1">
-        
-        <div class="mb-10 flex items-center gap-6" style="direction: rtl;">
-      
-          <!-- تیتر -->
-          <p class="text-2xl md:text-3xl font-black bg-black/20 px-6 py-3 text-white"
-            style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+      <!-- ستون محتوا -->
+      <div class="bg-blue-900 text-white flex flex-col justify-center px-4 md:px-8 py-6 md:py-10 order-1 md:order-1 metal-content">
+        <!-- تیتر اصلی -->
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+          <p class="text-xl md:text-2xl lg:text-3xl font-black bg-black/20 px-4 md:px-6 py-2 md:py-3 text-white metal-title"
+             style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
             دستگاه لیزر فایبر
           </p>
         </div>
 
         <!-- ویژگی‌ها -->
-        <div class="text-lg font-bold leading-loose space-y-4"
-            style="text-shadow: -2px 2px 1px rgba(0,0,0,1); margin-right: 5rem;">
+        <div class="text-base md:text-lg font-bold leading-relaxed space-y-2 md:space-y-3 metal-description"
+             style="text-shadow: -2px 2px 1px rgba(0,0,0,1); margin-right: 1rem;">
           <p>✔ <span class="text-white">برش دقیق فلزات رسانا و سخت با دقت بالا</span></p>
           <p>✔ <span class="text-white">لبه‌های تمیز بدون نیاز به پرداخت ثانویه</span></p>
-          <p>✔ <span class="text-white">سرعت بسیار بالا حتی در تیراژ تولید بالا</span></p>
-          <p>✔ <span class="text-white">بدون تغییر شکل حرارتی اطراف خط برش</span></p>
-          <p>✔ <span class="text-white">مصرف برق پایین و هزینه نگهداری کم</span></p>
         </div>
 
-        <!-- تیتر "فلزات قابل برش" -->
-        <h3 class="text-xl md:text-2xl font-black bg-black/20 text-white px-4 py-3 mt-12 inline-block ml-auto"
+        <!-- تیتر جدول -->
+         <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-lg md:text-xl lg:text-2xl font-black bg-black/20 text-white px-3 md:px-4 py-2 md:py-3 mt-4 md:mt-6 metal-title"
             style="font-family:'TitrZebr'; box-shadow: -15px 15px 30px rgba(0,0,0,1); text-shadow: -2px 2px 1px rgba(0,0,0,1);">
           فلزات قابل برش و ضخامت مجاز
         </h3>
+        </div>
 
         <!-- جدول بهینه‌شده -->
-        <div class="mt-6 overflow-x-auto">
-          <table class="table-fixed ml-auto border border-white/40 text-sm md:text-base text-white my-10" style="margin-right: 5rem;">
+        <div class="mt-2 md:mt-4 overflow-x-auto">
+          <table class="metal-table table-fixed ml-auto border border-white/40 text-xs md:text-sm lg:text-base text-white my-4 md:my-6" 
+                 style="margin-right: 1rem;">
             <thead class="bg-white/10 text-white">
               <tr>
-                <th class="px-6 py-2 border border-white/30 w-1/2 text-center align-middle">نوع فلز</th>
-                <th class="px-6 py-2 border border-white/30 w-1/2 text-center align-middle">حداکثر ضخامت قابل برش</th>
+                <th class="px-4 py-1 md:px-6 md:py-2 border border-white/30 w-1/2 text-center align-middle">نوع فلز</th>
+                <th class="px-4 py-1 md:px-6 md:py-2 border border-white/30 w-1/2 text-center align-middle">حداکثر ضخامت قابل برش</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">فولاد سیاه</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">تا ۲۰ میلی‌متر</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">فولاد سیاه</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">تا ۲۰ میلی‌متر</td>
               </tr>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">استیل</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">تا ۱۰ میلی‌متر</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">استیل</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">تا ۱۰ میلی‌متر</td>
               </tr>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">آلومینیوم</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">تا ۶ میلی‌متر</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">آلومینیوم</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">تا ۶ میلی‌متر</td>
               </tr>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">برنج</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">تا ۵ میلی‌متر</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">برنج</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">تا ۵ میلی‌متر</td>
               </tr>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">مس</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">تا ۴ میلی‌متر</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">مس</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">تا ۴ میلی‌متر</td>
               </tr>
               <tr>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">گالوانیزه</td>
-                <td class="border border-white/20 px-6 py-2 w-1/2 text-center align-middle">بسته به نوع ورق</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">گالوانیزه</td>
+                <td class="border border-white/20 px-4 py-1 md:px-6 md:py-2 w-1/2 text-center align-middle">بسته به نوع ورق</td>
               </tr>
             </tbody>
           </table>
         </div>
-
       </div>
     </div>
     <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
 
-<!-- کارت ۲: خم‌کاری CNC -->
-<div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto">
-  <div class="relative order-1">
-    <img src="/static/images/metal/cnc-bending.jpg" alt="خم‌کاری CNC" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
-  </div>
-  <div class="bg-blue-900 text-white flex flex-col justify-center px-10 py-10 order-2" style="direction: rtl;">
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto mb-8" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      خم‌کاری دقیق فلزات با دستگاه CNC
-    </h3>
-    <p class="text-lg font-bold leading-loose my-4 space-y-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-      خم‌کاری یکی از مراحل مهم در شکل‌دهی فلزات است که امکان ایجاد زوایای دقیق و طرح‌های پیچیده را فراهم می‌کند.
-      این فرآیند با استفاده از دستگاه‌های CNC پیشرفته انجام می‌شود تا دقت و هماهنگی کاملی با طرح برش داشته باشد.
-    </p>
+    <!-- کارت ۲: خم‌کاری CNC -->
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto metal-card">
+      <div class="relative order-1 metal-img-container h-[250px] md:h-full">
+        <img src="/static/images/metal/cnc-bending.jpg" alt="خم‌کاری CNC" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-r from-blue-900 to-transparent"></div>
+      </div>
+      <div class="bg-blue-900 text-white flex flex-col justify-center px-4 md:px-8 py-6 md:py-10 order-2 metal-content" style="direction: rtl;">
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto mb-4 md:mb-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          خم‌کاری دقیق فلزات با دستگاه CNC
+        </h3>
+        </div>
+        <p class="text-sm md:text-base font-bold leading-relaxed my-2 md:my-4 space-y-3 md:space-y-4 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          خم‌کاری یکی از مراحل مهم در شکل‌دهی فلزات است که امکان ایجاد زوایای دقیق و طرح‌های پیچیده را فراهم می‌کند.
+          این فرآیند با استفاده از دستگاه‌های CNC پیشرفته انجام می‌شود تا دقت و هماهنگی کاملی با طرح برش داشته باشد.
+        </p>
 
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto my-10" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      ویژگی‌های خم‌کاری CNC
-    </h3>
-    <ul class="text-lg font-bold leading-loose space-y-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); margin-right: 5rem;">
-      <li>✔ دقت بالا: خم‌های یکنواخت و بدون امواج</li>
-      <li>✔ انعطاف‌پذیری در طراحی: امکان اجرای طرح‌های پیچیده و سفارشی</li>
-      <li>✔ همخوانی کامل با طرح برش: بدون تغییر ابعاد و کیفیت</li>
-      <li>✔ سرعت بالا: آماده‌سازی قطعات در کمترین زمان</li>
-      <li>✔ عدم آسیب به سطح فلز: بدون ترک یا شکستگی در قسمت خم</li>
-    </ul>
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto my-4 md:my-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          ویژگی‌های خم‌کاری CNC
+        </h3>
+        </div>
+        <ul class="text-sm md:text-base font-bold leading-relaxed space-y-2 md:space-y-3 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          <li>✔ دقت بالا: خم‌های یکنواخت و بدون امواج</li>
+          <li>✔ انعطاف‌پذیری در طراحی: امکان اجرای طرح‌های پیچیده و سفارشی</li>
+          <li>✔ همخوانی کامل با طرح برش: بدون تغییر ابعاد و کیفیت</li>
+          <li>✔ سرعت بالا: آماده‌سازی قطعات در کمترین زمان</li>
+          <li>✔ عدم آسیب به سطح فلز: بدون ترک یا شکستگی در قسمت خم</li>
+        </ul>
 
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto my-10" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      کاربردهای خم‌کاری
-    </h3>
-    <ul class="text-lg font-bold leading-loose space-y-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); margin-right: 5rem;">
-      <li>✔ تولید شاسی‌های فلزی برای ماشین‌آلات</li>
-      <li>✔ ساخت قطعات سه‌بعدی و جعبه‌های فلزی</li>
-      <li>✔ طراحی تجهیزات صنعتی و سازه‌های مهندسی</li>
-      <li>✔ تولید قاب‌های فلزی و قطعات دکوراتیو</li>
-      <li>✔ اجرای پروژه‌های سفارشی با ابعاد دقیق</li>
-    </ul>
-  </div>
-</div>
-<div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
-
-<!-- کارت ۳ -->
-<div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto">
-  <div class="relative order-2 md:order-2">
-    <img src="/static/images/metal/powder-coating.jpg" alt="رنگ کوره‌ای" class="absolute inset-0 w-full h-full object-cover">
-    <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
-  </div>
-
-  <div class="bg-blue-900 text-white flex flex-col justify-center px-8 py-6 order-1 md:order-1" style="direction: rtl;">
-    
-    <!-- تیتر ۱ -->
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto my-10" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      خدمات رنگ کوره‌ای الکترواستاتیک
-    </h3>
-    <p class="text-lg font-bold leading-loose mb-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1);">
-      رنگ الکترواستاتیک یکی از بهترین روش‌های پوشش‌دهی فلزات است که سطحی یکدست، براق و مقاوم ایجاد می‌کند. این فرآیند شامل پاشش رنگ به صورت الکترواستاتیکی و سپس پخت در کوره با دمای بالا است تا ماندگاری و کیفیت رنگ تضمین شود.
-    </p>
-
-    <!-- تیتر ۲ -->
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto my-10" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      ویژگی‌های رنگ کوره‌ای
-    </h3>
-    <ul class="text-lg font-bold leading-loose space-y-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); margin-right: 5rem;">
-      <li>✔ پوشش یکنواخت و باکیفیت: بدون ناهماهنگی یا قطره‌های رنگ</li>
-      <li>✔ مقاومت بالا: در برابر ضربه، خط‌و‌خش و شرایط محیطی</li>
-      <li>✔ تنوع رنگ: امکان ارائه رنگ‌های مختلف مطابق نیاز</li>
-      <li>✔ عدم نیاز به رنگ‌آمیزی مجدد: ماندگاری طولانی‌مدت</li>
-      <li>✔ سازگاری با انواع فلزات: مناسب برای استیل، آهن، آلومینیوم و غیره</li>
-    </ul>
-
-    <!-- تیتر ۳ -->
-    <h3 class="text-2xl font-bold bg-black/20 px-2 py-4 text-right inline-block ml-auto my-10" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-      کاربردهای رنگ کوره‌ای
-    </h3>
-    <ul class="text-lg font-bold leading-loose space-y-6" style="text-shadow: -3px 3px 1px rgba(0,0,0,1); margin-right: 5rem;">
-      <li>✔ رنگ‌آمیزی قطعات فلزی صنعتی</li>
-      <li>✔ پوشش‌دهی تابلوهای تبلیغاتی و قطعات تزئینی</li>
-      <li>✔ افزایش مقاومت قطعات در برابر خوردگی</li>
-      <li>✔ آماده‌سازی تجهیزات آشپزخانه صنعتی و پزشکی</li>
-      <li>✔ رنگ‌آمیزی قطعات ماشین‌آلات و وسایل نقلیه</li>
-    </ul>
-
-  </div>
-</div>
-<div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
-
-<!-- چرا خدمات الماس کویر؟ -->
-<section class="hero-electric bg-blue-900 text-white py-12 px-6 text-right relative overflow-hidden" style="direction: rtl;">
-  
-  <!-- افکت پس‌زمینه -->
-  <div class="particles-layer white-particles absolute inset-0 z-0"></div>
-
-  <!-- محتوای بالای افکت -->
-  <div class="relative z-10 max-w-6xl mx-auto">
-    
-    <!-- تیتر با بک‌گراند محدود -->
-    <div class="w-fit mx-auto">
-      <h2 class="text-2xl font-bold bg-black/20 px-4 py-4 my-10"
-          style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
-        چرا خدمات برش، خم‌کاری و رنگ الماس کویر
-      </h2>
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto my-4 md:my-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          کاربردهای خم‌کاری
+        </h3>
+        </div>
+        <ul class="text-sm md:text-base font-bold leading-relaxed space-y-2 md:space-y-3 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          <li>✔ تولید شاسی‌های فلزی برای ماشین‌آلات</li>
+          <li>✔ ساخت قطعات سه‌بعدی و جعبه‌های فلزی</li>
+          <li>✔ طراحی تجهیزات صنعتی و سازه‌های مهندسی</li>
+          <li>✔ تولید قاب‌های فلزی و قطعات دکوراتیو</li>
+          <li>✔ اجرای پروژه‌های سفارشی با ابعاد دقیق</li>
+        </ul>
+      </div>
     </div>
+    <div class="w-full h-[5px] bg-[linear-gradient(to_right,white,#1e3a8a)]"></div>
 
-    <!-- لیست مزایا -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-12 mt-6 text-lg font-bold leading-loose"
-         style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
-      <p>⚪ کیفیت تضمینی – دقت تا صدم میلی‌متر</p>
-      <p>⚪ قیمت‌گذاری شفاف و منصفانه بدون هزینه‌های پنهان</p>
-      <p>⚪ تحویل سریع و حرفه‌ای تیراژ بالا یا تک‌قطعه‌ای</p>
-      <p>⚪ مشاوره رایگان فنی برای انتخاب متریال و طراحی مناسب</p>
-      <p>⚪ امکان نمونه‌سازی برای پروژه‌های خاص</p>
+    <!-- کارت ۳: رنگ کوره‌ای -->
+    <div class="grid grid-cols-1 md:grid-cols-2 w-full h-auto metal-card">
+      <div class="relative order-2 md:order-2 metal-img-container h-[250px] md:h-full">
+        <img src="/static/images/metal/powder-coating.jpg" alt="رنگ کوره‌ای" class="absolute inset-0 w-full h-full object-cover">
+        <div class="absolute inset-0 bg-gradient-to-l from-blue-900 to-transparent"></div>
+      </div>
+
+      <div class="bg-blue-900 text-white flex flex-col justify-center px-4 md:px-8 py-6 md:py-10 order-1 md:order-1 metal-content" style="direction: rtl;">
+        
+        <!-- تیتر ۱ -->
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto my-4 md:my-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          خدمات رنگ کوره‌ای الکترواستاتیک
+        </h3>
+        </div>
+        <p class="text-sm md:text-base font-bold leading-relaxed mb-4 md:mb-6 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          رنگ الکترواستاتیک یکی از بهترین روش‌های پوشش‌دهی فلزات است که سطحی یکدست، براق و مقاوم ایجاد می‌کند. این فرآیند شامل پاشش رنگ به صورت الکترواستاتیکی و سپس پخت در کوره با دمای بالا است تا ماندگاری و کیفیت رنگ تضمین شود.
+        </p>
+
+        <!-- تیتر ۲ -->
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto my-4 md:my-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          ویژگی‌های رنگ کوره‌ای
+        </h3>
+        </div>
+        <ul class="text-sm md:text-base font-bold leading-relaxed space-y-2 md:space-y-3 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          <li>✔ پوشش یکنواخت و باکیفیت: بدون ناهماهنگی یا قطره‌های رنگ</li>
+          <li>✔ مقاومت بالا: در برابر ضربه، خط‌و‌خش و شرایط محیطی</li>
+          <li>✔ تنوع رنگ: امکان ارائه رنگ‌های مختلف مطابق نیاز</li>
+          <li>✔ عدم نیاز به رنگ‌آمیزی مجدد: ماندگاری طولانی‌مدت</li>
+          <li>✔ سازگاری با انواع فلزات: مناسب برای استیل، آهن، آلومینیوم و غیره</li>
+        </ul>
+
+        <!-- تیتر ۳ -->
+        <div class="mb-4 md:mb-6 flex items-center gap-4 md:gap-6" style="direction: rtl;">
+        <h3 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 text-right inline-block ml-auto my-4 md:my-6 metal-title" style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+          کاربردهای رنگ کوره‌ای
+        </h3>
+        </div>
+        <ul class="text-sm md:text-base font-bold leading-relaxed space-y-2 md:space-y-3 metal-description" style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          <li>✔ رنگ‌آمیزی قطعات فلزی صنعتی</li>
+          <li>✔ پوشش‌دهی تابلوهای تبلیغاتی و قطعات تزئینی</li>
+          <li>✔ افزایش مقاومت قطعات در برابر خوردگی</li>
+          <li>✔ آماده‌سازی تجهیزات آشپزخانه صنعتی و پزشکی</li>
+          <li>✔ رنگ‌آمیزی قطعات ماشین‌آلات و وسایل نقلیه</li>
+        </ul>
+      </div>
     </div>
+    <div class="w-full h-[5px] bg-[linear-gradient(to_left,white,#1e3a8a)]"></div>
 
-  </div>
-</section>
+    <!-- چرا خدمات الماس کویر؟ -->
+    <section class="hero-electric bg-blue-900 text-white py-8 md:py-12 px-4 md:px-6 text-right relative overflow-hidden" style="direction: rtl;">
+      
+      <!-- افکت پس‌زمینه -->
+      <div class="particles-layer white-particles absolute inset-0 z-0"></div>
 
-<!-- کارت CTA نهایی با افکت hero -->
-<section class="hero-electric bg-blue-900 py-16 px-6 text-center text-white relative overflow-hidden">
+      <!-- محتوای بالای افکت -->
+      <div class="relative z-10 max-w-6xl mx-auto">
+        
+        <!-- تیتر با بک‌گراند محدود -->
+        <div class="w-fit mx-auto">
+          <h2 class="text-xl md:text-2xl font-bold bg-black/20 px-3 py-3 md:px-4 md:py-4 my-6 md:my-8 metal-title"
+              style="box-shadow: -15px 15px 30px rgba(0,0,0,1); font-family:'TitrZebr';">
+            چرا خدمات برش، خم‌کاری و رنگ الماس کویر
+          </h2>
+        </div>
 
-  <!-- افکت ذرات پس‌زمینه -->
-  <div class="particles-layer white-particles absolute inset-0 z-0"></div>
+        <!-- لیست مزایا -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-y-3 gap-x-6 md:gap-x-8 mt-4 md:mt-6 text-sm md:text-base font-bold leading-relaxed metal-description"
+             style="text-shadow: -2px 2px 1px rgba(0,0,0,1);">
+          <p>⚪ کیفیت تضمینی – دقت تا صدم میلی‌متر</p>
+          <p>⚪ قیمت‌گذاری شفاف و منصفانه بدون هزینه‌های پنهان</p>
+          <p>⚪ تحویل سریع و حرفه‌ای تیراژ بالا یا تک‌قطعه‌ای</p>
+          <p>⚪ مشاوره رایگان فنی برای انتخاب متریال و طراحی مناسب</p>
+          <p>⚪ امکان نمونه‌سازی برای پروژه‌های خاص</p>
+        </div>
+      </div>
+    </section>
 
-  <!-- محتوای بالای افکت -->
-  <div class="relative z-10">
-    <div class="bg-white/10 mx-1 px-4 py-8 inline-block mt-20 text-4xl font-black text-white animate-breathe"
-         style="text-shadow: -2px 2px 1px rgba(0,0,0,1); font-family:'TitrZebr';">
-      آماده‌ایم قطعه یا پروژه فلزی شما را با بهترین کیفیت اجرا کنیم
-    </div>
+    <!-- کارت CTA نهایی با افکت hero -->
+    <!-- بخش CTA نهایی -->
+    <section class="hero-electric bg-blue-900 py-8 md:py-12 px-4 md:px-6 text-center text-white relative overflow-hidden">
+      <!-- محتوای بالای افکت -->
+      <div class="relative z-10 mx-auto max-w-4xl">
+        <div class="inline-block bg-white/10 px-6 py-4 md:px-8 md:py-6 mt-6 md:mt-10 text-xl md:text-2xl lg:text-3xl font-black text-white animate-breathe metal-title"
+            style="text-shadow: -2px 2px 1px rgba(0,0,0,1); font-family:'TitrZebr';">
+          آماده‌ایم قطعه یا پروژه فلزی شما را با بهترین کیفیت اجرا کنیم
+        </div>
 
-    <p class="my-10 text-xl">برای استعلام قیمت، مشاوره یا ثبت سفارش، با ما تماس بگیرید</p>
+        <p class="my-8 md:my-10 text-sm md:text-base font-bold">برای استعلام قیمت، مشاوره یا ثبت سفارش، با ما تماس بگیرید</p>
 
-    <a href="/contact" class="text-stroke-blue custom-button2">
-      تماس با ما
-    </a>
-  </div>
-</section>
-
+        <div class="flex justify-center">
+          <a href="/contact" class="text-stroke-blue custom-button2 inline-flex items-center gap-2 text-sm md:text-base lg:text-lg px-4 md:px-20">
+            تماس با ما
+          </a>
+        </div>
+      </div>
+    </section>
   </div>
 </section>
 
