@@ -1007,6 +1007,140 @@
               }
         }
 
+    /*---------------------- استایل‌های رسپانسیو برای صفحه تماس با ما ----------------------*/
+  @media (max-width: 1023px) {
+    /* بخش تیتر مستقل */
+    .contact-page .contact-header {
+      padding-top: 5rem !important;
+      padding-bottom: 5rem !important;
+    }
+    
+    .contact-page .contact-header h1 {      
+      line-height: 2.5rem !important;
+    }
+    
+    /* بخش متنی دو قسمتی */
+    .contact-page .contact-text-split {
+      grid-template-columns: 1fr !important;
+    }
+    
+    .contact-page .contact-text-split > div {
+      grid-column: span 12 !important;
+    }
+    
+    .contact-page .contact-text-split > div:first-child,
+    .contact-page .contact-text-split > div:last-child {
+      padding: 1.5rem !important;
+    }
+    
+    .contact-page .contact-text-split > div:nth-child(2) {
+      display: none !important;
+    }
+    
+    .contact-page .contact-text-split p {
+      font-size: 1rem !important;
+      line-height: 2.5 !important;
+    }
+    
+    /* بخش ویژگی‌های آیکن‌دار */
+    .contact-page .contact-features {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+      margin: 0.5rem 1rem !important;
+    }
+    
+    .contact-page .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3 {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 1rem !important;
+    }
+    
+    @media (max-width: 639px) {
+      .contact-page .grid-cols-1.sm\:grid-cols-2.md\:grid-cols-3 {
+        grid-template-columns: 1fr !important;
+      }
+    }
+    
+    .contact-page .bg-blue-900.rounded-xl.p-6 {
+      padding: 1rem !important;
+    }
+    
+    .contact-page .bg-blue-900.rounded-xl.p-6 img {
+      width: 200px !important;
+      height: 200px !important;
+      margin: 0.5rem 0.5rem !important;
+    }
+    
+    .contact-page .bg-blue-900.rounded-xl.p-6 p {
+      font-size: 1rem !important;
+      padding: 0.5rem 0;
+    }
+    
+    /* بخش نتیجه‌گیری */
+    .contact-page .contact-conclusion {
+      padding-top: 2rem !important;
+      padding-bottom: 2rem !important;
+    }
+    
+    .contact-page .contact-conclusion h1 {
+      font-size: 1.5rem !important;
+      line-height: 3.5rem !important;
+      padding: 1rem 0.5rem !important;
+      display: inline-block;
+      width: 90%;
+    }
+    
+    /* بخش تماس سریع */
+    .contact-page .contact-quick-contact {
+      padding: 2rem 0.5rem !important;
+    }
+    
+    .contact-page .contact-quick-contact .space-y-8 {
+      gap: 1rem !important;
+    }
+    
+    .contact-page .contact-quick-contact input,
+    .contact-page .contact-quick-contact textarea,
+    .contact-page .contact-quick-contact button {
+      padding: 0.5rem !important;
+      font-size: 0.9rem !important;
+    }
+    
+    .contact-page .contact-quick-contact .flex.items-center.gap-3 {
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+    
+    .contact-page .contact-quick-contact .flex.items-center.gap-3 img {
+      width: 24px !important;
+      height: 24px !important;
+    }
+    
+    .contact-page .contact-quick-contact .flex.items-center.gap-3 span,
+    .contact-page .contact-quick-contact .flex.items-center.gap-3 a {
+      font-size: 0.9rem !important;
+      line-height: 3rem !important;
+    }
+    
+    .contact-page .contact-quick-contact iframe {
+      height: 200px !important;      
+    }
+  }
+  
+  /* برای حالت افقی موبایل */
+  @media (max-width: 1023px) and (orientation: landscape) {
+    .contact-page .contact-quick-contact {
+      grid-template-columns: 1fr !important;
+    }
+    
+    .contact-page .contact-quick-contact > div {
+      width: 100% !important;
+    }
+    
+    .contact-page .contact-quick-contact iframe {
+      height: 150px !important;
+    }
+  }
+
     /* ==================== فونت‌های سفارشی ==================== */
     @font-face {
       font-family: 'IRANSans';

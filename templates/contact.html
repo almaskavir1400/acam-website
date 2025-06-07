@@ -4,21 +4,24 @@
 
 {% block content %}
 
+<!-- 🔹 کلاس اصلی برای تمام سکشن‌های صفحه تماس -->
+<div class="contact-page bg-white">
+
 <!-- 🔹 سکشن تیتر مستقل - تمام‌عرض چسبیده به هدر -->
-<section class="bg-blue-900 py-20 px-6 text-center text-white">
-  <h1 class="text-3xl md:text-4xl font-bold leading-relaxed font-display"
+<section class="contact-header bg-blue-900 py-20 px-6 text-center text-white">
+  <h1 class="text-xl md:text-2xl lg:text-4xl font-bold leading-relaxed font-display"
       style="font-family:'TitrZebr';">
     مهندسی دقیق - از طراحی تا اجرا
   </h1>
 </section>
 
 <!-- 🔹 سکشن متنی دو بخشی با فلش بین آن‌ها -->
-<section class="w-full grid grid-cols-11 text-xl">
+<section class="contact-text-split w-full grid grid-cols-11 text-xl">
   <!-- بخش راست: متن اول با بک‌گراند آبی تیره -->
   
   <div class="col-span-5 bg-blue-900 text-white flex items-center justify-center px-6 py-4 m-0 text-center">
   <div class="flex items-center gap-4">
-    <p class="leading-relaxed m-0 text-xl text-start">
+    <p class="leading-relaxed m-0 text-xl text-start" style="line-height: 3rem;">
       شرکت <a href="/" class="font-bold text-orange-500 hover:text-white transition">الماس کویر الکترو مبین</a> با بیش از یک دهه تجربه، در طراحی، ساخت و اجرای تابلوهای برق صنعتی و خدمات فلزکاری، به عنوان یک برند معتبر صنعتی شناخته می‌شود
     </p>
   </div>
@@ -33,14 +36,14 @@
 
   <!-- بخش چپ: متن دوم با پس‌زمینه سفید و متن آبی -->
   <div class="col-span-5 bg-white text-blue-900 flex items-center justify-center px-6 py-4 m-0 text-center">
-    <p class="leading-relaxed m-0 text-xl">
+    <p class="leading-relaxed m-0 text-xl text-start" style="line-height: 3rem;">
       ما با بهره‌گیری از دانش مهندسی، تجهیزات مدرن، تیم متعهد و سال ها تجربه، پروژه‌های شما را با کیفیتی فراتر از انتظار اجرا می‌کنیم
     </p>
   </div>
 </section>
 
 <!-- ویژگی‌ها به صورت آیکن‌دار در دو ردیف سه ستونه با پس‌زمینه سفید و مرکزچین -->
-<section class="bg-white py-16">
+<section class="contact-features bg-white py-16">
   <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 text-blue-900">
     <div class="bg-blue-900 text-white rounded-xl p-6 flex flex-col items-center text-center">
       <img src="/static/icon/panel.png" alt="مونتاژ تابلو برق" class="w-25 h-25 mb-4">
@@ -72,8 +75,8 @@
 <!-- نتیجه‌گیری نهایی -->
 
 <!-- 🔹 سکشن پایانی با تیتر شعار شرکت -->
-<section class="bg-white py-20 px-6 text-center text-blue-900">
-  <h1 class="bg-black/20 px-4 py-8 inline-block text-3xl md:text-4xl font-bold leading-relaxed font-display animate-breathe"
+<section class="contact-conclusion bg-white py-20 px-6 text-center text-blue-900">
+  <h1 class="bg-black/10 px-4 py-8 inline-block text-3xl md:text-4xl font-bold leading-relaxed font-display animate-breathe"
       style="font-family:'TitrZebr'; text-shadow: -2px 2px 1px rgba(255,255,255,1);">
     ما فقط تولید نمی‌کنیم - آینده‌ی پروژه‌های صنعتی شما را تضمین می‌کنیم
   </h1>
@@ -91,7 +94,7 @@
 </style>
 
 <!-- 🔹 تماس سریع -->
-<section class="hero-electric grid grid-cols-1 md:grid-cols-2 gap-8 px-8 py-20 bg-blue-900 text-white relative overflow-hidden">
+<section class="contact-quick-contact hero-electric grid grid-cols-1 lg:grid-cols-2 gap-8 px-8 py-20 bg-blue-900 text-white relative overflow-hidden">
 <div class="particles-layer white-particles absolute inset-0 z-0"></div>
   
   <!-- فرم تماس -->  
@@ -143,28 +146,28 @@
     </a>
   </div>
 
-  <div class="flex items-center gap-3">
+  <div class="flex gap-3">
     <img src="/static/icon/telephone.svg" alt="تلفن" class="w-8 h-8">
     <a href="tel:03591099440" class="hover:text-orange-400 transition">035-91099440</a>
   </div>
 
-  <div class="flex items-center gap-3">
+  <div class="flex gap-3">
     <img src="/static/icon/cell-phone.svg" alt="موبایل" class="w-8 h-8">
     <a href="tel:09134154214" class="hover:text-orange-400 transition">0913-4154214</a>
   </div>
 
-  <div class="flex items-center gap-3">
+  <div class="flex gap-3">
     <img src="/static/icon/email.svg" alt="ایمیل" class="w-8 h-8">
     <a href="mailto:info@acam-co.ir" class="hover:text-orange-400 transition">info@acam-co.ir</a>
   </div>
 
-  <div class="flex items-center gap-3">
+  <div class="flex gap-3">
     <img src="/static/icon/location.svg" alt="آدرس" class="w-8 h-8">
-    <span>یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br>
+    <span style="line-height: 2.5rem;">یزد - شهرک صنعتی - منطقه ویژه اقتصادی - بلوار صنعت - کوچه 9 صنعت<br>
           کدپستی: 8947185259</span>
   </div>
 
-  <div class="mt-8 rounded-xl overflow-hidden bg-black/30 p-6 shadow-lg">
+  <div class="mt-8 rounded-xl overflow-hidden bg-black/30 p-2 md:p-6 shadow-lg">
   <iframe
     src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3387.215855266905!2d54.22886302383397!3d31.900732028250424!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDU0JzAyLjYiTiA1NMKwMTMnMzQuNiJF!5e0!3m2!1sfa!2s!4v1747481491388!5m2!1sfa!2s"
     width="100%" height="250"
@@ -197,6 +200,7 @@
 </div>
 
 </section>
+</div>
 
 <script>
 document.getElementById("contact-form").addEventListener("submit", async function (e) {
